@@ -54,10 +54,10 @@ const LetterGlitch = ({
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result
       ? {
-          r: parseInt(result[1], 16),
-          g: parseInt(result[2], 16),
-          b: parseInt(result[3], 16)
-        }
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+      }
       : null;
   };
 
@@ -116,9 +116,11 @@ const LetterGlitch = ({
   };
 
   const drawLetters = () => {
-    if (!context.current || letters.current.length === 0) return;
+    if (!context.current || !canvasRef.current || letters.current.length === 0) return;
+
     const ctx = context.current;
-    const { width, height } = canvasRef.current!.getBoundingClientRect();
+    const { width, height } = canvasRef.current.getBoundingClientRect();
+
     ctx.clearRect(0, 0, width, height);
     ctx.font = `${fontSize}px monospace`;
     ctx.textBaseline = 'top';
@@ -210,8 +212,13 @@ const LetterGlitch = ({
     window.addEventListener('resize', handleResize);
 
     return () => {
-      cancelAnimationFrame(animationRef.current!);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
       window.removeEventListener('resize', handleResize);
+      // clear references so no code tries to use them after unmount
+      context.current = null;
+      canvasRef.current = null;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [glitchSpeed, smooth]);
