@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Nunito, } from "next/font/google";
-import "./globals.css";
+import ProgressBar from "@/components/ProgressBar";
+import "@/app/globals.css";
 
 const NunitoSans = Nunito({
-    style: "normal",
     variable: "--font-nunito-sans",
     subsets: ["latin"],
     weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"],
@@ -17,9 +17,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="en">
-            <body
-                className={`${NunitoSans.variable} antialiased`}
-            >
+            <body className={`${NunitoSans.variable} antialiased`}>
+                <ProgressBar />
                 {children}
             </body>
         </html>

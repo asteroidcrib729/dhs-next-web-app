@@ -1,12 +1,25 @@
 import Header from "@/components/Header";
+import ServicePageTop from "@/app/services/components/ServicePageTop";
+import ServicePageTabs from "@/app/services/components/ServicePageTabs";
+import ServicePageHardwarePartners from "@/app/services/components/ServicePageHardwarePartners";
+import ServicePageProcess from "@/app/services/components/ServicePageProcess";
 import Footer from "@/components/Footer";
+import CTA from "@/components/CTA";
 
 export default function Services() {
     return(
         <>
             <Header/>
-            
-            <h1>This Is The Services Page.</h1>
+
+            <ServicePageTop/>
+
+            <ServicePageTabs/>
+
+            <ServicePageHardwarePartners/>
+
+            <ServicePageProcess/>
+
+            <CTA/>
 
             <Footer/>
         </>

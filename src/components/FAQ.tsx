@@ -93,14 +93,14 @@ const DEFAULT_FAQS: FaqItem[] = [
 ];
 
 export default function Faq({
-    title = "Frequently asked questions",
+    title = "Frequently Asked Questions",
     faqs = DEFAULT_FAQS,
 }: FaqProps) {
     return (
-        <section className="py-0">
+        <section id="faq-section" className="py-0">
             <div className="w-full bg-black text-slate-100">
                 <div className="p-4 sm:p-8 lg:p-12 xl:p-16">
-                    <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-400 mb-8 sm:mb-10 lg:mb-12">
+                    <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-8 sm:mb-10 lg:mb-12">
                         {title}
                     </h2>
 

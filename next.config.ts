@@ -8,6 +8,41 @@ const nextConfig: NextConfig = {
         hostname: "cdn.simpleicons.org",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "svgmix.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "eng-properties.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "jsnmedical.com.au",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "missionhealthcare.com.au",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "nectronix.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "sharzproperties.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "711maxbachat.com",
+        pathname: "/**",
+      },
     ],
   },
 };

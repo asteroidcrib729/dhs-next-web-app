@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import TermsAndConditionsPage from "@/app/terms-and-conditions/components/TermsAndConditionsPage";
 import Footer from "@/components/Footer";
 
 export default function TermsAndConditions() {
@@ -6,7 +7,7 @@ export default function TermsAndConditions() {
         <>
             <Header/>
             
-            <h1>This Is The Terms And Conditions Page.</h1>
+            <TermsAndConditionsPage/>
 
             <Footer/>
         </>

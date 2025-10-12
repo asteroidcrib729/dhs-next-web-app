@@ -71,11 +71,11 @@ export default function Pricing() {
     );
 
     return (
-        <section className="relative isolate overflow-hidden bg-white py-16 sm:py-24 lg:py-32">
+        <section className="relative isolate overflow-hidden bg-white py-16">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-4xl text-center">
                     <h2 className="text-3xl font-semibold leading-7 text-indigo-400">Pricing</h2>
-                    <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    <p className="mt-6 text-3xl font-bold tracking-tight text-black sm:text-4xl">
                         Pricing that grows with you
                     </p>
                     <p className="mt-6 text-lg leading-8 text-black">
@@ -87,8 +87,8 @@ export default function Pricing() {
                         <button
                             type="button"
                             className={`relative flex items-center px-4 py-2 rounded-l-full border border-indigo-500 focus:outline-none ${billingCycle === 'monthly'
-                                    ? 'bg-indigo-600 text-white'
-                                    : 'bg-transparent text-indigo-400'
+                                ? 'bg-indigo-600 text-white'
+                                : 'bg-transparent text-indigo-400'
                                 }`}
                             onClick={() => toggleBilling('monthly')}
                         >
@@ -97,8 +97,8 @@ export default function Pricing() {
                         <button
                             type="button"
                             className={`relative flex items-center px-4 py-2 rounded-r-full border border-indigo-500 focus:outline-none -ml-px ${billingCycle === 'annual'
-                                    ? 'bg-indigo-600 text-white'
-                                    : 'bg-transparent text-indigo-400'
+                                ? 'bg-indigo-600 text-white'
+                                : 'bg-transparent text-indigo-400'
                                 }`}
                             onClick={() => toggleBilling('annual')}
                         >
@@ -108,16 +108,16 @@ export default function Pricing() {
                 </div>
 
                 {/* Pricing cards container */}
-                <div className="mt-16 grid grid-cols-1 gap-y-12 sm:mt-20 lg:mt-24 lg:grid-cols-3 lg:gap-x-8">
+                <div className="mt-12 grid grid-cols-1 gap-y-12 lg:grid-cols-3 lg:gap-x-8">
                     {plans.map((plan) => {
                         const price = billingCycle === 'monthly' ? plan.monthlyPrice : plan.annualPrice;
                         return (
                             <div
                                 key={plan.name}
-                                className={`relative rounded-2xl p-8 xl:p-10 ${plan.popular
-                                        ? 'bg-gradient-to-b from-[#0F1040] via-[#0C0F3A] to-[#05061A] ring-2 ring-indigo-600'
-                                        : 'bg-[#0D1036]'
-                                    }`}
+                                className={`
+                                    relative rounded-2xl p-8 xl:p-10 hover:scale-[103%] hover:shadow-lg hover:shadow-indigo-600 transition-all duration-300 
+                                    ${plan.popular ? 'bg-gradient-to-b from-[#0F1040] via-[#0C0F3A] to-[#05061A] ring-2 ring-indigo-600' : 'bg-[#0D1036]'}
+                                `}
                             >
                                 {/* "Most popular" badge */}
                                 {plan.popular && (
@@ -134,10 +134,10 @@ export default function Pricing() {
                                     <span className="text-base font-medium text-gray-400">/month</span>
                                 </p>
                                 <Link
-                                    href="/#"
+                                    href="/contact"
                                     className={`text-center mt-8 block w-full rounded-lg px-4 py-2 text-sm font-semibold shadow-sm focus:outline-none transition-colors pointer-cursor ${plan.popular
-                                            ? 'bg-indigo-600 hover:bg-indigo-500 text-white'
-                                            : 'bg-gray-800 hover:bg-gray-700 text-white'
+                                        ? 'bg-indigo-600 hover:bg-indigo-500 text-white'
+                                        : 'bg-gray-800 hover:bg-gray-700 text-white'
                                         }`}
                                 >
                                     Buy plan

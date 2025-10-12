@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
 
 export default function TrustedMarketingPartner() {
     type Partner = {
@@ -62,12 +63,27 @@ export default function TrustedMarketingPartner() {
         },
     ];
 
+    const Features = [
+        {
+            title: "Market Knowledge",
+            description: "Deep understanding of consumer behavior and market trends across industries",
+        },
+        {
+            title: "Compliance Ready",
+            description: "All campaigns comply with international marketing regulations and best practices",
+        },
+        {
+            title: "24/7 Support",
+            description: "Support and communication aligned with your business hours",
+        },
+    ]
+
     return (
         <>
             <section className="w-full bg-black py-20 px-6">
                 <div className="mx-auto max-w-6xl text-center">
                     {/* Heading */}
-                    <h2 className="text-3xl font-bold text-gray-400 md:text-4xl">
+                    <h2 className="text-3xl font-bold text-white md:text-4xl">
                         Your Trusted Digital Marketing Partner
                     </h2>
 
@@ -81,32 +97,16 @@ export default function TrustedMarketingPartner() {
 
                     {/* Features */}
                     <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                        <div className="rounded-2xl bg-gray-800 p-8 text-center shadow-lg shadow-[#2b47d9]">
-                            <h3 className="text-lg font-semibold text-gray-400">
-                                Market Knowledge
-                            </h3>
-                            <p className="mt-3 text-white text-base leading-relaxed">
-                                Deep understanding of consumer behavior and market trends across
-                                industries
-                            </p>
-                        </div>
-
-                        <div className="rounded-2xl bg-gray-800 p-8 text-center shadow-lg shadow-[#2b47d9]">
-                            <h3 className="text-lg font-semibold text-gray-400">
-                                Compliance Ready
-                            </h3>
-                            <p className="mt-3 text-white text-base leading-relaxed">
-                                All campaigns comply with international marketing regulations and
-                                best practices
-                            </p>
-                        </div>
-
-                        <div className="rounded-2xl bg-gray-800 p-8 text-center shadow-lg shadow-[#2b47d9]">
-                            <h3 className="text-lg font-semibold text-gray-400">24/7 Support</h3>
-                            <p className="mt-3 text-white text-base leading-relaxed">
-                                Support and communication aligned with your business hours
-                            </p>
-                        </div>
+                        {Features.map((Feature, index) => (
+                            <Card key={index} className="rounded-2xl bg-gray-800 p-8 text-center hover:scale-[103%] hover:shadow-lg hover:shadow-[#2b47d9] transition-all duration-300">
+                                <CardContent className="mt-3 text-white text-base leading-relaxed">
+                                    <CardHeader className="text-lg font-semibold text-gray-400">
+                                        {Feature.title}
+                                    </CardHeader>
+                                    {Feature.description}
+                                </CardContent>
+                            </Card>
+                        ))}
                     </div>
                 </div>
             </section>

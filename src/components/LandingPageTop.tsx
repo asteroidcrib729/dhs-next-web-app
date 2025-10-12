@@ -34,14 +34,14 @@ export default function LandingPageTop() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
-                            href="/get-started"
+                            href="/services"
                             className="px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
                         >
                             Get Started
                         </Link>
                         <Link
                             href="/case-studies"
-                            className="px-6 py-3 rounded-lg bg-black hover:bg-gray-500 transition"
+                            className="px-6 py-3 rounded-lg bg-black hover:bg-gray-600 transition"
                         >
                             View Case Studies
                         </Link>

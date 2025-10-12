@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import LandingPageTop from "@/components/LandingPageTop";
-import TrustedMarketingPartner from "@/components/Trusted Marketing Partner";
+import TrustedMarketingPartner from "@/components/TrustedMarketingPartner";
 import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
 import CaseStudy from "@/components/CaseStudy";

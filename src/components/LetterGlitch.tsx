@@ -220,7 +220,6 @@ const LetterGlitch = ({
       context.current = null;
       canvasRef.current = null;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [glitchSpeed, smooth]);
 
   return (

@@ -25,6 +25,7 @@ export default function Header() {
         { href: "/blog", label: "Blog" },
         { href: "/about", label: "About" },
         { href: "/contact", label: "Contact" },
+        { href: "/portfolio", label: "Portfolio" },
     ];
 
     const isActive = (href: string) =>
@@ -62,7 +63,7 @@ export default function Header() {
             <nav
                 className={[
                     "relative z-10 bg-white px-6 py-4 flex items-center justify-between transition-shadow",
-                    scrolled ? "sticky top-0 shadow-md" : "shadow-sm",
+                    scrolled ? "shadow-md" : "shadow-sm",
                 ].join(" ")}
             >
                 {/* Animated background layer */}
@@ -107,7 +108,7 @@ export default function Header() {
 
                 {/* CTA Button */}
                 <Link
-                    href="/quote"
+                    href="/contact"
                     className="hidden md:inline-flex items-center text-white px-5 py-2 rounded-full shadow active:translate-y-[1px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-primary-foreground h-10 sm:inline-flex bg-blue-600 hover:bg-blue-700"
                 >
                     Get Free Quote
@@ -166,13 +167,13 @@ export default function Header() {
             .aurora-layer {
                 position: absolute;
                 inset: -20%;
-                filter: blur(32px);
-                opacity: 0.25;
+                filter: blur(20px);       /* less blur */
+                opacity: 0.5;             /* stronger */
                 will-change: transform, opacity;
                 background:
-                radial-gradient(160px 160px at 20% 30%, rgba(59,130,246,0.75), transparent 60%),
-                radial-gradient(180px 180px at 70% 40%, rgba(99,102,241,0.7), transparent 60%),
-                radial-gradient(160px 160px at 40% 80%, rgba(14,165,233,0.7), transparent 60%);
+                    radial-gradient(180px 180px at 20% 30%, rgba(59,130,246,0.95), transparent 60%),
+                    radial-gradient(200px 200px at 70% 40%, rgba(99,102,241,0.9), transparent 60%),
+                    radial-gradient(180px 180px at 40% 80%, rgba(14,165,233,0.9), transparent 60%);
                 animation: auroraShift 22s linear infinite;
             }
 

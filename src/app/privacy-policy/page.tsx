@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import PrivacyPolicyPage from "@/app/privacy-policy/components/PrivacyPolicyPage";
 import Footer from "@/components/Footer";
 
 export default function PrivacyPolicy() {
@@ -6,7 +7,7 @@ export default function PrivacyPolicy() {
         <>
             <Header/>
             
-            <h1>This Is The Privacy Policy Page.</h1>
+            <PrivacyPolicyPage/>
 
             <Footer/>
         </>

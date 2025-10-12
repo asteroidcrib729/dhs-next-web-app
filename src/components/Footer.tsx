@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function Footer() {
     return (
-        <div className="relative bg-gradient-to-r from-slate-800 to-gray-900 text-white">
+        <div className="relative bg-gradient-to-r from-slate-500 to-slate-900 text-white">
             <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="lg:flex lg:items-start lg:gap-8">
 
@@ -43,12 +44,11 @@ export default function Footer() {
                                         className="w-full p-2 mb-2 md:mb-0 bg-transparent text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-teal-500"
                                     />
 
-                                    <Link
-                                        href="/#"
-                                        className="mt-1 w-full bg-teal-500 px-6 py-3 text-sm font-bold tracking-wide text-white uppercase rounded-lg hover:bg-teal-600 transition sm:mt-0 sm:w-auto sm:shrink-0"
+                                    <Button asChild
+                                        className="w-full bg-teal-500 px-6 py-3 text-sm font-bold tracking-wide text-white uppercase rounded-lg hover:bg-teal-600 transition sm:w-auto sm:shrink-0"
                                     >
-                                        Sign Up
-                                    </Link>
+                                        <Link href="/#">Sign Up</Link>
+                                    </Button>
                                 </div>
                             </form>
                         </div>
@@ -57,11 +57,9 @@ export default function Footer() {
                         <div className="col-span-2 sm:col-span-1">
                             <p className="font-medium">Services</p>
                             <ul className="mt-6 space-y-4 text-sm">
-                                <li><a href="#" className="hover:text-teal-400 transition">1on1 Coaching</a></li>
-                                <li><a href="#" className="hover:text-teal-400 transition">Company Review</a></li>
-                                <li><a href="#" className="hover:text-teal-400 transition">Accounts Review</a></li>
-                                <li><a href="#" className="hover:text-teal-400 transition">HR Consulting</a></li>
-                                <li><a href="#" className="hover:text-teal-400 transition">SEO Optimisation</a></li>
+                                <li><Link href="/services#service-section" className="hover:text-teal-400 transition">Digital Marketing</Link></li>
+                                <li><Link href="/services#service-section" className="hover:text-teal-400 transition">Web Development</Link></li>
+                                <li><Link href="/services#service-section" className="hover:text-teal-400 transition">IT Solutions</Link></li>
                             </ul>
                         </div>
 
@@ -69,9 +67,9 @@ export default function Footer() {
                         <div className="col-span-2 sm:col-span-1">
                             <p className="font-medium">Company</p>
                             <ul className="mt-6 space-y-4 text-sm">
-                                <li><a href="#" className="hover:text-teal-400 transition">About</a></li>
-                                <li><a href="#" className="hover:text-teal-400 transition">Meet the Team</a></li>
-                                <li><a href="#" className="hover:text-teal-400 transition">Accounts Review</a></li>
+                                <li><Link href="/about" className="hover:text-teal-400 transition">About Us</Link></li>
+                                <li><Link href="/contact" className="hover:text-teal-400 transition">Contact Us</Link></li>
+                                <li><Link href="/portfolio" className="hover:text-teal-400 transition">Our Portfolio</Link></li>
                             </ul>
                         </div>
 
@@ -79,9 +77,9 @@ export default function Footer() {
                         <div className="col-span-2 sm:col-span-1">
                             <p className="font-medium">Helpful Links</p>
                             <ul className="mt-6 space-y-4 text-sm">
-                                <li><a href="#" className="hover:text-teal-400 transition">Contact</a></li>
-                                <li><a href="#" className="hover:text-teal-400 transition">FAQs</a></li>
-                                <li><a href="#" className="hover:text-teal-400 transition">Live Chat</a></li>
+                                <li><Link href="/contact" className="hover:text-teal-400 transition">Contact Us</Link></li>
+                                <li><Link href="/blog" className="hover:text-teal-400 transition">Our Blog</Link></li>
+                                <li><Link href="/#faq-section" className="hover:text-teal-400 transition">FAQs</Link></li>
                             </ul>
                         </div>
 
@@ -89,10 +87,9 @@ export default function Footer() {
                         <div className="col-span-2 sm:col-span-1">
                             <p className="font-medium">Legal</p>
                             <ul className="mt-6 space-y-4 text-sm">
-                                <li><a href="#" className="hover:text-teal-400 transition">Accessibility</a></li>
-                                <li><a href="#" className="hover:text-teal-400 transition">Returns Policy</a></li>
-                                <li><a href="#" className="hover:text-teal-400 transition">Refund Policy</a></li>
-                                <li><a href="#" className="hover:text-teal-400 transition">Hiring-3 Statistics</a></li>
+                                <li><Link href="/terms-and-conditions" className="hover:text-teal-400 transition">Terms & Conditions</Link></li>
+                                <li><Link href="/privacy-policy" className="hover:text-teal-400 transition">Privacy Policy</Link></li>
+                                <li><Link href="/cookie-policy" className="hover:text-teal-400 transition">Cookie Policy</Link></li>
                             </ul>
                         </div>
 
@@ -100,18 +97,19 @@ export default function Footer() {
                         <div className="col-span-2 sm:col-span-1">
                             <p className="font-medium">Downloads</p>
                             <ul className="mt-6 space-y-4 text-sm">
-                                <li><a href="#" className="hover:text-teal-400 transition">Marketing Calendar</a></li>
-                                <li><a href="#" className="hover:text-teal-400 transition">SEO Infographics</a></li>
+                                <li><Link href="/case-studies" className="hover:text-teal-400 transition">Case Studies</Link></li>
+                                <li><Link href="/#" className="hover:text-teal-400 transition">Marketing Calendar</Link></li>
+                                <li><Link href="/#" className="hover:text-teal-400 transition">SEO Infographics</Link></li>
                             </ul>
                         </div>
 
                         {/* Socials */}
                         <ul className="col-span-2 flex flex-col md:flex-row justify-center md:justify-start gap-4 md:gap-6 lg:col-span-5 lg:justify-end">
-                            <li><a href="#" className="hover:text-teal-400 transition">Facebook</a></li>
-                            <li><a href="#" className="hover:text-teal-400 transition">Instagram</a></li>
-                            <li><a href="#" className="hover:text-teal-400 transition">Twitter</a></li>
-                            <li><a href="#" className="hover:text-teal-400 transition">GitHub</a></li>
-                            <li><a href="#" className="hover:text-teal-400 transition">Dribbble</a></li>
+                            <li><Link href="/#" className="hover:text-teal-400 transition">Facebook</Link></li>
+                            <li><Link href="/#" className="hover:text-teal-400 transition">Instagram</Link></li>
+                            <li><Link href="/#" className="hover:text-teal-400 transition">Twitter</Link></li>
+                            <li><Link href="/#" className="hover:text-teal-400 transition">GitHub</Link></li>
+                            <li><Link href="/#" className="hover:text-teal-400 transition">Dribbble</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -122,9 +120,9 @@ export default function Footer() {
                             &copy; 2025. Tech Ventures System Pvt. Ltd. All rights reserved.
                         </p>
                         <ul className="mt-4 flex flex-wrap justify-center gap-4 text-xs sm:mt-0 md:justify-end">
-                            <li><a href="#" className="hover:text-teal-400 transition">Terms & Conditions</a></li>
-                            <li><a href="#" className="hover:text-teal-400 transition">Privacy Policy</a></li>
-                            <li><a href="#" className="hover:text-teal-400 transition">Cookies</a></li>
+                            <li><Link href="/terms-and-conditions" className="hover:text-teal-400 transition">Terms & Conditions</Link></li>
+                            <li><Link href="/privacy-policy" className="hover:text-teal-400 transition">Privacy Policy</Link></li>
+                            <li><Link href="/cookie-policy" className="hover:text-teal-400 transition">Cookie Policy</Link></li>
                         </ul>
                     </div>
                 </div>

@@ -23,7 +23,7 @@ const data: Testimonial[] = [
         role: "IT Director, Global Manufacturing",
     },
     {
-        rating: 4,
+        rating: 5,
         quote:
             "“The PPC campaigns they managed generated a 400% ROI. Their team is professional, responsive, and delivers results.”",
         name: "Emily Rodriguez",
@@ -63,7 +63,7 @@ export default function TestimonialsSection() {
                     {data.map((t, idx) => (
                         <article
                             key={idx}
-                            className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm ring-1 ring-black/5"
+                            className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm ring-1 ring-black/5 transition-transform hover:-translate-y-0.5 hover:shadow-md"
                         >
                             <Stars count={t.rating} />
 
