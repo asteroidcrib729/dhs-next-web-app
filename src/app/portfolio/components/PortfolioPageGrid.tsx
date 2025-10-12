@@ -99,10 +99,10 @@ export default function PortfolioPageGrid() {
                     </div>
 
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                        {projects.map((p, i) => (
+                        {projects.map((project) => (
                             <Card
-                                key={p.id}
-                                className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-0 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                                key={project.id}
+                                className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white project-0 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
                                 {/* subtle gradient border glow on hover */}
                                 <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition duration-300 group-hover:opacity-100">
                                     <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-br from-blue-500/30 via-indigo-500/30 to-cyan-500/30 blur-[2px]" />
@@ -115,14 +115,14 @@ export default function PortfolioPageGrid() {
                                     <div className="flex flex-col justify-center items-center gap-3">
                                         <div className="grid h-48 w-full place-items-center rounded-xl border border-slate-200 bg-slate-400">
                                             <Image
-                                                src={p.logo}
-                                                alt={`${p.title} logo`}
-                                                className={`${p.width_class} ${p.height_class} opacity-70`}
+                                                src={project.logo}
+                                                alt={`${project.title} logo`}
+                                                className={`${project.width_class} ${project.height_class} opacity-70`}
                                                 width={200}
                                                 height={200}
                                             />
                                         </div>
-                                        <CardTitle className="text-lg text-slate-900">{p.title}</CardTitle>
+                                        <CardTitle className="text-lg text-slate-900">{project.title}</CardTitle>
                                     </div>
                                     {/* floating pill on hover 
                                     <div className="pointer-events-none absolute right-4 top-4 translate-y-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-xs text-slate-700 opacity-0 backdrop-blur transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
@@ -133,7 +133,7 @@ export default function PortfolioPageGrid() {
 
                                 <CardContent className="px-5">
                                     <CardDescription className="flex justify-center items-center leading-6 text-sm text-slate-600">
-                                        {p.desc}
+                                        {project.desc}
                                     </CardDescription>
                                 </CardContent>
 
@@ -144,7 +144,7 @@ export default function PortfolioPageGrid() {
                                         {/* Button with link as child (shadcn) */}
                                         <Button asChild className="w-full rounded-full bg-blue-600">
                                             <Link
-                                                href={p.href}
+                                                href={project.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center gap-2"
