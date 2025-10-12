@@ -28,6 +28,7 @@ const eslintConfig = [
       '@typescript-eslint/ban-ts-comment': 'off',
       'react-hooks/exhaustive-deps': 'off',
       '@typescript-eslint/no-empty-object-type': 'off',
+      //'@typescript-eslint/no-require-imports': 'off',
     },
   }),
 ];
