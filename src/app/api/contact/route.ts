@@ -68,7 +68,7 @@ export async function POST(req: Request) {
             message,
             newsletter: toBool(raw.newsletter),     // Boolean (default false in DB)
             terms: toBool(raw.terms),               // Boolean (required)
-        } satisfies Prisma.ContactCreateInput;
+        } satisfies Prisma.contactCreateInput;
 
         // Minimal required validation for your model
         if (!data.firstName || !data.lastName || !data.email || !data.service || !data.terms) {
