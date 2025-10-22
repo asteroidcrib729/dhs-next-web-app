@@ -44,7 +44,7 @@ export default function Header() {
                     </div>
                     <div className="flex items-center gap-2">
                         <FaWhatsapp size={16} />
-                        <Link className="hover:text-blue-400" href="tel:+92-304-2204258" aria-label="WhatsApp +92-304-2204258">
+                        <Link className="hover:text-blue-400" href="https://wa.me/923042204258?text=Hello%21%20I%27m%20interested%20in%20your%20service%2E" aria-label="WhatsApp +92-304-2204258" target="_blank">
                             +92-304-2204258
                         </Link>
                     </div>

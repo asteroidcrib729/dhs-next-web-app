@@ -1,4 +1,8 @@
-import Image from "next/image";
+"use client";
+
+// import Image from "next/image";
+import React, { useState } from "react";
+import ReactPlayer from "react-player";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -12,7 +16,7 @@ export default function PortfolioPageGrid() {
             href: "https://eng-properties.com/",
             logo: "https://eng-properties.com/Images/ENG_PROPERTIES_LOGO-removebg-preview.png",
             width_class: "md:h-36",
-            height_class: "md:w-72", 
+            height_class: "md:w-72",
         },
         {
             id: 2,
@@ -21,7 +25,7 @@ export default function PortfolioPageGrid() {
             href: "https://jsnmedical.com.au/",
             logo: "https://jsnmedical.com.au/wp-content/uploads/2025/08/B0F1I8EmB-1.png",
             width_class: "md:h-36",
-            height_class: "md:w-84", 
+            height_class: "md:w-84",
         },
         {
             id: 3,
@@ -30,7 +34,7 @@ export default function PortfolioPageGrid() {
             href: "https://missionhealthcare.com.au/",
             logo: "https://missionhealthcare.com.au/wp-content/uploads/2025/10/mission-healthcare-logo-ver2.svg",
             width_class: "md:h-48",
-            height_class: "md:w-84", 
+            height_class: "md:w-84",
         },
         {
             id: 4,
@@ -39,7 +43,7 @@ export default function PortfolioPageGrid() {
             href: "https://nectronix.com/",
             logo: "https://nectronix.com/wp-content/uploads/2025/08/Untitled_design__1_-removebg-preview.png",
             width_class: "md:h-36",
-            height_class: "md:w-84", 
+            height_class: "md:w-84",
         },
         {
             id: 5,
@@ -57,37 +61,11 @@ export default function PortfolioPageGrid() {
             href: "https://sharzproperties.com/",
             logo: "https://sharzproperties.com/images/Sharz-Properties-Logo.svg",
             width_class: "md:h-48",
-            height_class: "md:w-84", 
+            height_class: "md:w-84",
         },
-        // {
-        //     id: 7,
-        //     title: "Omada Pro - Solutions Hub",
-        //     desc: "Network solutions hub with comparison tables and multi-locale support.",
-        //     href: "https://example.com",
-        //     logo: "/logo-placeholder.svg",
-        // },
-        // {
-        //     id: 8,
-        //     title: "RetailChain - Local SEO",
-        //     desc: "Store-finder + schema automation and geo-landing pages for 120+ locations.",
-        //     href: "https://example.com",
-        //     logo: "/logo-placeholder.svg",
-        // },
-        // {
-        //     id: 9,
-        //     title: "EduNext - Admissions Portal",
-        //     desc: "Headless CMS, application tracker, and analytics for a university.",
-        //     href: "https://example.com",
-        //     logo: "/logo-placeholder.svg",
-        // },
-        // {
-        //   id: 10,
-        //   title: "VeeTech - Disaster Recovery",
-        //   desc: "Trust-driven site with ROI widgets, calculators, and gated playbooks.",
-        //   href: "https://example.com",
-        //   logo: "/logo-placeholder.svg",
-        // },
     ]
+
+    const [hoveredId, setHoveredId] = useState<number | null>(null);
 
     return (
         <>
@@ -113,7 +91,9 @@ export default function PortfolioPageGrid() {
 
                                 <CardHeader className="px-5 pt-5 pb-0">
                                     <div className="flex flex-col justify-center items-center gap-3">
-                                        <div className="grid h-48 w-full place-items-center rounded-xl border border-slate-200 bg-slate-400">
+                                        <div onMouseEnter={() => setHoveredId(project.id)} onMouseLeave={() => setHoveredId(null)} onTouchStart={() => setHoveredId(project.id)} onTouchEnd={() => setHoveredId(null)} className="grid h-48 w-full place-items-center rounded-xl border border-slate-200 bg-slate-400">
+                                            <ReactPlayer src="" playing={hoveredId === project.id} controls={false} loop={true} muted={true} pip={true} /*light={true}*/ width="100%" height="100%" className="w-full h-full"></ReactPlayer>
+                                            {/*
                                             <Image
                                                 src={project.logo}
                                                 alt={`${project.title} logo`}
@@ -121,6 +101,7 @@ export default function PortfolioPageGrid() {
                                                 width={200}
                                                 height={200}
                                             />
+                                            */}
                                         </div>
                                         <CardTitle className="text-lg text-slate-900">{project.title}</CardTitle>
                                     </div>
@@ -167,6 +148,12 @@ export default function PortfolioPageGrid() {
                         ))}
                     </div>
                 </div>
+
+                {/*
+                <div className="bg-black w-full h-[500px]">
+                    <ReactPlayer src="https://www.youtube.com/watch?v=X8BYu3dMKf0&pp=ygUcV2ViIERldmVsb3BtZW50IFRlY2hub2xvZ2llcw%3D%3D" controls={true} width="100%" height="100%" className="w-full h-full"></ReactPlayer>
+                </div>
+                */}
             </section>
         </>
     )

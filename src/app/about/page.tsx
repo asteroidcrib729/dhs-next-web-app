@@ -3,7 +3,7 @@ import AboutPageTop from "@/app/about/components/AboutPageTop";
 import AboutPageStory from "@/app/about/components/AboutPageStory";
 import AboutPageMissionVision from "@/app/about/components/AboutPageMissionVision";
 import AboutPageTeams from "@/app/about/components/AboutPageTeams";
-import AboutPageStats from "@/app/about/components/AboutPageStats";
+// import AboutPageStats from "@/app/about/components/AboutPageStats";
 import AboutPageApproach from "@/app/about/components/AboutPageApproach";
 import AboutPageCertifications from "@/app/about/components/AboutPageCertifications";
 import CTA from "@/components/CTA";
@@ -24,7 +24,7 @@ export default function About() {
 
             <AboutPageTeams/>
 
-            <AboutPageStats/>
+            {/* <AboutPageStats/> */}
 
             <AboutPageApproach/>
 

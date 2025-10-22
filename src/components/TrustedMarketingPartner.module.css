@@ -1,0 +1,37 @@
+/* ==== Partner slider animation (CSS Modules) ==== */
+
+/* Mask container (keeps overflow hidden) */
+.mask {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Moving track */
+.track {
+  display: flex;
+  width: max-content;            /* grows to fit content */
+  gap: 1rem;                     /* equals Tailwind gap-4 */
+  padding-right: 1rem;           /* match Tailwind pr-4 visually */
+  will-change: transform;
+  animation: partner-scroll-x var(--slider-speed, 35s) linear infinite;
+  animation-play-state: running;
+}
+
+/* Pause the animation on hover */
+.mask:hover .track {
+  animation-play-state: paused;
+}
+
+/* Duplicate-two-rows loop: shift by -50% */
+@keyframes partner-scroll-x {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Respect user’s reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none !important;
+    transform: translateX(0) !important;
+  }
+}

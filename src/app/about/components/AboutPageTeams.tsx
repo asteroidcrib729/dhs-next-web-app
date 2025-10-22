@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { SiLinkedin, SiX } from "react-icons/si";
+import { SiLinkedin, /* SiX */ } from "react-icons/si";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,32 +11,40 @@ export default function AboutPageTeams() {
             role: "CEO & Co-Founder",
             bio: "15+ years in digital marketing with expertise in scaling businesses from startups to enterprises.",
             image: "/profile-placeholder.jpg",
-            linkedin: "#",
-            twitter: "#",
+            linkedin: "https://www.linkedin.com/in/mubarak-bhimani-analytical-research-development-professional/",
+            // twitter: "#",
         },
         {
             name: "Wasif Raza",
             role: "CMO & Co-Founder",
             bio: "Expert in digital marketing strategies and brand development with 12+ years of experience in driving business growth.",
             image: "/profile-placeholder.jpg",
-            linkedin: "#",
-            twitter: "#",
+            linkedin: "https://www.linkedin.com/in/wasif-raza-08b7a1201/",
+            // twitter: "#",
         },
         {
-            name: "Emily Rodriguez",
-            role: "Head of Digital Marketing",
-            bio: "SEO and PPC specialist who has generated over $50M in revenue for clients.",
+            name: "Jahangeer Rizvi",
+            role: "Head of Business Development",
+            bio: "Leader in global market expansion and B2B sales strategy with 12+ years of experience in building and scaling high-growth revenue streams.",
             image: "/profile-placeholder.jpg",
-            linkedin: "#",
-            twitter: "#",
+            linkedin: "https://www.linkedin.com/in/rizvi-saab-4b407a26/",
+            // twitter: "#",
         },
         {
-            name: "David Park",
-            role: "Cybersecurity Lead",
-            bio: "Certified security expert specializing in enterprise-grade protection solutions.",
+            name: "Faraz Hussain",
+            role: "Full-Stack Developer",
+            bio: "Full-Stack Developer who has engineered scalable web applications serving over 1M+ monthly active users.",
             image: "/profile-placeholder.jpg",
-            linkedin: "#",
-            twitter: "#",
+            linkedin: "https://www.linkedin.com/in/faraz-hussain-a79637288",
+            // twitter: "#",
+        },
+        {
+            name: "Asad Raza",
+            role: "Full-Stack Developer",
+            bio: "Full-Stack Developer with a track record of shipping 15+ production-level applications from concept to launch.",
+            image: "/profile-placeholder.jpg",
+            linkedin: "https://www.linkedin.com/in/syed-asad-raza-naqvi-a932a7296/",
+            // twitter: "#",
         },
     ]
 
@@ -75,12 +83,13 @@ export default function AboutPageTeams() {
                                             variant="outline"
                                             className="h-8 w-8 rounded-full border-gray-300 text-gray-600 bg-white hover:bg-blue-50 hover:border-blue-400 hover:text-blue-600 focus:ring-2 focus:ring-blue-500 focus:outline-none active:scale-95 transition-all duration-200"
                                             asChild>
-                                            <Link href="#" aria-label="LinkedIn">
+                                            <Link href={member.linkedin} target="_blank" aria-label="LinkedIn">
                                                 <SiLinkedin className="h-4 w-4" />
                                             </Link>
                                         </Button>
 
                                         {/* X (Twitter) Button */}
+                                        {/*
                                         <Button
                                             size="icon"
                                             variant="outline"
@@ -90,6 +99,7 @@ export default function AboutPageTeams() {
                                                 <SiX className="h-4 w-4" />
                                             </Link>
                                         </Button>
+                                        */}
                                     </div>
                                 </CardContent>
                             </Card>

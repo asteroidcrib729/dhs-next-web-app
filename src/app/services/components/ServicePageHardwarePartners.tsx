@@ -5,17 +5,17 @@ export default function ServicePageHardwarePartners() {
     const hardwareBrands = [
         {
             name: "Dell",
-            href: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/dell.svg",
+            href: "/dell-latest-logo.svg",
             description: "Enterprise servers, workstations, and storage solutions",
         },
         {
             name: "HP",
-            href: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/hp.svg",
+            href: "/hp-latest-logo.svg",
             description: "Business laptops, printers, and server infrastructure",
         },
         {
             name: "Lenovo",
-            href: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/lenovo.svg",
+            href: "/lenovo-latest-logo.svg",
             description: "ThinkPad laptops, desktops, and data center solutions",
         },
         {
@@ -30,17 +30,17 @@ export default function ServicePageHardwarePartners() {
         },
         {
             name: "Constructor Tech",
-            href: "/constructor-logo.png",
+            href: "/constructor-tech-latest-logo.svg",
             description: "Custom technology solutions and integration",
         },
         {
-            name: "Veem",
-            href: "/veeam-logo.svg",
+            name: "Veeam",
+            href: "/veeam-latest-logo.svg",
             description: "Backup and disaster recovery solutions",
         },
         {
             name: "VMware",
-            href: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/vmware.svg",
+            href: "/vmware-latest-logo.svg",
             description: "Virtualization and cloud infrastructure",
         },
     ]
@@ -68,7 +68,7 @@ export default function ServicePageHardwarePartners() {
                                             alt={`${brand.name} logo`}
                                             width={120}
                                             height={60}
-                                            className="mx-auto w-auto h-20 grayscale transition-all"
+                                            className="mx-auto w-auto h-20 transition-all"
                                         />
                                     </div>
                                     <h3 className="font-semibold text-gray-900 mb-2">{brand.name}</h3>

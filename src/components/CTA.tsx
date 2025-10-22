@@ -20,7 +20,7 @@ export default function CTA() {
                 <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
                     {/* Call button (pill) */}
                     <Link
-                        href="tel:+92-304-2204258"
+                        href="tel:+92-300-1297101"
                         className="inline-flex items-center gap-3 rounded-2xl bg-white px-6 py-4 text-base font-semibold text-[#2B47D9] shadow-lg ring-1 ring-white/20 transition hover:bg-slate-50 md:text-lg"
                     >
                         <svg
@@ -32,7 +32,7 @@ export default function CTA() {
                         >
                             <path d="M2 5.75A1.75 1.75 0 0 1 3.75 4h2.22c.72 0 1.35.46 1.56 1.14l.86 2.72c.19.6.02 1.25-.44 1.67l-1.44 1.34a12.6 12.6 0 0 0 5.19 5.19l1.34-1.44c.42-.46 1.07-.63 1.67-.44l2.72.86c.68.21 1.14.84 1.14 1.56v2.22A1.75 1.75 0 0 1 18.25 22h-1.5C9.71 22 2 14.29 2 7.25v-1.5Z" />
                         </svg>
-                        <span className="whitespace-nowrap">Call +92-304-2204258</span>
+                        <span className="whitespace-nowrap">Call +92-300-1297101</span>
                     </Link>
 
                     {/* Primary CTA */}
