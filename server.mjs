@@ -1,19 +1,18 @@
-import { spawn } from "child_process";
+import next from "next";
+import * as http from "http";
 
-// Run Next.js's built-in server bound to the Passenger/cPanel PORT
-const child = spawn(
-    process.execPath, // node binary
-    [
-        "node_modules/next/dist/bin/next",
-        "start",
-        "-p",
-        process.env.PORT || "3000",
-    ],
-    { stdio: "inherit" }
-);
+process.env.NODE_ENV = "production";
+process.env.NODE_OPTIONS = "--max-old-space-size=512";
 
-child.on("close", (code) => process.exit(code));
-child.on("error", (err) => {
-    console.error(err);
-    process.exit(1);
+const app = next({ dev: false });
+const handle = app.getRequestHandler();
+
+const port = process.env.PORT || 3000;
+
+app.prepare().then(() => {
+    http
+        .createServer((req, res) => handle(req, res))
+        .listen(port, () => {
+            console.log(`Ready on port ${port}`);
+        });
 });
