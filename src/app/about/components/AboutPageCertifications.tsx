@@ -16,12 +16,12 @@ export default function AboutPageCertifications() {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
                         {[
-                            "/google.svg",
-                            "/microsoft.svg",
-                            "/vmware-7.svg",
-                            "/dell.svg",
-                            "hp.svg",
-                            "/sangfor.svg",
+                            "/google-latest-logo.svg",
+                            "/microsoft-certified-latest-logo.svg",
+                            "/vmware-latest-logo.svg",
+                            "/dell-latest-logo.svg",
+                            "hp-latest-logo.svg",
+                            "/sangfor-latest-logo.svg",
                         ].map((cert, index) => (
                             <div key={index} className="text-center">
                                 <div className="w-20 h-20 rounded-lg flex items-center justify-center mx-auto mb-2 hover:scale-[110%] transition-transform duration-300">
