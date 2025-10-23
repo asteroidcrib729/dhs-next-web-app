@@ -4,7 +4,7 @@ import TrustedMarketingPartner from "@/components/TrustedMarketingPartner";
 import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
 import CaseStudy from "@/components/CaseStudy";
-import Pricing from "@/components/Pricing";
+// import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -24,7 +24,9 @@ export default function Home() {
 
             <CaseStudy />
 
+            {/*
             <Pricing />
+            */}
 
             <FAQ />
             

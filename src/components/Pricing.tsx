@@ -12,7 +12,7 @@ export default function Pricing() {
 
     const plans = [
         {
-            name: 'Freelancer',
+            name: 'Digital Marketing',
             description: 'The essentials to provide your best work for clients.',
             monthlyPrice: 19,
             annualPrice: 15,
@@ -25,7 +25,7 @@ export default function Pricing() {
             popular: false,
         },
         {
-            name: 'Startup',
+            name: 'Web Development',
             description: 'A plan that scales with your rapidly growing business.',
             monthlyPrice: 29,
             annualPrice: 25,
@@ -39,7 +39,7 @@ export default function Pricing() {
             popular: true,
         },
         {
-            name: 'Enterprise',
+            name: 'IT Solutions',
             description: 'Dedicated support and infrastructure for your company.',
             monthlyPrice: 59,
             annualPrice: 55,
