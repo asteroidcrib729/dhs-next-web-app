@@ -3,7 +3,7 @@ export const runtime = 'nodejs';
 
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
-import type { Prisma } from '@/generated/prisma';
+import type { Prisma } from '@prisma/client';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
