@@ -17,17 +17,17 @@ export default function AboutPageCertifications() {
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
                         {[
                             "/google-latest-logo.svg",
-                            "/microsoft-certified-latest-logo.svg",
+                            "/microsoft-certified-latest-logo.png",
                             "/vmware-latest-logo.svg",
                             "/dell-latest-logo.svg",
-                            "hp-latest-logo.svg",
+                            "/hp-latest-logo.svg",
                             "/sangfor-latest-logo.svg",
                         ].map((cert, index) => (
                             <div key={index} className="text-center">
-                                <div className="w-20 h-20 rounded-lg flex items-center justify-center mx-auto mb-2 hover:scale-[110%] transition-transform duration-300">
+                                <div className="w-30 h-30 rounded-lg flex items-center justify-center mx-auto mb-2 hover:scale-[110%] transition-transform duration-300">
                                     {/**/}
                                     <Badge className="bg-white w-full h-full">
-                                        <Image src={cert} alt="" width={240} height={80} className="w-full h-full"></Image>
+                                        <Image src={cert} alt="" width={240} height={80} className="w-auto h-auto"></Image>
                                     </Badge>
                                 </div>
                             </div>
