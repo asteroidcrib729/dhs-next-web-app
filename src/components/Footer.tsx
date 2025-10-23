@@ -105,7 +105,7 @@ export default function Footer() {
 
                         {/* Socials */}
                         <ul className="col-span-2 flex flex-col md:flex-row justify-center md:justify-start gap-4 md:gap-6 lg:col-span-5 lg:justify-end">
-                            <li><Link href="https://www.facebook.com/share/16YinjskGp/?mibextid=wwXIfr" target="_blank" className="hover:text-teal-400 transition">Facebook</Link></li>
+                            <li><Link href="https://www.facebook.com/techventuresolution" target="_blank" className="hover:text-teal-400 transition">Facebook</Link></li>
                             <li><Link href="https://www.instagram.com/techventuressystem/" target="_blank" className="hover:text-teal-400 transition">Instagram</Link></li>
                             <li><Link href="https://pk.linkedin.com/company/techventuresolution" target="_blank" className="hover:text-teal-400 transition">LinkedIn</Link></li>
                             {/* <li><Link href="/#" target="_blank" className="hover:text-teal-400 transition">GitHub</Link></li> */}
