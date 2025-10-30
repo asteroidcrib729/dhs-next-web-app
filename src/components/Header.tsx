@@ -56,7 +56,7 @@ export default function Header() {
                         </Link>
                     </div>
                 </div>
-                <span className="hidden sm:block">Free Consultation Available</span>
+                <span className="hidden sm:block"><Link className="hover:text-blue-400" target="_blank" href="https://maplebyte.co/contact-us-copy/">Free Consultation Available</Link></span>
             </div>
 
             {/* Main Navbar */}
@@ -150,6 +150,11 @@ export default function Header() {
                     <Mail size={16} />
                     <Link className="hover:text-blue-500" href="mailto:info@techventuresolution.com">
                         info@techventuresolution.com
+                    </Link>
+                </div>
+                <div className="flex items-center">
+                    <Link className="hover:text-blue-500" target="_blank" href="https://maplebyte.co/contact-us-copy/">
+                        Free Consultation Available
                     </Link>
                 </div>
 

@@ -47,7 +47,9 @@ body {
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #3b82f6, 0 0 5px #3b82f6;
+  box-shadow:
+    0 0 10px #3b82f6,
+    0 0 5px #3b82f6;
   opacity: 1;
   transform: rotate(3deg) translate(0px, -4px);
 }
@@ -77,4 +79,10 @@ h2[manage],
 h2[third],
 h2[updates] {
   scroll-margin-top: 6.5rem;
+}
+
+/* Remove the circular shadow glow and the triangle icon */
+.react-player__shadow,
+.react-player__play-icon {
+  display: none !important;
 }

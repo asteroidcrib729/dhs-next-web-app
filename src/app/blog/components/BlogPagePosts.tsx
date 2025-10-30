@@ -32,7 +32,7 @@ export default function BlogPagePosts() {
             date: "December 15, 2024",
             readTime: "12 min read",
             category: "Digital Marketing",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-01.png",
             featured: true,
         },
         {
@@ -43,7 +43,7 @@ export default function BlogPagePosts() {
             date: "November 10, 2024",
             readTime: "7 min read",
             category: "Digital Marketing",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-02.jpg",
             featured: false,
         },
         {
@@ -54,7 +54,7 @@ export default function BlogPagePosts() {
             date: "October 22, 2024",
             readTime: "9 min read",
             category: "Digital Marketing",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-03.png",
             featured: false,
         },
         {
@@ -65,7 +65,7 @@ export default function BlogPagePosts() {
             date: "October 8, 2024",
             readTime: "8 min read",
             category: "Digital Marketing",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-04.svg",
             featured: false,
         },
         {
@@ -76,7 +76,7 @@ export default function BlogPagePosts() {
             date: "September 30, 2024",
             readTime: "10 min read",
             category: "Digital Marketing",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-05.png",
             featured: false,
         },
 
@@ -89,7 +89,7 @@ export default function BlogPagePosts() {
             date: "December 12, 2024",
             readTime: "8 min read",
             category: "IT Solutions",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-06.webp",
             featured: false,
         },
         {
@@ -100,7 +100,7 @@ export default function BlogPagePosts() {
             date: "November 20, 2024",
             readTime: "7 min read",
             category: "IT Solutions",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-07.jpg",
             featured: false,
         },
         {
@@ -111,7 +111,7 @@ export default function BlogPagePosts() {
             date: "October 25, 2024",
             readTime: "10 min read",
             category: "IT Solutions",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-08.jpg",
             featured: false,
         },
         {
@@ -122,7 +122,7 @@ export default function BlogPagePosts() {
             date: "September 18, 2024",
             readTime: "6 min read",
             category: "IT Solutions",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-09.avif",
             featured: false,
         },
         {
@@ -133,7 +133,7 @@ export default function BlogPagePosts() {
             date: "August 30, 2024",
             readTime: "9 min read",
             category: "IT Solutions",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-10.jpg",
             featured: false,
         },
 
@@ -146,7 +146,7 @@ export default function BlogPagePosts() {
             date: "December 10, 2024",
             readTime: "10 min read",
             category: "SEO",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-11.jpg",
             featured: false,
         },
         {
@@ -157,7 +157,7 @@ export default function BlogPagePosts() {
             date: "November 5, 2024",
             readTime: "8 min read",
             category: "SEO",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-12.png",
             featured: false,
         },
         {
@@ -168,7 +168,7 @@ export default function BlogPagePosts() {
             date: "October 14, 2024",
             readTime: "9 min read",
             category: "SEO",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-13.webp",
             featured: false,
         },
         {
@@ -179,7 +179,7 @@ export default function BlogPagePosts() {
             date: "September 28, 2024",
             readTime: "7 min read",
             category: "SEO",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-14.webp",
             featured: false,
         },
         {
@@ -190,7 +190,7 @@ export default function BlogPagePosts() {
             date: "August 15, 2024",
             readTime: "6 min read",
             category: "SEO",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-15.jpg",
             featured: false,
         },
 
@@ -203,7 +203,7 @@ export default function BlogPagePosts() {
             date: "December 8, 2024",
             readTime: "7 min read",
             category: "Cybersecurity",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-16.png",
             featured: false,
         },
         {
@@ -214,7 +214,7 @@ export default function BlogPagePosts() {
             date: "November 19, 2024",
             readTime: "6 min read",
             category: "Cybersecurity",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-17.png",
             featured: false,
         },
         {
@@ -225,7 +225,7 @@ export default function BlogPagePosts() {
             date: "October 30, 2024",
             readTime: "8 min read",
             category: "Cybersecurity",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-18.webp",
             featured: false,
         },
         {
@@ -236,7 +236,7 @@ export default function BlogPagePosts() {
             date: "September 12, 2024",
             readTime: "9 min read",
             category: "Cybersecurity",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-19.jpg",
             featured: false,
         },
         {
@@ -247,7 +247,7 @@ export default function BlogPagePosts() {
             date: "August 25, 2024",
             readTime: "10 min read",
             category: "Cybersecurity",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-20.png",
             featured: false,
         },
 
@@ -260,7 +260,7 @@ export default function BlogPagePosts() {
             date: "December 5, 2024",
             readTime: "9 min read",
             category: "PPC",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-21.jpg",
             featured: false,
         },
         {
@@ -271,7 +271,7 @@ export default function BlogPagePosts() {
             date: "November 14, 2024",
             readTime: "7 min read",
             category: "PPC",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-22.jpg",
             featured: false,
         },
         {
@@ -282,7 +282,7 @@ export default function BlogPagePosts() {
             date: "October 22, 2024",
             readTime: "8 min read",
             category: "PPC",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-23.jpg",
             featured: false,
         },
         {
@@ -293,7 +293,7 @@ export default function BlogPagePosts() {
             date: "September 16, 2024",
             readTime: "6 min read",
             category: "PPC",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-24.jpg",
             featured: false,
         },
         {
@@ -304,7 +304,7 @@ export default function BlogPagePosts() {
             date: "August 5, 2024",
             readTime: "9 min read",
             category: "PPC",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-25.jpg",
             featured: false,
         },
 
@@ -317,7 +317,7 @@ export default function BlogPagePosts() {
             date: "December 1, 2024",
             readTime: "6 min read",
             category: "Social Media",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-26.webp",
             featured: false,
         },
         {
@@ -328,7 +328,7 @@ export default function BlogPagePosts() {
             date: "November 18, 2024",
             readTime: "7 min read",
             category: "Social Media",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-27.png",
             featured: false,
         },
         {
@@ -339,7 +339,7 @@ export default function BlogPagePosts() {
             date: "October 10, 2024",
             readTime: "8 min read",
             category: "Social Media",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-28.jpg",
             featured: false,
         },
         {
@@ -350,7 +350,7 @@ export default function BlogPagePosts() {
             date: "September 5, 2024",
             readTime: "9 min read",
             category: "Social Media",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-29.png",
             featured: false,
         },
         {
@@ -361,7 +361,7 @@ export default function BlogPagePosts() {
             date: "August 1, 2024",
             readTime: "7 min read",
             category: "Social Media",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-30.jpg",
             featured: false,
         },
 
@@ -374,7 +374,7 @@ export default function BlogPagePosts() {
             date: "December 3, 2024",
             readTime: "11 min read",
             category: "E-commerce",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-31.webp",
             featured: false,
         },
         {
@@ -385,7 +385,7 @@ export default function BlogPagePosts() {
             date: "November 8, 2024",
             readTime: "8 min read",
             category: "E-commerce",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-32.png",
             featured: false,
         },
         {
@@ -396,7 +396,7 @@ export default function BlogPagePosts() {
             date: "October 20, 2024",
             readTime: "9 min read",
             category: "E-commerce",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-33.jpg",
             featured: false,
         },
         {
@@ -407,7 +407,7 @@ export default function BlogPagePosts() {
             date: "September 14, 2024",
             readTime: "7 min read",
             category: "E-commerce",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-34.jpg",
             featured: false,
         },
         {
@@ -418,7 +418,7 @@ export default function BlogPagePosts() {
             date: "August 7, 2024",
             readTime: "8 min read",
             category: "E-commerce",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-35.jpg",
             featured: false,
         },
 
@@ -431,7 +431,7 @@ export default function BlogPagePosts() {
             date: "November 28, 2024",
             readTime: "13 min read",
             category: "Network Infrastructure",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-36.png",
             featured: false,
         },
         {
@@ -442,7 +442,7 @@ export default function BlogPagePosts() {
             date: "October 15, 2024",
             readTime: "9 min read",
             category: "Network Infrastructure",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-37.webp",
             featured: false,
         },
         {
@@ -453,7 +453,7 @@ export default function BlogPagePosts() {
             date: "September 10, 2024",
             readTime: "8 min read",
             category: "Network Infrastructure",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-38.png",
             featured: false,
         },
         {
@@ -464,7 +464,7 @@ export default function BlogPagePosts() {
             date: "August 28, 2024",
             readTime: "10 min read",
             category: "Network Infrastructure",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-39.jpg",
             featured: false,
         },
         {
@@ -475,7 +475,7 @@ export default function BlogPagePosts() {
             date: "August 12, 2024",
             readTime: "9 min read",
             category: "Network Infrastructure",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-40.jpg",
             featured: false,
         },
 
@@ -488,7 +488,7 @@ export default function BlogPagePosts() {
             date: "November 25, 2024",
             readTime: "8 min read",
             category: "Content Marketing",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-41.jpeg",
             featured: false,
         },
         {
@@ -499,7 +499,7 @@ export default function BlogPagePosts() {
             date: "October 18, 2024",
             readTime: "9 min read",
             category: "Content Marketing",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-42.webp",
             featured: false,
         },
         {
@@ -510,7 +510,7 @@ export default function BlogPagePosts() {
             date: "September 22, 2024",
             readTime: "7 min read",
             category: "Content Marketing",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-43.webp",
             featured: false,
         },
         {
@@ -521,7 +521,7 @@ export default function BlogPagePosts() {
             date: "August 19, 2024",
             readTime: "10 min read",
             category: "Content Marketing",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-44.png",
             featured: false,
         },
         {
@@ -532,7 +532,7 @@ export default function BlogPagePosts() {
             date: "July 29, 2024",
             readTime: "8 min read",
             category: "Content Marketing",
-            image: "/landscape-placeholder.svg",
+            image: "/blog-images/blog-image-45.png",
             featured: false,
         },
     ];
@@ -613,11 +613,9 @@ export default function BlogPagePosts() {
                                 onClick={() => { setSelectedCategory(category); setVisibleCount(5); }}
                                 variant={selectedCategory === category ? "default" : "outline"}
                                 size="sm"
-                                className={
-                                    selectedCategory === category
+                                className={`${selectedCategory === category
                                         ? "bg-blue-600 hover:bg-blue-700"
-                                        : ""
-                                }
+                                        : ""} cursor-pointer`}
                             >
                                 {category}
                             </Button>
@@ -683,7 +681,7 @@ export default function BlogPagePosts() {
 
                     {visibleCount < categoryBlogs.length && (
                         <div className="text-center mt-12">
-                            <Button onClick={() => setVisibleCount(prev => prev + 5)} variant="outline" size="lg">
+                            <Button onClick={() => setVisibleCount(prev => prev + 5)} variant="outline" size="lg" className="cursor-pointer">
                                 Load More Articles
                             </Button>
                         </div>
