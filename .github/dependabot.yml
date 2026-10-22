@@ -1,0 +1,43 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "10:00"
+      timezone: Asia/Karachi
+    open-pull-requests-limit: 10
+    versioning-strategy: increase
+    groups:
+      nextjs:
+        patterns: [next, eslint-config-next, "@next/*"]
+      prisma:
+        patterns: [prisma, "@prisma/*"]
+      react:
+        patterns: [react, react-dom, "@types/react", "@types/react-dom"]
+      tailwind:
+        patterns: [tailwindcss, "@tailwindcss/*", tailwind-merge]
+      other-compatible-updates:
+        patterns: ["*"]
+        update-types: [minor, patch]
+    ignore:
+      # Match the Node 24 runtime; review runtime-major upgrades together.
+      - dependency-name: "@types/node"
+        update-types: [version-update:semver-major]
+      # The current React plugins declare ESLint 9 compatibility.
+      - dependency-name: eslint
+        update-types: [version-update:semver-major]
+      # Current typescript-eslint supports TypeScript <6.1; review upgrades manually.
+      - dependency-name: typescript
+        versions: [">=6.1.0"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "10:00"
+      timezone: Asia/Karachi
+    groups:
+      actions:
+        patterns: ["*"]

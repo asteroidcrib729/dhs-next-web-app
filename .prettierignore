@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+build/
+coverage/
+.local/
+.git/
+.env*
+!.env.example
+src/generated/
+next-env.d.ts
+package-lock.json
+public/
+*.tsbuildinfo

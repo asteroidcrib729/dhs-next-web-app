@@ -6,19 +6,19 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export default function CaseStudies() {
-    return(
-        <>
-            <Header/>
+  return (
+    <>
+      <Header />
 
-            <CaseStudiesPageTop/>
+      <CaseStudiesPageTop />
 
-            <CaseStudiesPageResults/>
+      <CaseStudiesPageResults />
 
-            <CaseStudiesPageGrid/>
+      <CaseStudiesPageGrid />
 
-            <CTA/>
+      <CTA />
 
-            <Footer/>
-        </>
-    );
+      <Footer />
+    </>
+  );
 }

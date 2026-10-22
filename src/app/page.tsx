@@ -10,29 +10,29 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-    return (
-        <>
-            <Header />
+  return (
+    <>
+      <Header />
 
-            <LandingPageTop />
+      <LandingPageTop />
 
-            <TrustedMarketingPartner />
+      <TrustedMarketingPartner />
 
-            <Features />
+      <Features />
 
-            <Testimonials />
+      <Testimonials />
 
-            <CaseStudy />
+      <CaseStudy />
 
-            {/*
+      {/*
             <Pricing />
             */}
 
-            <FAQ />
-            
-            <CTA />
+      <FAQ />
 
-            <Footer />
-        </>
-    );
+      <CTA />
+
+      <Footer />
+    </>
+  );
 }

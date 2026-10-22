@@ -10,29 +10,29 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export default function About() {
-    return(
-        <>
-            {/* <h1>This Is The About Page.</h1> */}
+  return (
+    <>
+      {/* <h1>This Is The About Page.</h1> */}
 
-            <Header/>
+      <Header />
 
-            <AboutPageTop/>
+      <AboutPageTop />
 
-            <AboutPageStory/>
+      <AboutPageStory />
 
-            <AboutPageMissionVision/>
+      <AboutPageMissionVision />
 
-            <AboutPageTeams/>
+      <AboutPageTeams />
 
-            {/* <AboutPageStats/> */}
+      {/* <AboutPageStats/> */}
 
-            <AboutPageApproach/>
+      <AboutPageApproach />
 
-            <AboutPageCertifications/>
+      <AboutPageCertifications />
 
-            <CTA/>
+      <CTA />
 
-            <Footer/>
-        </>
-    );
+      <Footer />
+    </>
+  );
 }

@@ -5,17 +5,17 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export default function Blog() {
-    return(
-        <>
-            <Header/>
+  return (
+    <>
+      <Header />
 
-            <BlogPageTop/>
+      <BlogPageTop />
 
-            <BlogPagePosts/>
+      <BlogPagePosts />
 
-            <CTA/>
+      <CTA />
 
-            <Footer/>
-        </>
-    );
+      <Footer />
+    </>
+  );
 }

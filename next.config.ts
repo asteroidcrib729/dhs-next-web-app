@@ -47,19 +47,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // experimental: {
-  //   outputFileTracingIncludes: {
-  //     // adjust these globs to where your server code lives
-  //     'app/**': [
-  //       './node_modules/.prisma/**',
-  //       './node_modules/@prisma/**',
-  //     ],
-  //     'pages/api/**': [
-  //       './node_modules/.prisma/**',
-  //       './node_modules/@prisma/**',
-  //     ],
-  //   },
-  // },
 };
 
 export default nextConfig;

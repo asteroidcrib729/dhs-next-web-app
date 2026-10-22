@@ -5,17 +5,17 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export default function Portfolio() {
-    return (
-        <>
-            <Header />
+  return (
+    <>
+      <Header />
 
-            <PortfolioPageTop/>
+      <PortfolioPageTop />
 
-            <PortfolioPageGrid/>
+      <PortfolioPageGrid />
 
-            <CTA/>
+      <CTA />
 
-            <Footer />
-        </>
-    );
+      <Footer />
+    </>
+  );
 }

@@ -7,21 +7,21 @@ import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 
 export default function Services() {
-    return(
-        <>
-            <Header/>
+  return (
+    <>
+      <Header />
 
-            <ServicePageTop/>
+      <ServicePageTop />
 
-            <ServicePageTabs/>
+      <ServicePageTabs />
 
-            <TrustedMarketingPartner/>
+      <TrustedMarketingPartner />
 
-            <ServicePageProcess/>
+      <ServicePageProcess />
 
-            <CTA/>
+      <CTA />
 
-            <Footer/>
-        </>
-    );
+      <Footer />
+    </>
+  );
 }

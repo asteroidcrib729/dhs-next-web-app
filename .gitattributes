@@ -1,0 +1,12 @@
+* text=auto eol=lf
+# Preserve media bytes, including original SVG whitespace; verify them with asset hashes.
+public/** -text -whitespace
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.avif binary
+*.ico binary
+*.mp4 binary
+*.woff binary
+*.woff2 binary

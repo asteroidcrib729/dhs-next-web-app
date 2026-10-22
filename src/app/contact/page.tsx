@@ -7,21 +7,21 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export default function Contact() {
-    return (
-        <>
-            <Header />
+  return (
+    <>
+      <Header />
 
-            <ContactPageTop />
+      <ContactPageTop />
 
-            <ContactPageForm />
+      <ContactPageForm />
 
-            <ContactPageMap />
+      <ContactPageMap />
 
-            <FAQ />
+      <FAQ />
 
-            <CTA />
+      <CTA />
 
-            <Footer />
-        </>
-    );
+      <Footer />
+    </>
+  );
 }

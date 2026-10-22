@@ -1,0 +1,783 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "source": "711-max-bachat-latest-logo.png",
+      "output": "images/logos/711-max-bachat-latest-logo.webp",
+      "sourceBytes": 122723,
+      "sourceSha256": "17586f4b85651a6ee5965dd5faf626dd183b8fd0407089f12f725a072e5e191e",
+      "outputBytes": 64982,
+      "outputSha256": "84d542ab4ce6e22e6a2f061af1d855479a41cfa61990cca783840d3e35bd3c32"
+    },
+    {
+      "source": "barracuda-latest-logo.png",
+      "output": "images/logos/barracuda-latest-logo.webp",
+      "sourceBytes": 626291,
+      "sourceSha256": "1f04a4a7b28c64e1ed6f42f67c75e2723fd465a036890c9d22f9e10c2bd93bc6",
+      "outputBytes": 75230,
+      "outputSha256": "04481f86f274b043029ec9493d43bc83883567b8e5fb6cfbfcccdc1eff020b10"
+    },
+    {
+      "source": "blog-images/blog-image-01.png",
+      "output": "images/blog/blog-image-01.webp",
+      "sourceBytes": 58740,
+      "sourceSha256": "033e6aa2cbbea71fa37a2404a0b4915e1754f823d97bab89532afa4500291a68",
+      "outputBytes": 20450,
+      "outputSha256": "5f1936a20726ebf751bb70b53998b808df3a83d15b4238c5ca170d3a0a72691e"
+    },
+    {
+      "source": "blog-images/blog-image-02.jpg",
+      "output": "images/blog/blog-image-02.webp",
+      "sourceBytes": 80984,
+      "sourceSha256": "7b5380b2bc09d1aec00b48165aa581efee7928fe5b1f1dba72b8eb3d98fbebf3",
+      "outputBytes": 32656,
+      "outputSha256": "69a40bc0a92192fda2e0b61b7d47f03ec38fc57bf7c0a6a60ef8b111fbd0dcac"
+    },
+    {
+      "source": "blog-images/blog-image-03.png",
+      "output": "images/blog/blog-image-03.webp",
+      "sourceBytes": 886803,
+      "sourceSha256": "1db2a18201794ed438739eafa1f4597dff1ef8bc86ebda0a66459bb17446e3eb",
+      "outputBytes": 37122,
+      "outputSha256": "54b2e38b611b37998d5fde8658f35960f9cae81cd812052b3c9f9efbc1282c0a"
+    },
+    {
+      "source": "blog-images/blog-image-04.svg",
+      "output": "images/blog/blog-image-04.svg",
+      "sourceBytes": 6487,
+      "sourceSha256": "4e5ac3a0e1bc48880f18c3d81abf37683967865a316eb88623a58b1d60c7d576",
+      "outputBytes": 6487,
+      "outputSha256": "4e5ac3a0e1bc48880f18c3d81abf37683967865a316eb88623a58b1d60c7d576"
+    },
+    {
+      "source": "blog-images/blog-image-05.png",
+      "output": "images/blog/blog-image-05.webp",
+      "sourceBytes": 5134134,
+      "sourceSha256": "85d5825aaecb4b61d29e6530f2e9eba4fc3c166f42f7fcbf917c9065737c003c",
+      "outputBytes": 47266,
+      "outputSha256": "db47a184d01056a5afdc7d749e93490344dce38cb2550bbece29ca545890558d"
+    },
+    {
+      "source": "blog-images/blog-image-06.webp",
+      "output": "images/blog/blog-image-06.webp",
+      "sourceBytes": 63462,
+      "sourceSha256": "f5d86d71a24e8c84dbbe15b19a114527b5d19ef05a46e4ff0afc1d28dae82106",
+      "outputBytes": 55526,
+      "outputSha256": "c5f34502a6c6c0b277a27583be5e1a0997040847eecfe39500c71adc75905f33"
+    },
+    {
+      "source": "blog-images/blog-image-07.jpg",
+      "output": "images/blog/blog-image-07.webp",
+      "sourceBytes": 620732,
+      "sourceSha256": "494f26aa2786028521032084e595952f0c05966c953ff4228ec755e2183800ef",
+      "outputBytes": 62244,
+      "outputSha256": "473e8eda20fcad793f91667f682578b3aaa989024a347763066b2234577bbdae"
+    },
+    {
+      "source": "blog-images/blog-image-08.jpg",
+      "output": "images/blog/blog-image-08.webp",
+      "sourceBytes": 8112129,
+      "sourceSha256": "bcf568fbd832b89f319ddf16a339d19bc4b9864e8daf9481ca249498dcf35b68",
+      "outputBytes": 120016,
+      "outputSha256": "c371babddc0b5fa3f75bd0dcea648d28b389c2764a82e9f1adb6ec8ff090742e"
+    },
+    {
+      "source": "blog-images/blog-image-09.avif",
+      "output": "images/blog/blog-image-09.webp",
+      "sourceBytes": 105677,
+      "sourceSha256": "6b7b426065384e78f255a79bf7d396f7546f714bb65c9af643525b6402353f99",
+      "outputBytes": 40398,
+      "outputSha256": "6a15eb14387e016840ae79c3889f9186c92713168b7a06d5840a3fe9da3fe1b8"
+    },
+    {
+      "source": "blog-images/blog-image-10.jpg",
+      "output": "images/blog/blog-image-10.webp",
+      "sourceBytes": 182056,
+      "sourceSha256": "558fbc575296052924cb8befdf18f0492cfcd595c22047c11eca7ce2f69e728c",
+      "outputBytes": 90004,
+      "outputSha256": "4c0bcde228d2ae806614658a42e8075da9fb1d82977828437d0488464f15847d"
+    },
+    {
+      "source": "blog-images/blog-image-11.jpg",
+      "output": "images/blog/blog-image-11.webp",
+      "sourceBytes": 179648,
+      "sourceSha256": "26b93a86e8fb36f43198770a9c17f10515833ba1084b31d9524c673d45894e69",
+      "outputBytes": 55372,
+      "outputSha256": "fd3270ed9da65f97967934aed324c4f6dd4c52d9804113ce9b305e4d6d60b8c1"
+    },
+    {
+      "source": "blog-images/blog-image-12.png",
+      "output": "images/blog/blog-image-12.webp",
+      "sourceBytes": 38803,
+      "sourceSha256": "b40518158a0b97435239639ebaca415c7bc6ab9cccd39ab1b2175077b9de9069",
+      "outputBytes": 13450,
+      "outputSha256": "ad50e0b8370a5ccbdd5339029fc876a16bf14d230fbc85313964aaa22edb5d16"
+    },
+    {
+      "source": "blog-images/blog-image-13.webp",
+      "output": "images/blog/blog-image-13.webp",
+      "sourceBytes": 21554,
+      "sourceSha256": "a6c71c80860a80c9dd5c064ba61b221972b837cb6c35ee6aecfd5b2618d07568",
+      "outputBytes": 23340,
+      "outputSha256": "311f5c3121a6ae983ed3acaa4c6b032e64688ab4adf1af3f3eba04c613038e8f"
+    },
+    {
+      "source": "blog-images/blog-image-14.webp",
+      "output": "images/blog/blog-image-14.webp",
+      "sourceBytes": 60008,
+      "sourceSha256": "796e14b6755d55982d6c66576efc485e6979e6751d1b8b5174d9bcbfa14072ee",
+      "outputBytes": 63674,
+      "outputSha256": "4044d8e7b58f057a85f73fa3e9dbfda3c02fab6e6f61665d77a1f2d6bd2303dc"
+    },
+    {
+      "source": "blog-images/blog-image-15.jpg",
+      "output": "images/blog/blog-image-15.webp",
+      "sourceBytes": 203130,
+      "sourceSha256": "794d4dede16089afcf31f9bac1513e907b9510a8e0c1a5298cdba78b5e0b898d",
+      "outputBytes": 35194,
+      "outputSha256": "1d0929c2c3f06d932d3d9f5651341a0dca38cf4b6a996a6b2f5a6c040c20c808"
+    },
+    {
+      "source": "blog-images/blog-image-16.png",
+      "output": "images/blog/blog-image-16.webp",
+      "sourceBytes": 962245,
+      "sourceSha256": "a621ab645e4d964e5dc3e1fa1a0b9baedfdb2c0a8a736d12d8a6677c4f23af5c",
+      "outputBytes": 86540,
+      "outputSha256": "dafcb4205004292a41b784dcd8900db2b522c8b01cf777a3119f33705333fd11"
+    },
+    {
+      "source": "blog-images/blog-image-17.png",
+      "output": "images/blog/blog-image-17.webp",
+      "sourceBytes": 116118,
+      "sourceSha256": "1666e05a9e3fbebc7753bc75eff988a4190bd9481c42d197d2ca11fd115461e5",
+      "outputBytes": 44848,
+      "outputSha256": "171d71135f445b9c2ef63fe73b851292d411dd2daa3313cfb38087e45c0e0f09"
+    },
+    {
+      "source": "blog-images/blog-image-18.webp",
+      "output": "images/blog/blog-image-18.webp",
+      "sourceBytes": 19046,
+      "sourceSha256": "fd498689a24ea8d97be9e6d1d9db32c6c1940c466f4396e39bca6e3adea6886f",
+      "outputBytes": 45042,
+      "outputSha256": "bffa4b5a4347fd4992b8f6d5481c50c420277d4a3e953437f32054c53d0bd0e1"
+    },
+    {
+      "source": "blog-images/blog-image-19.jpg",
+      "output": "images/blog/blog-image-19.webp",
+      "sourceBytes": 88022,
+      "sourceSha256": "ea763ba89aeaa4d8fef461ad5a0f3760257760c023ae55c6377110a34cdd64cd",
+      "outputBytes": 31806,
+      "outputSha256": "0ae9614fa578322ed84b1ff6417e5f8b664e6854233d8ad0222a3d85c609a808"
+    },
+    {
+      "source": "blog-images/blog-image-20.png",
+      "output": "images/blog/blog-image-20.webp",
+      "sourceBytes": 1005373,
+      "sourceSha256": "accae5eb3019a3a11a8254e4fabead35460d47d825be7d71593424a7ef86e15b",
+      "outputBytes": 64964,
+      "outputSha256": "d70217ee0edb71c4521f51d44c63a6fb430b37bf982890f782ffaa31c984bc29"
+    },
+    {
+      "source": "blog-images/blog-image-21.jpg",
+      "output": "images/blog/blog-image-21.webp",
+      "sourceBytes": 388207,
+      "sourceSha256": "cd6cacb31fc5ef1421710a5e56bcdc5826c0f89e5db60513b8720114516e5014",
+      "outputBytes": 28192,
+      "outputSha256": "ae9243ca0bd7eba502969555bd8fd2095d318722b01c398adfaa42406630846e"
+    },
+    {
+      "source": "blog-images/blog-image-22.jpg",
+      "output": "images/blog/blog-image-22.webp",
+      "sourceBytes": 47708,
+      "sourceSha256": "07f20f9fadf2d3573d37b672aec56a604bc988a2645c871923664e1dae9ae72c",
+      "outputBytes": 21982,
+      "outputSha256": "fac2936ea178b76aae73b5a742a25123679fc5ad21fdf50d85152a72e36da031"
+    },
+    {
+      "source": "blog-images/blog-image-23.jpg",
+      "output": "images/blog/blog-image-23.webp",
+      "sourceBytes": 230525,
+      "sourceSha256": "90078a263c511a7f41d71139fe4a016027e517ccb6381b0b78bc37b230635218",
+      "outputBytes": 22700,
+      "outputSha256": "604d7f58b804a771ad62bd9469d23842fc3721a382e841e95ce0f498a940b65a"
+    },
+    {
+      "source": "blog-images/blog-image-24.jpg",
+      "output": "images/blog/blog-image-24.webp",
+      "sourceBytes": 939635,
+      "sourceSha256": "0c738d829facfbd28b47bc024d959cce7be5c0fcdc264f85f212d432a043eddf",
+      "outputBytes": 42506,
+      "outputSha256": "bef7de9db95ee095877e6cf2e76f515fc1763ddc4f715b8da3a31fea6e3ced90"
+    },
+    {
+      "source": "blog-images/blog-image-25.jpg",
+      "output": "images/blog/blog-image-25.webp",
+      "sourceBytes": 673243,
+      "sourceSha256": "edc969e196dc471edec23f8894d74d06188553f6f71b273afad48bcf29c280bf",
+      "outputBytes": 53322,
+      "outputSha256": "0db118902fb49303cdc3a11f2886e7ec1aa1f9df06fe4c095c9f1f14c172ca81"
+    },
+    {
+      "source": "blog-images/blog-image-26.webp",
+      "output": "images/blog/blog-image-26.webp",
+      "sourceBytes": 42250,
+      "sourceSha256": "963a7baf8b649ae9252a97332055f6a22290e5081936b97cb77155d34713c6d5",
+      "outputBytes": 29756,
+      "outputSha256": "6ebc64dad4cd5b156f5cf65af6d042a8b057e17a301ba2d0bee0e454d93f900f"
+    },
+    {
+      "source": "blog-images/blog-image-27.png",
+      "output": "images/blog/blog-image-27.webp",
+      "sourceBytes": 903353,
+      "sourceSha256": "fadc124d1b1adb71cd60eb7d888cf4aa1f178f44c5cb5a06e2da24c073bb9826",
+      "outputBytes": 73674,
+      "outputSha256": "6b2bd3067670d7f5808d5f189227e8058d13ce263534641f7e6fffa5aed8f265"
+    },
+    {
+      "source": "blog-images/blog-image-28.jpg",
+      "output": "images/blog/blog-image-28.webp",
+      "sourceBytes": 231652,
+      "sourceSha256": "ce6f627734aa00ba989b70b11a1552c1ca395b26a1ecbc121a497863d81ac1ed",
+      "outputBytes": 83128,
+      "outputSha256": "6f70a7315eb7140d0d065b57ea226f82fec149c1fcbd4894f051f3975224dc7f"
+    },
+    {
+      "source": "blog-images/blog-image-29.png",
+      "output": "images/blog/blog-image-29.webp",
+      "sourceBytes": 605260,
+      "sourceSha256": "09a37de92181d51d243c3fc5a378d132c8cebc5bb859b77be7c3bb7986c977a7",
+      "outputBytes": 36558,
+      "outputSha256": "8cc89cf39d02d75996eb52179a222181a4e0f7ccb56270695ea15310a8f43744"
+    },
+    {
+      "source": "blog-images/blog-image-30.jpg",
+      "output": "images/blog/blog-image-30.webp",
+      "sourceBytes": 73974,
+      "sourceSha256": "0b0f5ed47bc0638abda2c57e4cac5f1a6c6d6f860c01f3e94be8d1331988568e",
+      "outputBytes": 27004,
+      "outputSha256": "d24d1fcb08cb77fae632946ff9758de92f70e0c063c62522d3f819d015e2c127"
+    },
+    {
+      "source": "blog-images/blog-image-31.webp",
+      "output": "images/blog/blog-image-31.webp",
+      "sourceBytes": 45204,
+      "sourceSha256": "0786b7d4db4b4420f2545902c38a0d6c832690cbf3b261fe746d240fda86fd61",
+      "outputBytes": 43720,
+      "outputSha256": "f708be86fc8745d3dff1fede15696bb9c51fb66fbc009aa67a0e9cdc8c64a1db"
+    },
+    {
+      "source": "blog-images/blog-image-32.png",
+      "output": "images/blog/blog-image-32.webp",
+      "sourceBytes": 439128,
+      "sourceSha256": "7c8b12160672bc216420a8b20cb70ab397dab4a26e092db9bba10bb9d9e58a3a",
+      "outputBytes": 77580,
+      "outputSha256": "c6df050f2ca16c4516e58c73143a75b0e125ccbc62c453a72d19d4ba3afd6b18"
+    },
+    {
+      "source": "blog-images/blog-image-33.jpg",
+      "output": "images/blog/blog-image-33.webp",
+      "sourceBytes": 356487,
+      "sourceSha256": "cd0783889ca652335669db523cd2981a250371cb61b9e89eb554ee2c45daaabb",
+      "outputBytes": 272056,
+      "outputSha256": "691d656570f5d31a2e15c5043b525addb6d3efc944694c7d3b191837c67d0410"
+    },
+    {
+      "source": "blog-images/blog-image-34.jpg",
+      "output": "images/blog/blog-image-34.webp",
+      "sourceBytes": 39494,
+      "sourceSha256": "749c6c6b10ef83f4eb075490856f8b81f571298c6f09affb86e28322a7a50c19",
+      "outputBytes": 18406,
+      "outputSha256": "76e4330670f24341fa9f6eb3fd44786797796e3cd591e4688ce1ab49b1598db1"
+    },
+    {
+      "source": "blog-images/blog-image-35.jpg",
+      "output": "images/blog/blog-image-35.webp",
+      "sourceBytes": 299048,
+      "sourceSha256": "6ed901cfbafd640d0e57f0a96c39b85d20e6f87c48b759b86374e274b89222c4",
+      "outputBytes": 51256,
+      "outputSha256": "2583e64ededa366e1d2cf422f0eae8f8b1f334411735666cad18906d59552433"
+    },
+    {
+      "source": "blog-images/blog-image-36.png",
+      "output": "images/blog/blog-image-36.webp",
+      "sourceBytes": 242789,
+      "sourceSha256": "5155558ca31e4e4a6378eedda732034f6357c0a874aeb574ca3326760f6a4d83",
+      "outputBytes": 33608,
+      "outputSha256": "1d2a3f950753111bf58bb4bf5982e7966fefa2b3ba844c3516bede91fc577446"
+    },
+    {
+      "source": "blog-images/blog-image-37.webp",
+      "output": "images/blog/blog-image-37.webp",
+      "sourceBytes": 886366,
+      "sourceSha256": "aad8712c98ab2a7c0579c82ebabbdd60b826c4520d7b81228ce726f7f74ef7d6",
+      "outputBytes": 89890,
+      "outputSha256": "4863ed19c9ed8f1e6830222dfddfa620699b35f38f2abacdb0b6167c768d96e4"
+    },
+    {
+      "source": "blog-images/blog-image-38.png",
+      "output": "images/blog/blog-image-38.webp",
+      "sourceBytes": 137938,
+      "sourceSha256": "294485dd1df56adca08d7f492fb89c5c0b721e6f798aa9307b4d135d9fb54849",
+      "outputBytes": 44892,
+      "outputSha256": "f6aa3518e9cb9c2d480a2b4e12a6d68f1de9725f0eb64a14032bd847442f3126"
+    },
+    {
+      "source": "blog-images/blog-image-39.jpg",
+      "output": "images/blog/blog-image-39.webp",
+      "sourceBytes": 81178,
+      "sourceSha256": "0a8f2e6c8553bef97cbbe7782e1476b6d4461fa3642d5839be5314ab15216418",
+      "outputBytes": 38120,
+      "outputSha256": "fd927f0cd96e36318c643d0f57599dffe7438c51193e841dfc73c594b8c1524c"
+    },
+    {
+      "source": "blog-images/blog-image-40.jpg",
+      "output": "images/blog/blog-image-40.webp",
+      "sourceBytes": 79587,
+      "sourceSha256": "237affe8d9609d83146cccc1cad93e02c030578164cd314dc079be877d447aa5",
+      "outputBytes": 30594,
+      "outputSha256": "f2e70fb216d2fa8f244e16f92a78f20608b811ba381a2a1171b3ab46b7b8b9b8"
+    },
+    {
+      "source": "blog-images/blog-image-41.jpeg",
+      "output": "images/blog/blog-image-41.webp",
+      "sourceBytes": 381165,
+      "sourceSha256": "4fa634396fde4977ab81fd22007a598357d2dc6db9a84ae9ebb2f551b02d0827",
+      "outputBytes": 55264,
+      "outputSha256": "6f72793a3416f87fcebd7e32b6280916b377d056735006a19907ba2bd85ef478"
+    },
+    {
+      "source": "blog-images/blog-image-42.webp",
+      "output": "images/blog/blog-image-42.webp",
+      "sourceBytes": 55314,
+      "sourceSha256": "da56dacb32ad4daa8a371d7b963ab19bf1953bb2a61a5441cd830332b596dc9b",
+      "outputBytes": 50902,
+      "outputSha256": "5a83eea5b77021577cb1da70881c30ddd8f4b18f540b3e3d3ce9029ff8c29bcb"
+    },
+    {
+      "source": "blog-images/blog-image-43.webp",
+      "output": "images/blog/blog-image-43.webp",
+      "sourceBytes": 37270,
+      "sourceSha256": "2cedbf6541cfb0aae110f3547437579c9d4ffdae6b8239bd68da11bbfed9b88d",
+      "outputBytes": 42386,
+      "outputSha256": "0215ef3d4ef0c230c3ba9818ead6dc114d2b80cf539d53c16c8c9fb51b2c1fa0"
+    },
+    {
+      "source": "blog-images/blog-image-44.png",
+      "output": "images/blog/blog-image-44.webp",
+      "sourceBytes": 216434,
+      "sourceSha256": "930c8bd5cab1bf707f06036e474e75f4342acd1f925900db309b33f1d053f98c",
+      "outputBytes": 19376,
+      "outputSha256": "b1f96ce41dafbffc7097d43ec16aae1f2871bd5d5a1c10db6a41f42997f4546a"
+    },
+    {
+      "source": "blog-images/blog-image-45.png",
+      "output": "images/blog/blog-image-45.webp",
+      "sourceBytes": 136518,
+      "sourceSha256": "883c0ab2318ddbdc8e26663491e16d3024bb222376a26b5dc87a65cf855f5f8c",
+      "outputBytes": 32134,
+      "outputSha256": "9616f85a4cf928e4f2c7e84eecb7c3795fc8e9d54a4e66b627349782ed5c6162"
+    },
+    {
+      "source": "clutch-logo.png",
+      "output": "images/logos/clutch-logo.webp",
+      "sourceBytes": 17875,
+      "sourceSha256": "5c737654ec9a532aeb17ae2b93912af0e1d58f7c0c9639125a7e87ce37253c5c",
+      "outputBytes": 21432,
+      "outputSha256": "0fe99c935a1a38d8a344811ac991ac0c0a766c5474ea0467443a3e123ad70e35"
+    },
+    {
+      "source": "constructor-tech-latest-logo.svg",
+      "output": "images/logos/constructor-tech-latest-logo.svg",
+      "sourceBytes": 4922,
+      "sourceSha256": "28b063af99256542ba73c2a7ed9e341d516662eb277a9632f0dcc2b33868219a",
+      "outputBytes": 4922,
+      "outputSha256": "28b063af99256542ba73c2a7ed9e341d516662eb277a9632f0dcc2b33868219a"
+    },
+    {
+      "source": "dell-latest-logo.svg",
+      "output": "images/logos/dell-latest-logo.svg",
+      "sourceBytes": 2044,
+      "sourceSha256": "11046b98770f07b32517ee9c2674943def7f7084e4b9a134b6156cda15765b30",
+      "outputBytes": 2044,
+      "outputSha256": "11046b98770f07b32517ee9c2674943def7f7084e4b9a134b6156cda15765b30"
+    },
+    {
+      "source": "eng-properties-latest-logo.png",
+      "output": "images/logos/eng-properties-latest-logo.webp",
+      "sourceBytes": 125835,
+      "sourceSha256": "d15cb56eb3c8ff094548bb135881fdc1b742f4ebe2210c2c73c08df039e54fab",
+      "outputBytes": 75598,
+      "outputSha256": "d23a3011398a36bd3a675d1d5c175cfeb2172dd752eb9abf1900fbcff8258762"
+    },
+    {
+      "source": "file.svg",
+      "output": "images/illustrations/file.svg",
+      "sourceBytes": 391,
+      "sourceSha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4",
+      "outputBytes": 391,
+      "outputSha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4"
+    },
+    {
+      "source": "globe.svg",
+      "output": "images/illustrations/globe.svg",
+      "sourceBytes": 1035,
+      "sourceSha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf",
+      "outputBytes": 1035,
+      "outputSha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf"
+    },
+    {
+      "source": "google-cloud-latest-logo.svg",
+      "output": "images/logos/google-cloud-latest-logo.svg",
+      "sourceBytes": 1496,
+      "sourceSha256": "3c0cc5edb63c0667299eeb7eb307ac94ad51c02c2df768cd2252c54875cd2a41",
+      "outputBytes": 1496,
+      "outputSha256": "3c0cc5edb63c0667299eeb7eb307ac94ad51c02c2df768cd2252c54875cd2a41"
+    },
+    {
+      "source": "google-latest-logo.svg",
+      "output": "images/logos/google-latest-logo.svg",
+      "sourceBytes": 2317,
+      "sourceSha256": "a1260a1310864f3c07f4c6d2efc7413d5fe7c98242826379c824bf6b7317c10a",
+      "outputBytes": 2317,
+      "outputSha256": "a1260a1310864f3c07f4c6d2efc7413d5fe7c98242826379c824bf6b7317c10a"
+    },
+    {
+      "source": "google-partners.svg",
+      "output": "images/logos/google-partners.svg",
+      "sourceBytes": 6925,
+      "sourceSha256": "78da89d18acd9c88656bd20963c73be530be26fdab5a857648e04b5975aa20d6",
+      "outputBytes": 6925,
+      "outputSha256": "78da89d18acd9c88656bd20963c73be530be26fdab5a857648e04b5975aa20d6"
+    },
+    {
+      "source": "h3c-latest-logo.png",
+      "output": "images/logos/h3c-latest-logo.webp",
+      "sourceBytes": 20297,
+      "sourceSha256": "de582b9b00f30d811329c62c8efcf4ec618d6bcea6244c030bc6302dac1723b1",
+      "outputBytes": 19828,
+      "outputSha256": "734497a565a0128807259f4b9ba992d09e558dfc7d435bba946f5cbb988a139a"
+    },
+    {
+      "source": "hp-latest-logo.svg",
+      "output": "images/logos/hp-latest-logo.svg",
+      "sourceBytes": 1678,
+      "sourceSha256": "44c1f65759c38480332964814872323ff5160cedeb6115ad3d6acdde067acc8b",
+      "outputBytes": 1678,
+      "outputSha256": "44c1f65759c38480332964814872323ff5160cedeb6115ad3d6acdde067acc8b"
+    },
+    {
+      "source": "jsn-medical-latest-logo.png",
+      "output": "images/logos/jsn-medical-latest-logo.webp",
+      "sourceBytes": 65891,
+      "sourceSha256": "91d8ba073cf681c1d506cb69196b541d917c280102451f5990c74602e8393e1b",
+      "outputBytes": 32562,
+      "outputSha256": "7cc9268f6702098a16b7d447de53934c440dbe275b6635f8cee21aa874441d2c"
+    },
+    {
+      "source": "landscape-placeholder.svg",
+      "output": "images/placeholders/landscape-placeholder.svg",
+      "sourceBytes": 892,
+      "sourceSha256": "e488c3da55f4b620c6f45e5e9115e470f118d010d4c0336596dd8a0f9cee4dd1",
+      "outputBytes": 892,
+      "outputSha256": "e488c3da55f4b620c6f45e5e9115e470f118d010d4c0336596dd8a0f9cee4dd1"
+    },
+    {
+      "source": "lenovo-latest-logo.svg",
+      "output": "images/logos/lenovo-latest-logo.svg",
+      "sourceBytes": 1801,
+      "sourceSha256": "84f347c25abfdac804157095c075a10cf9bca454c395221fe87730abe4938c20",
+      "outputBytes": 1801,
+      "outputSha256": "84f347c25abfdac804157095c075a10cf9bca454c395221fe87730abe4938c20"
+    },
+    {
+      "source": "meta-latest-logo.svg",
+      "output": "images/logos/meta-latest-logo.svg",
+      "sourceBytes": 1984,
+      "sourceSha256": "78e77f62b148c7e51c24d978f7f450deaa2adb84b7b716d113c0f2777b97e7e0",
+      "outputBytes": 1984,
+      "outputSha256": "78e77f62b148c7e51c24d978f7f450deaa2adb84b7b716d113c0f2777b97e7e0"
+    },
+    {
+      "source": "methodology.jpg",
+      "output": "images/about/methodology.webp",
+      "sourceBytes": 982426,
+      "sourceSha256": "18aed5827ce277a1811ead5da303dd8ba93f602d9a5606cd8aa0ea3fcb1bbcb2",
+      "outputBytes": 62584,
+      "outputSha256": "71811272c1235007869a5221aad9d5f26363f2595c83d19e79ff29c9c65e73d2"
+    },
+    {
+      "source": "microsoft-certified-latest-logo.png",
+      "output": "images/logos/microsoft-certified-latest-logo.webp",
+      "sourceBytes": 48445,
+      "sourceSha256": "243051919a7167836b0fde62496b657ef11e976445b436f8ea36c256138bab48",
+      "outputBytes": 48026,
+      "outputSha256": "991180cecb43317171e837d72c3b78c02f1ebd6f2f2b65f0dbff09a3f87b31ab"
+    },
+    {
+      "source": "microsoft-certified-latest-logo.svg",
+      "output": "images/logos/microsoft-certified-latest-logo.svg",
+      "sourceBytes": 12033,
+      "sourceSha256": "82f813316af38e8a8ed5ddf4d79415a34a0f22a0aa96d4210c67f0eef8f8d9ab",
+      "outputBytes": 12033,
+      "outputSha256": "82f813316af38e8a8ed5ddf4d79415a34a0f22a0aa96d4210c67f0eef8f8d9ab"
+    },
+    {
+      "source": "mission-healthcare-latest-logo.svg",
+      "output": "images/logos/mission-healthcare-latest-logo.svg",
+      "sourceBytes": 44564,
+      "sourceSha256": "85edeb2cb28583e7eb4fe88b6b0ec9e6c6713768111e9b76255c4be6d89d4a18",
+      "outputBytes": 44564,
+      "outputSha256": "85edeb2cb28583e7eb4fe88b6b0ec9e6c6713768111e9b76255c4be6d89d4a18"
+    },
+    {
+      "source": "nectronix-digital-latest-logo.png",
+      "output": "images/logos/nectronix-digital-latest-logo.webp",
+      "sourceBytes": 156010,
+      "sourceSha256": "ec1c510a5fee9d291235b366aa2fd1d3bcd88c51e3841206fa9b341f9db40231",
+      "outputBytes": 90512,
+      "outputSha256": "6e2f82530765f9fb7057810c325d32a7dc7a93b00451b5883335353a6e6692f5"
+    },
+    {
+      "source": "next.svg",
+      "output": "images/illustrations/next.svg",
+      "sourceBytes": 1375,
+      "sourceSha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc",
+      "outputBytes": 1375,
+      "outputSha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc"
+    },
+    {
+      "source": "oracle-latest-logo.svg",
+      "output": "images/logos/oracle-latest-logo.svg",
+      "sourceBytes": 2008,
+      "sourceSha256": "ca77574264b0e1367eba0b57624ef0e1de8dfbb9f9cc407cd17e5d89b748a5ee",
+      "outputBytes": 2008,
+      "outputSha256": "ca77574264b0e1367eba0b57624ef0e1de8dfbb9f9cc407cd17e5d89b748a5ee"
+    },
+    {
+      "source": "our-story.jpg",
+      "output": "images/about/our-story.webp",
+      "sourceBytes": 1010389,
+      "sourceSha256": "b9686a2ee8fcafe35e5b22cc86a1771c0a472fa84af9fa4fdddd741c07adfd65",
+      "outputBytes": 261842,
+      "outputSha256": "42907d8fdf1bc0ee5bd6a5766e7dca7b9d49febe81527676f876f135646e846c"
+    },
+    {
+      "source": "profile-placeholder.jpg",
+      "output": "images/placeholders/profile-placeholder.webp",
+      "sourceBytes": 8663,
+      "sourceSha256": "7b941a0a0669dce7b31fbcc17d89b514c8df3f76ae5a90cc83b64267c10c3b19",
+      "outputBytes": 5000,
+      "outputSha256": "91248543b2d6bd5b68d49ff0ff866e80c9a0990e01fd23749f39893a55d0cdff"
+    },
+    {
+      "source": "sangfor-latest-logo.svg",
+      "output": "images/logos/sangfor-latest-logo.svg",
+      "sourceBytes": 87740,
+      "sourceSha256": "17935fe63f753998e87ef13570dae714cf809c9e81eb923b249141d1a10161c5",
+      "outputBytes": 87740,
+      "outputSha256": "17935fe63f753998e87ef13570dae714cf809c9e81eb923b249141d1a10161c5"
+    },
+    {
+      "source": "sharz-properties-latest-logo.svg",
+      "output": "images/logos/sharz-properties-latest-logo.svg",
+      "sourceBytes": 13442,
+      "sourceSha256": "c5934bf45f7f414f7a040b29a3f8a8aba7b7de20870e04ff554a4008e8154de2",
+      "outputBytes": 13442,
+      "outputSha256": "c5934bf45f7f414f7a040b29a3f8a8aba7b7de20870e04ff554a4008e8154de2"
+    },
+    {
+      "source": "solarwinds-latest-logo.png",
+      "output": "images/logos/solarwinds-latest-logo.webp",
+      "sourceBytes": 415002,
+      "sourceSha256": "e1515bb8174b6c4235e073d80aacbc03d0d8323ddccfe22a2007861b892ef890",
+      "outputBytes": 89254,
+      "outputSha256": "0f45ec1d0d42013ceecdc7274f2dd23e0610385bc0579d0945cd9b42cc17595e"
+    },
+    {
+      "source": "tiktok-latest-logo.svg",
+      "output": "images/logos/tiktok-latest-logo.svg",
+      "sourceBytes": 1606,
+      "sourceSha256": "afc19baed635ab99c481573a071115d5ee92c4a1104d13125be2f7b332d08efc",
+      "outputBytes": 1606,
+      "outputSha256": "afc19baed635ab99c481573a071115d5ee92c4a1104d13125be2f7b332d08efc"
+    },
+    {
+      "source": "tvs-logo.png",
+      "output": "images/logos/tvs-logo.webp",
+      "sourceBytes": 172795,
+      "sourceSha256": "7a7daf3831ced87e3aa9b4a014517c94cc4b29475d7923a67a389b2d848d9254",
+      "outputBytes": 89608,
+      "outputSha256": "4b6d84734656dac79db00346f5dfa2f8d1bfe649ad1af5756488f1e186c5c0b6"
+    },
+    {
+      "source": "tvs-new-logo.png",
+      "output": "images/logos/tvs-new-logo.webp",
+      "sourceBytes": 187363,
+      "sourceSha256": "4dccc96b24e57b7cded989b737484c724ae2410d396e5f7ed48fc94fcd3b88dc",
+      "outputBytes": 110640,
+      "outputSha256": "e6e32ba7d3a14f903abd12cb6e9142882f3027275648a0b9a6c160496804bf4b"
+    },
+    {
+      "source": "twitter-latest-logo.svg",
+      "output": "images/logos/twitter-latest-logo.svg",
+      "sourceBytes": 402,
+      "sourceSha256": "d5102eef2b652169e45c7455b9949adfd24859addbb198c70337ff71e6885680",
+      "outputBytes": 402,
+      "outputSha256": "d5102eef2b652169e45c7455b9949adfd24859addbb198c70337ff71e6885680"
+    },
+    {
+      "source": "veeam-latest-logo.svg",
+      "output": "images/logos/veeam-latest-logo.svg",
+      "sourceBytes": 2870,
+      "sourceSha256": "c026d201fea19535e7b3b3bb092027b2bbeb21f7ae12f47d2e7204e48e8469f6",
+      "outputBytes": 2870,
+      "outputSha256": "c026d201fea19535e7b3b3bb092027b2bbeb21f7ae12f47d2e7204e48e8469f6"
+    },
+    {
+      "source": "vercel.svg",
+      "output": "images/illustrations/vercel.svg",
+      "sourceBytes": 128,
+      "sourceSha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4",
+      "outputBytes": 128,
+      "outputSha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4"
+    },
+    {
+      "source": "video-thumbnails/711-Max-Bachat.png",
+      "output": "images/portfolio/711-Max-Bachat.webp",
+      "sourceBytes": 1129264,
+      "sourceSha256": "c32effca0d81a99df6bc3638375e3bc9a8b33882c7ec17542f5ebabe0dc5c3f7",
+      "outputBytes": 39458,
+      "outputSha256": "0da5bbce2705d158e9caaa3bd397041e64b1fe803e073805b24523e154a9419d"
+    },
+    {
+      "source": "video-thumbnails/ENG-Properties.png",
+      "output": "images/portfolio/ENG-Properties.webp",
+      "sourceBytes": 2037872,
+      "sourceSha256": "a8e734e625cbc888baa816ff817920e015ea5c873333c756e82648c951e56ac4",
+      "outputBytes": 57758,
+      "outputSha256": "9a95c01fa09956f5f48be1590b96b6280fa8e66bb0e4e97d2c460ab685fdcf5e"
+    },
+    {
+      "source": "video-thumbnails/JSN-Medical.png",
+      "output": "images/portfolio/JSN-Medical.webp",
+      "sourceBytes": 1766563,
+      "sourceSha256": "ec4718e16141c34458aae6838f83602ab4949329d9bfaf49ee3a2046433ba04a",
+      "outputBytes": 50574,
+      "outputSha256": "3e9bf123857ab1cb5ad8186e21d9328fac4cf9fccfe3790e71a9b7e9e2368548"
+    },
+    {
+      "source": "video-thumbnails/Mission-Health-Care.png",
+      "output": "images/portfolio/Mission-Health-Care.webp",
+      "sourceBytes": 2448629,
+      "sourceSha256": "e040d718305464e3b6960fb3a3288dd97ae298d124bb688b85b2d49d8d3189cd",
+      "outputBytes": 112406,
+      "outputSha256": "52e5b1f30c5d395984a316d557788f1e7695bcf282c5227852a638308fd45642"
+    },
+    {
+      "source": "video-thumbnails/Nectronix.png",
+      "output": "images/portfolio/Nectronix.webp",
+      "sourceBytes": 3004054,
+      "sourceSha256": "854d13d3d45ffc62e759002e30e39b3746c7f74396d5900fbbd737dc76cf2696",
+      "outputBytes": 72620,
+      "outputSha256": "7b7b415e827a26f788db298ce1c7cfe3bf7b19844256e35308305e2007fe5f62"
+    },
+    {
+      "source": "video-thumbnails/Sharz-Properties.png",
+      "output": "images/portfolio/Sharz-Properties.webp",
+      "sourceBytes": 2961269,
+      "sourceSha256": "2bffeb729560ee7b433db69ba1459d2b26ddeb774276d8a347d1f7ccaf95ea10",
+      "outputBytes": 96976,
+      "outputSha256": "884bcaa4d1933c214666c145fb798a7cb89974dbd48f8f35459a0f0cd028f66b"
+    },
+    {
+      "source": "videos/711-Max-Bachat.mp4",
+      "output": "videos/portfolio/711-Max-Bachat.mp4",
+      "sourceBytes": 14779941,
+      "sourceSha256": "8d75af9a8744dbf36242a4f5b608807494e221c29d896bf60439bf63c8e1fd45",
+      "outputBytes": 1236033,
+      "outputSha256": "37e10b5bd39820b654bf8254ed3fbad898a814ef038c67e066bfa88b8529ef36"
+    },
+    {
+      "source": "videos/ENG-Properties.mp4",
+      "output": "videos/portfolio/ENG-Properties.mp4",
+      "sourceBytes": 21414801,
+      "sourceSha256": "b45f88800a6ca2320b0e556a261cdc20a66ef86a3f5d0624d2af314c2a9d225e",
+      "outputBytes": 2500502,
+      "outputSha256": "383ab424bfdc38e5c3294d503d72f7071597d278ec782fb419e9fcd1fc7c0130"
+    },
+    {
+      "source": "videos/JSN-Medical.mp4",
+      "output": "videos/portfolio/JSN-Medical.mp4",
+      "sourceBytes": 18335458,
+      "sourceSha256": "e6a079a9e14c68f7f023de849fb97e95a0e4bd1f5956473974a9bc3d00de91c5",
+      "outputBytes": 1866834,
+      "outputSha256": "98a30b3bb23488b3fc0d13deca527b987c00159db5800e65707a5d8fc5904b62"
+    },
+    {
+      "source": "videos/Mission-Health-Care.mp4",
+      "output": "videos/portfolio/Mission-Health-Care.mp4",
+      "sourceBytes": 12689514,
+      "sourceSha256": "54a38b5bd55d7805d103ad76817b88f460a92c276d1f160cd85f32bac21d4938",
+      "outputBytes": 1008277,
+      "outputSha256": "9932cd72491c4e040465be88d3446248f2479c3b8a331a779deb17ffd9a1e29f"
+    },
+    {
+      "source": "videos/Nectronix.mp4",
+      "output": "videos/portfolio/Nectronix.mp4",
+      "sourceBytes": 16329738,
+      "sourceSha256": "faeeab668150f802237f5f940750223921cd992a112f3763b898668605258280",
+      "outputBytes": 1786114,
+      "outputSha256": "9c879e2f577c452689c832b9d5ef9a61f8bfbcb264b113c244d746d4a5768fcc"
+    },
+    {
+      "source": "videos/Sharz-Properties.mp4",
+      "output": "videos/portfolio/Sharz-Properties.mp4",
+      "sourceBytes": 16144859,
+      "sourceSha256": "2edbf0e386e3215c76bcd5d892b93f67930cb31dedf15c9fb7697eef8045617e",
+      "outputBytes": 2798844,
+      "outputSha256": "9bb4789eb7363f5cb4c82bd4a3f1e14970e44b1157b0057124db240ce2dfef12"
+    },
+    {
+      "source": "vmware-latest-logo.svg",
+      "output": "images/logos/vmware-latest-logo.svg",
+      "sourceBytes": 8299,
+      "sourceSha256": "2a2de8c85e64ca6ac27c4da3c6cc523b2dd7f77ede6635f1f439b61b39c690d9",
+      "outputBytes": 8299,
+      "outputSha256": "2a2de8c85e64ca6ac27c4da3c6cc523b2dd7f77ede6635f1f439b61b39c690d9"
+    },
+    {
+      "source": "web-app-manifest-192x192.png",
+      "output": "icons/web-app-manifest-192x192.png",
+      "sourceBytes": 14526,
+      "sourceSha256": "d71c24df29e1948f076666bf31dd78eb1ad4e6b82d5c9d3088ce348317eecf59",
+      "outputBytes": 14526,
+      "outputSha256": "d71c24df29e1948f076666bf31dd78eb1ad4e6b82d5c9d3088ce348317eecf59"
+    },
+    {
+      "source": "web-app-manifest-512x512.png",
+      "output": "icons/web-app-manifest-512x512.png",
+      "sourceBytes": 57750,
+      "sourceSha256": "6290b7962acb936b8ba5b94483e6ae11d71ddfa55756ed285103b64b73286716",
+      "outputBytes": 57750,
+      "outputSha256": "6290b7962acb936b8ba5b94483e6ae11d71ddfa55756ed285103b64b73286716"
+    },
+    {
+      "source": "window.svg",
+      "output": "images/illustrations/window.svg",
+      "sourceBytes": 385,
+      "sourceSha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1",
+      "outputBytes": 385,
+      "outputSha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1"
+    },
+    {
+      "source": "zwsoft-latest-logo.png",
+      "output": "images/logos/zwsoft-latest-logo.webp",
+      "sourceBytes": 410674,
+      "sourceSha256": "7120f9c45dfe6680539cbed7b93475cd2ebf753adcaf4ca88aed19a1ee77457d",
+      "outputBytes": 85718,
+      "outputSha256": "cd595b890d81a8828d4bb18446b3b3eec054de45f7c0cb18ee7c314952bc0c61"
+    }
+  ],
+  "beforeBytes": 143200132,
+  "afterBytes": 15327230
+}

@@ -1,6 +1,6 @@
 // /* eslint-disable @next/next/no-img-element */
 // import React from "react"
-// 
+//
 // export default function PortfolioPageLanding() {
 //     return (
 //         <main className="relative">
@@ -29,11 +29,11 @@
 //                         </a>
 //                     </div>
 //                 </div>
-// 
+//
 //                 {/* soft top/bottom dividers */}
 //                 <div className="h-2 w-full bg-gradient-to-r from-[#1d4ed8] via-[#2563eb] to-[#0ea5e9]" />
 //             </section>
 //         </main>
 //     )
 // }
-// 
+//

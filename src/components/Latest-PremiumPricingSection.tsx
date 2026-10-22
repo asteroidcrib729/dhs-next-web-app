@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 /**
  * PremiumPricingSection
@@ -16,10 +16,10 @@ import { useState } from 'react';
 export default function PremiumPricingSection() {
   // When `billingCycle` is `'monthly'`, the monthly pricing values are used.
   // When it is `'annual'`, prices reflect an annual billing cycle.
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "annual">("monthly");
 
   // Toggle handler updates the billing cycle state.
-  const toggleBilling = (cycle: 'monthly' | 'annual') => {
+  const toggleBilling = (cycle: "monthly" | "annual") => {
     setBillingCycle(cycle);
   };
 
@@ -27,44 +27,44 @@ export default function PremiumPricingSection() {
   // makes the component easier to modify and keeps markup clean.
   const plans = [
     {
-      name: 'Freelancer',
-      description: 'The essentials to provide your best work for clients.',
+      name: "Freelancer",
+      description: "The essentials to provide your best work for clients.",
       monthlyPrice: 19,
       annualPrice: 15, // per month when billed annually (approx. 20% off)
       features: [
-        '5 products',
-        'Up to 1,000 subscribers',
-        'Basic analytics',
-        '48‑hour support response time',
+        "5 products",
+        "Up to 1,000 subscribers",
+        "Basic analytics",
+        "48‑hour support response time",
       ],
       popular: false,
     },
     {
-      name: 'Startup',
-      description: 'A plan that scales with your rapidly growing business.',
+      name: "Startup",
+      description: "A plan that scales with your rapidly growing business.",
       monthlyPrice: 29,
       annualPrice: 25,
       features: [
-        '25 products',
-        'Up to 10,000 subscribers',
-        'Advanced analytics',
-        '24‑hour support response time',
-        'Marketing automations',
+        "25 products",
+        "Up to 10,000 subscribers",
+        "Advanced analytics",
+        "24‑hour support response time",
+        "Marketing automations",
       ],
       popular: true,
     },
     {
-      name: 'Enterprise',
-      description: 'Dedicated support and infrastructure for your company.',
+      name: "Enterprise",
+      description: "Dedicated support and infrastructure for your company.",
       monthlyPrice: 59,
       annualPrice: 55,
       features: [
-        'Unlimited products',
-        'Unlimited subscribers',
-        'Advanced analytics',
-        '1‑hour, dedicated support response time',
-        'Marketing automations',
-        'Custom reporting tools',
+        "Unlimited products",
+        "Unlimited subscribers",
+        "Advanced analytics",
+        "1‑hour, dedicated support response time",
+        "Marketing automations",
+        "Custom reporting tools",
       ],
       popular: false,
     },
@@ -97,7 +97,8 @@ export default function PremiumPricingSection() {
             Pricing that grows with you
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.
+            Choose an affordable plan that’s packed with the best features for engaging your
+            audience, creating customer loyalty, and driving sales.
           </p>
 
           {/* Billing toggle */}
@@ -105,22 +106,22 @@ export default function PremiumPricingSection() {
             <button
               type="button"
               className={`relative flex items-center px-4 py-2 rounded-l-full border border-indigo-500 focus:outline-none ${
-                billingCycle === 'monthly'
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-transparent text-indigo-400'
+                billingCycle === "monthly"
+                  ? "bg-indigo-600 text-white"
+                  : "bg-transparent text-indigo-400"
               }`}
-              onClick={() => toggleBilling('monthly')}
+              onClick={() => toggleBilling("monthly")}
             >
               Monthly
             </button>
             <button
               type="button"
               className={`relative flex items-center px-4 py-2 rounded-r-full border border-indigo-500 focus:outline-none -ml-px ${
-                billingCycle === 'annual'
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-transparent text-indigo-400'
+                billingCycle === "annual"
+                  ? "bg-indigo-600 text-white"
+                  : "bg-transparent text-indigo-400"
               }`}
-              onClick={() => toggleBilling('annual')}
+              onClick={() => toggleBilling("annual")}
             >
               Annually
             </button>
@@ -130,14 +131,14 @@ export default function PremiumPricingSection() {
         {/* Pricing cards container */}
         <div className="mt-16 grid grid-cols-1 gap-y-12 sm:mt-20 lg:mt-24 lg:grid-cols-3 lg:gap-x-8">
           {plans.map((plan) => {
-            const price = billingCycle === 'monthly' ? plan.monthlyPrice : plan.annualPrice;
+            const price = billingCycle === "monthly" ? plan.monthlyPrice : plan.annualPrice;
             return (
               <div
                 key={plan.name}
                 className={`relative rounded-2xl p-8 xl:p-10 ${
                   plan.popular
-                    ? 'bg-gradient-to-b from-[#0F1040] via-[#0C0F3A] to-[#05061A] ring-2 ring-indigo-600'
-                    : 'bg-[#0D1036]'
+                    ? "bg-gradient-to-b from-[#0F1040] via-[#0C0F3A] to-[#05061A] ring-2 ring-indigo-600"
+                    : "bg-[#0D1036]"
                 }`}
               >
                 {/* "Most popular" badge */}
@@ -158,8 +159,8 @@ export default function PremiumPricingSection() {
                   type="button"
                   className={`mt-8 w-full rounded-lg px-4 py-2 text-sm font-semibold shadow-sm focus:outline-none transition-colors ${
                     plan.popular
-                      ? 'bg-indigo-600 hover:bg-indigo-500 text-white'
-                      : 'bg-gray-800 hover:bg-gray-700 text-white'
+                      ? "bg-indigo-600 hover:bg-indigo-500 text-white"
+                      : "bg-gray-800 hover:bg-gray-700 text-white"
                   }`}
                 >
                   Buy plan

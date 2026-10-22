@@ -3,13 +3,13 @@ import TermsAndConditionsPage from "@/app/terms-and-conditions/components/TermsA
 import Footer from "@/components/Footer";
 
 export default function TermsAndConditions() {
-    return(
-        <>
-            <Header/>
-            
-            <TermsAndConditionsPage/>
+  return (
+    <>
+      <Header />
 
-            <Footer/>
-        </>
-    );
+      <TermsAndConditionsPage />
+
+      <Footer />
+    </>
+  );
 }

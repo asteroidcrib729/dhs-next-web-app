@@ -3,13 +3,13 @@ import PrivacyPolicyPage from "@/app/privacy-policy/components/PrivacyPolicyPage
 import Footer from "@/components/Footer";
 
 export default function PrivacyPolicy() {
-    return(
-        <>
-            <Header/>
-            
-            <PrivacyPolicyPage/>
+  return (
+    <>
+      <Header />
 
-            <Footer/>
-        </>
-    );
+      <PrivacyPolicyPage />
+
+      <Footer />
+    </>
+  );
 }
