@@ -1,6 +1,18 @@
-﻿# Local verification - October 22, 2026
+﻿# Project verification - October 22, 2026
 
-I verified the current PostgreSQL project on Windows with Node.js 24.21.0 and npm 11.19.1. Hosted GitHub Actions runs await commit/push; local validation does not establish that a hosted workflow has passed.
+I verified the current PostgreSQL project locally on Windows with Node.js 24.21.0 and npm 11.19.1, then confirmed the hosted GitHub Actions results below.
+
+## Hosted GitHub Actions verification
+
+The modernization commit `7a5a22b66bd29159c8abec53db55fdc4cd44e453` was pushed to `master` and verified against the matching remote SHA. All eight CI jobs passed on October 22, 2026:
+
+| Workflow     | Successful hosted run                                                                           | Coverage                                                                                                                                                         |
+| ------------ | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Code quality | [Run 39819286887](https://github.com/asteroidcrib729/tvs-next-web-app/actions/runs/39819286887) | Linux and Windows clean install, formatting, lint, types, schema, assets and production builds; PostgreSQL migration/drift/CRUD; Actionlint with runner tooling. |
+| Security     | [Run 39819286798](https://github.com/asteroidcrib729/tvs-next-web-app/actions/runs/39819286798) | Production dependency gate, full audit artifact and redacted full-history Gitleaks scan.                                                                         |
+| CodeQL       | [Run 39819286922](https://github.com/asteroidcrib729/tvs-next-web-app/actions/runs/39819286922) | JavaScript/TypeScript and GitHub Actions analysis/uploads.                                                                                                       |
+
+No workflow failure required a corrective code change. Initial Dependabot update runs also completed successfully. The development server was stopped and TCP port 3000 was confirmed closed. README explicitly documents that both formatting commands traverse the repository root; source files are formatted wherever the respective formatters apply, with documented generated/media/secret exclusions.
 
 ## Current repository and database checks
 
@@ -46,7 +58,7 @@ ESLint 9.39.5 satisfies the current React/import/accessibility plugins' declared
 
 ## Remaining boundaries
 
-GitHub must execute the new workflows after commit/push; Linux CI, CodeQL uploads and scheduled Dependabot PR creation have not been observed locally. Repository security settings and branch protection remain operator configuration. See [development plan 01](development-plan-01.md).
+Linux and Windows quality/build jobs, PostgreSQL integration, Security, and both CodeQL uploads passed in the hosted runs linked above. Initial Dependabot update jobs succeeded; future scheduled executions and newly proposed dependency PRs still require normal review. Branch protection and other optional repository rules remain operator configuration. See [development plan 01](development-plan-01.md).
 
 Persistent PostgreSQL hosting, real local credentials and Vercel deployment remain future tasks. Set a real `DATABASE_URL` and deliberately apply the baseline only to an appropriate fresh PostgreSQL database. Existing MySQL data requires its own transfer plan if relevant.
 

@@ -79,6 +79,8 @@ Prettier covers its supported file types; Prisma's formatter covers `prisma/sche
 
 `npm run check` runs formatting checks, ESLint, TypeScript, Prisma schema validation, and asset verification. GitHub Actions repeats code quality and builds on Linux and Windows, applies PostgreSQL migrations to an isolated PostgreSQL 18 service, checks schema drift and CRUD, audits dependencies, scans secrets with Gitleaks, and analyzes TypeScript/JavaScript and Actions with CodeQL. Dependabot checks npm packages and Actions weekly. See [CI and PostgreSQL plan](development-plans/development-plan-01.md).
 
+I monitor hosted results in [Code quality](https://github.com/asteroidcrib729/tvs-next-web-app/actions/workflows/code-quality.yml), [Security](https://github.com/asteroidcrib729/tvs-next-web-app/actions/workflows/security.yml), and [CodeQL](https://github.com/asteroidcrib729/tvs-next-web-app/actions/workflows/codeql.yml). The [verification report](development-plans/verification.md#hosted-github-actions-verification) records the successful first hosted runs.
+
 The current React ESLint plugins declare support through ESLint 9. ESLint is pinned to 9.39.5 for peer-consistent clean installs; that major is end-of-support upstream. Review the plugins and upgrade ESLint together when they declare ESLint 10 support. No dependency-peer override or legacy-peer-deps setting is used.
 
 The PostgreSQL migration replaces the old MySQL migration history. It initializes a fresh database; it does not transfer existing MySQL data. If an external database already contains business data, plan an export, transformation, and import separately. Database hosting and Vercel deployment remain later work.

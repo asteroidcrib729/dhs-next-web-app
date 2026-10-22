@@ -38,7 +38,7 @@ Last updated: October 22, 2026 (Asia/Karachi).
 - Renamed `docs` to `development-plans` and updated script/README links. Asset manifest: `development-plans/assets-manifest.json`. Budget: 5 MiB per asset and 20 MiB total; `assets:check` validates hashes, inventory and source URLs.
 - Added Prettier 3.9.10, formatting write/check commands, Prisma formatting verification, EditorConfig and Git line-ending rules. `check` combines formatting, lint, types, schema and asset checks. Public media, generated code, local data and build output are excluded from Prettier; npm generates the lockfile and Prisma generates SQL.
 - Added GitHub Actions workflows: `code-quality.yml` (Linux/Windows checks/build, PostgreSQL 18 integration, Actionlint), `security.yml` (audit and Gitleaks), and `codeql.yml` (JavaScript/TypeScript and Actions). Actions use full commit pins; downloaded tools use version/checksum pins; permissions are minimal; no application secrets are required.
-- Added weekly npm/Actions Dependabot updates with compatible package grouping. No auto-merge. Hosted CI runs await commit/push; local Actionlint validation and Gitleaks scans passed (19 history commits and 223 nonignored working-tree files, no leaks). Clean npm ci, the quality checks and the production build passed. The configured contact API returned 200, independently persisted a long inquiry in PostgreSQL, and the test row was removed; email stayed disabled.
+- Added weekly npm/Actions Dependabot updates with compatible package grouping. No auto-merge. Hosted CI now passed on the initial modernization commit (see the delivery record below); local Actionlint validation and Gitleaks scans passed (19 history commits and 223 nonignored working-tree files, no leaks). Clean npm ci, the quality checks and the production build passed. The configured contact API returned 200, independently persisted a long inquiry in PostgreSQL, and the test row was removed; email stayed disabled.
 
 ## Current delivery task: formatting confirmation and hosted CI
 
@@ -46,7 +46,8 @@ Last updated: October 22, 2026 (Asia/Karachi).
 - Verified both formatting commands traverse the repository root and documented their exact behavior and intentional exclusions in README. CI performs a read-only formatting gate; it does not write formatting commits. Public media preserves original bytes/whitespace in Git and is validated by hashes, while source formatting and whitespace checks remain enforced.
 - Stopped the local development server and confirmed TCP port 3000 is closed. Keep it stopped unless the owner requests a restart.
 - Delivery scope includes the prior local setup, dependency updates, optimized asset replacements, PostgreSQL migration, formatting conventions, project documentation and CI/Dependabot configuration. Exclude ignored secrets, dependencies, build output and local evidence.
-- Hosted run results will be recorded after the initial push and any required CI fixes.
+- Modernization commit `7a5a22b66bd29159c8abec53db55fdc4cd44e453` was pushed to `origin/master` with matching remote SHA. All eight jobs passed: Code quality run `39819286887` (Linux/Windows checks/builds, PostgreSQL integration and Actionlint), Security run `39819286798` (dependency gate and Gitleaks), and CodeQL run `39819286922` (JavaScript/TypeScript and Actions). No workflow failure required a fix. Initial Dependabot runs also succeeded.
+- README now links hosted workflows; `development-plans/verification.md` contains the immutable successful run links. The documentation delivery commit is monitored again after pushing. Continue to verify the final remote SHA and clean worktree at handoff.
 
 ## Dependency constraints and remaining boundaries
 

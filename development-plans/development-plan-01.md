@@ -19,7 +19,7 @@ I am preparing the existing marketing website for continued development. The act
 - [x] Add production dependency vulnerability gating, full audit reports, Gitleaks, and CodeQL.
 - [x] Configure weekly Dependabot updates with related packages grouped together.
 - [x] Establish `AGENTS.md` as the ongoing project record and contributor instructions.
-- [ ] Run the workflows on GitHub after these changes are committed and pushed.
+- [x] Run the workflows on GitHub after commit/push: Code quality, Security and CodeQL all passed for the modernization commit; see [hosted verification](verification.md#hosted-github-actions-verification).
 - [ ] Configure repository rules/required checks and GitHub security features in the GitHub UI if needed.
 - [ ] Provision a persistent PostgreSQL database and set real development credentials.
 - [ ] Plan any transfer of existing external MySQL data if such data exists.
