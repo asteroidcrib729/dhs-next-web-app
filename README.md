@@ -20,7 +20,7 @@ To enable contact storage, create a local PostgreSQL database and user, set `DAT
 npm.cmd run db:deploy
 ```
 
-I do not run migrations automatically during installation. Database creation and credentials belong to the local database operator. Use `npm run db:migrate` when deliberately changing the schema. Optional email notifications require a Resend API key, a verified sender, and the intended recipient.
+I do not run migrations automatically during installation. Database creation and credentials belong to the local database operator. Use `npm run db:migrate` when deliberately changing the schema. Optional email notifications require a sending-only Resend API key, an allowed sender and the intended recipient. I configured the owner-selected onboarding@resend.dev sender; Resend restricts this sender to its account email. See [notification setup](development-plans/deployment.md#contact-email-notifications).
 
 ## Editorial studio
 
@@ -43,15 +43,15 @@ Development uses the SDK’s debug behavior. Hosted collection still requires en
 | Variable             | Used by                                 | Purpose                                                                                                                         |
 | -------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | `DATABASE_URL`       | `prisma.config.ts`, `src/lib/prisma.ts` | PostgreSQL URL; required for database commands, contact persistence and the editorial studio. URL-encode credentials.           |
-| `RESEND_API_KEY`     | `src/app/api/contact/route.ts`          | Optional server-side email key. Empty means no notification is sent.                                                            |
-| `CONTACT_EMAIL_FROM` | Contact API                             | Sender; must be verified with Resend for production.                                                                            |
+| `RESEND_API_KEY`     | `src/lib/contact-notification.ts`       | Optional server-side email key. Empty means no notification is sent.                                                            |
+| `CONTACT_EMAIL_FROM` | Contact API                             | Verified sender, or onboarding@resend.dev restricted to the Resend account email.                                               |
 | `CONTACT_EMAIL_TO`   | Contact API                             | Notification recipient.                                                                                                         |
 | `DEBUG_ERRORS`       | Contact API                             | Enables database error codes in error responses; keep `false` in production.                                                    |
 | `NODE_ENV`           | Next.js, custom production server       | Managed by `dev`, `build`, and `start`; do not set it in `.env`.                                                                |
 | `PORT`               | Next.js CLI, `server.mjs`               | Optional listen port, default 3000. For development, `npm run dev -- --port 3001` is explicit.                                  |
 | `NODE_OPTIONS`       | Node.js itself                          | Optional runtime options set before starting Node; the old assignment inside `server.mjs` was ineffective and has been removed. |
 
-I found no `NEXT_PUBLIC_*` or `import.meta.env` reads. Database and email values stay on the server. With an empty database URL, valid contact submissions receive HTTP 503; invalid submissions receive HTTP 400. Notifications require all three email settings; there are no hardcoded sender/recipient fallbacks. Missing email configuration does not prevent a configured database from saving an inquiry. A database health check returns a generic 503 when unavailable.
+I found no `NEXT_PUBLIC_*` or `import.meta.env` reads. Database and email values stay on the server. With an empty database URL, valid contact submissions receive HTTP 503; invalid submissions receive HTTP 400. Notifications require all three email settings; there are no hardcoded sender/recipient fallbacks. Missing email configuration does not prevent a configured database from saving an inquiry. Notifications escape submitted HTML, include plain text and handle provider rejection without exposing submission contents in logs. Email failure does not undo a stored inquiry. There is no automatic retry queue. A database health check returns a generic 503 when unavailable.
 
 ### Public contact details and outbound links
 
@@ -146,3 +146,5 @@ For an isolated test database only, set `DATABASE_TEST_ALLOW_WRITE=true`, then r
 I deploy the site at https://digitalhorizonsystems.vercel.app. Vercel runs the existing forward migrations before building. Production has its own database and auth secret; preview and local development share a separate database. Application traffic uses pooled TLS connections, and migrations use `DIRECT_DATABASE_URL` when configured. Preview authentication uses the trusted generated deployment hostname, while production uses its exact configured origin.
 
 The normal `npm run studio:import` command still imports private drafts. The explicit `npm run studio:import -- --publish-current` option is only for moving the existing bundled public catalogue into a new database, preserving its dates and noindex decisions. It never changes existing database entries. I used it once per new cloud database. Future editorial changes go through the Studio save/publish workflow. See [deployment operations](development-plans/deployment.md) for environment boundaries and account setup.
+
+I leave the local development server stopped until I need it and start it manually with `npm run dev`. The ignored `.local/deployment/studio-credentials.json` contains actual temporary login passwords, not hashes; Better Auth stores password hashes in PostgreSQL. Production and preview credentials are separate. See [editorial account operations](development-plans/deployment.md#editorial-accounts).

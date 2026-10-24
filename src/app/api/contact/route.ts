@@ -4,7 +4,7 @@ export const runtime = "nodejs";
 import { NextResponse } from "next/server";
 import { getPrisma } from "@/lib/prisma";
 import type { Prisma } from "@/generated/prisma/client";
-import { Resend } from "resend";
+import { sendContactNotification } from "@/lib/contact-notification";
 import { isSupportedContactService } from "@/lib/services";
 import { isGeneralPhoneNumber } from "@/lib/contact-phone";
 import { normalizeProjectBudget } from "@/lib/project-budget";
@@ -98,32 +98,10 @@ export async function POST(req: Request) {
     }
     const record = await getPrisma().contact.create({ data });
 
-    // Send email (don’t fail the request if email fails)
-    try {
-      if (
-        process.env.RESEND_API_KEY &&
-        process.env.CONTACT_EMAIL_FROM &&
-        process.env.CONTACT_EMAIL_TO
-      )
-        await new Resend(process.env.RESEND_API_KEY).emails.send({
-          from: process.env.CONTACT_EMAIL_FROM,
-          to: process.env.CONTACT_EMAIL_TO,
-          subject: "New Contact Form Submission",
-          html: `
-          <h2>New Inquiry Received</h2>
-          <p><strong>Name:</strong> ${record.firstName} ${record.lastName}</p>
-          <p><strong>Email:</strong> ${record.email}</p>
-          <p><strong>Phone:</strong> ${record.phone ?? "N/A"}</p>
-          <p><strong>Company:</strong> ${record.company ?? "N/A"}</p>
-          <p><strong>Service:</strong> ${record.service}</p>
-          <p><strong>Budget:</strong> ${record.budget ?? "N/A"}</p>
-          <p><strong>Message:</strong></p>
-          <p>${record.message ?? ""}</p>
-        `,
-        });
-    } catch (mailErr) {
-      console.error("Resend error:", stringifyErr(mailErr));
-    }
+    // The inquiry is already stored; notification failures must not trigger a resubmission.
+    const notification = await sendContactNotification(record);
+    if (notification === "failed")
+      console.error("Contact notification failed; the inquiry remains stored.");
 
     return NextResponse.json({ success: true });
   } catch (err: unknown) {
