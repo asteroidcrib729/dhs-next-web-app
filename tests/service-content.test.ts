@@ -37,6 +37,31 @@ test("phone input accepts local and international conventions and extensions", (
   ])
     assert.equal(isGeneralPhoneNumber(phone), false, phone);
 });
+test("phone validation rejects oversized and adversarial input without ambiguous matching", () => {
+  for (const phone of [
+    "1234567" + "\t".repeat(120) + "!",
+    "1234567" + " ".repeat(110) + "ext. nope",
+    "1234567 ext",
+    "1234567 x",
+    "1234567 #",
+    "1234567 ext 12 x34",
+    "1234567 ext. 123456789",
+    "1234567+123",
+    "1234567" + " ".repeat(122),
+    "1234567" + "\t".repeat(100_000) + "!",
+    " ".repeat(100_000),
+  ])
+    assert.equal(isGeneralPhoneNumber(phone), false, "reject malformed or oversized phone");
+  assert.equal(isGeneralPhoneNumber("1234567" + " ".repeat(121)), true);
+  for (const phone of [
+    "  +92 (300) 123-4567 EXT. 12345678  ",
+    "0044 20 7946 0958x42",
+    "1234567#1",
+    "1234567\tX\t12",
+  ])
+    assert.equal(isGeneralPhoneNumber(phone), true, phone);
+});
+
 test("services and contact options share the revised offering", () => {
   assert.deepEqual(
     serviceGroups.map((g) => g.title),

@@ -199,6 +199,13 @@ Last updated: October 24, 2026 (Asia/Karachi).
 
 - Verified the corrective commit 96a4bb02835592516759c14f26d07c0caa8489b7 on master against the actual remote; all hosted workflows passed: Code quality 40099975890 (Windows/Ubuntu checks and builds, workflow validation, PostgreSQL migration/drift/contact/editorial integration), Security 40099975857 and CodeQL 40099975904. The follow-up below records this verified code checkpoint only. Deployment remains pending authentication; no production/preview database or Vercel project has been created. Local port 3000 is running and homepage, About, Blog, Case Studies and studio login returned HTTP 200.
 
+## Completed work: contact phone CodeQL remediation (October 24, 2026)
+
+- Confirmed live CodeQL alert #1, js/polynomial-redos, on src/lib/contact-phone.ts. The original optional extension and overlapping whitespace repetitions produced superlinear rejection work on user-controlled values; isolated 1,000/2,000/4,000-tab probes reproduced the slowdown. A successful CodeQL workflow can still upload open alerts, so workflow success must not be treated as proof of zero findings.
+- Replaced the combined pattern with first-marker splitting and independent anchored number/extension checks. Added a 128-character bound before trim/matching. Preserved optional blank phone values, country-independent formatting, optional leading plus, 00 international prefix handling, 7 to 15 base digits and 1 to 8 extension digits using ext, ext., x or #. The shared helper protects both contact form and API; no schema or dependency change was needed.
+- Added regression coverage for adversarial whitespace, malformed/repeated extensions, invalid characters, 128/129-character boundaries and 100,000-character input. All 32 tests, formatting/lint/types/schema/assets, production build and diff checks passed. An additional 10,000 bounded generated samples matched the previous validator. Running API rejection probes returned HTTP 400 with the expected phone validation error before database/email handling; no inquiry was persisted or email sent.
+- Evidence is in ignored .local/phone-redos-baseline.json, phone-format-compatibility.json, phone-redos-api-report.json and phone-security check/build logs. Keep port 3000 running. Push the scoped correction and verify both the resulting workflows and alert #1 state; do not dismiss the finding manually. Vercel/Prisma deployment remains pending the previously documented authentication issues.
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 ## This is NOT the Next.js you know
