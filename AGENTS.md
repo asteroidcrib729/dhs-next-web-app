@@ -197,6 +197,8 @@ Last updated: October 24, 2026 (Asia/Karachi).
 - Provider authentication remains pending: Prisma requires reauthentication, and the user reports Invalid Client ID in its sign-in flow. This requires repairing/reconnecting the provider app configuration; no cloud database or deployment exists yet. Vercel team access still returns 403 pending its provider authorization link. Do not bypass these boundaries or ask the owner to paste secrets into chat.
 - The previously recorded owner dev process was absent at delivery verification. Restored Next development on port 3000 in a hidden process; homepage returned HTTP 200 with current branding. Leave it running.
 
+- Verified the corrective commit 96a4bb02835592516759c14f26d07c0caa8489b7 on master against the actual remote; all hosted workflows passed: Code quality 40099975890 (Windows/Ubuntu checks and builds, workflow validation, PostgreSQL migration/drift/contact/editorial integration), Security 40099975857 and CodeQL 40099975904. The follow-up below records this verified code checkpoint only. Deployment remains pending authentication; no production/preview database or Vercel project has been created. Local port 3000 is running and homepage, About, Blog, Case Studies and studio login returned HTTP 200.
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 ## This is NOT the Next.js you know
