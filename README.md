@@ -34,7 +34,7 @@ Saving a draft preserves the live article. Publishing updates its content, metad
 
 I integrated Vercel Web Analytics with measurement enabled by default. Visitors can disable future measurement for their browser on the Cookie Policy at `/cookie-policy#analytics-choice`; Privacy and Terms link to that control. The preference persists in local storage and synchronizes across tabs. Query strings, fragments, private studio/preview routes and API paths are excluded. Inquiry fields and editor identities are not analytics events.
 
-Development uses the SDK’s debug behavior. Hosted collection still requires enabling Web Analytics in the intended Vercel project dashboard and deploying the code. No deployment or Vercel account settings have been changed. See [analytics details](development-plans/editorial-studio.md#analytics-and-privacy-choice).
+Development uses the SDK debug behavior. Web Analytics is enabled in the Vercel project and the deployed analytics proxy loads successfully. The persistent browser opt-out was verified against actual proxy requests. See [analytics details](development-plans/editorial-studio.md#analytics-and-privacy-choice).
 
 ## Environment variables
 
@@ -69,7 +69,7 @@ I configure public contact details and website destinations in the `SITE_*` entr
 | `SITE_PARTNER_*`, `SITE_PROJECT_*`                        | Technology partner and portfolio website destinations.                                                               |
 | `SITE_ADDRESS`, `SITE_OFFICE_HOURS`, `SITE_MAP_EMBED_URL` | Settings for preserved contact cards/map if I re-enable their imports later.                                         |
 
-I left outdated phone, WhatsApp and public email values empty until current details are available. Empty contact settings hide their links. Social items are always clickable: configured profile URLs take priority, and empty or invalid social settings fall back to the official platform homepages. Empty partner/project destinations render readable content without a dead link. Old-brand social defaults were cleared; partner and portfolio URLs remain in the template for review. URL settings reject unsupported schemes and embedded credentials.
+I configure current phone, WhatsApp and public email values privately through the SITE settings. Empty contact settings hide their links. Social items are always clickable: configured profile URLs take priority, and empty or invalid social settings fall back to the official platform homepages. Empty partner/project destinations render readable content without a dead link. Old-brand social defaults were cleared; partner and portfolio URLs remain in the template for review. URL settings reject unsupported schemes and embedded credentials.
 
 **Restart development after editing settings. Rebuild production to update public values**, because marketing pages are statically generated. Next.js environment precedence still applies. I never put secrets in `SITE_*` settings.
 
@@ -118,7 +118,7 @@ The major-version migrations follow the [Next.js 16 upgrade guide](https://nextj
 
 See [asset organization and maintenance](development-plans/assets.md) for layout, optimization settings, external source archives, size budgets, and Git history considerations. `npm run assets:check` verifies every manifest hash, source URL, and storage budget without requiring FFmpeg or original media.
 
-See [local verification results](development-plans/verification.md) for browser checks, the remaining development-tool advisory, and database/email configuration boundaries.
+See the [implementation closeout](development-plans/implementation-closeout.md) for current browser, database, email, security and deployment verification. The [initial verification archive](development-plans/verification.md) preserves the earlier modernization results; its audit counts and configuration boundaries are historical.
 
 ## Formatting and CI
 
@@ -148,3 +148,7 @@ I deploy the site at https://digitalhorizonsystems.vercel.app. Vercel runs the e
 The normal `npm run studio:import` command still imports private drafts. The explicit `npm run studio:import -- --publish-current` option is only for moving the existing bundled public catalogue into a new database, preserving its dates and noindex decisions. It never changes existing database entries. I used it once per new cloud database. Future editorial changes go through the Studio save/publish workflow. See [deployment operations](development-plans/deployment.md) for environment boundaries and account setup.
 
 I leave the local development server stopped until I need it and start it manually with `npm run dev`. The ignored `.local/deployment/studio-credentials.json` contains actual temporary login passwords, not hashes; Better Auth stores password hashes in PostgreSQL. Production and preview credentials are separate. See [editorial account operations](development-plans/deployment.md#editorial-accounts).
+
+## License
+
+I reserve all rights to this project's original code, documentation, designs and branding under the [Digital Horizon Systems Proprietary License](LICENSE.md). Public repository access does not grant permission to copy, modify, redistribute or deploy those materials beyond applicable law, hosting-platform rights or my written permission. Third-party dependencies, fonts, photographs, videos and logos retain their own licenses and rights; see the [asset records](development-plans/assets.md).

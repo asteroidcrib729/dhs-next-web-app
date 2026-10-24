@@ -1,4 +1,6 @@
-﻿# Project verification - October 22, 2026
+﻿# Project verification archive - October 22, 2026
+
+This is a historical snapshot. For the current deployed application, fresh audit results and completed email verification, see the [October 24 implementation closeout](implementation-closeout.md). Configuration, asset counts and advisory status below describe the earlier checkpoint.
 
 I verified the current PostgreSQL project locally on Windows with Node.js 24.21.0 and npm 11.19.1, then confirmed the hosted GitHub Actions results below.
 
@@ -14,7 +16,7 @@ The modernization commit `7a5a22b66bd29159c8abec53db55fdc4cd44e453` was pushed t
 
 No workflow failure required a corrective code change. Initial Dependabot update runs also completed successfully. The development server was stopped and TCP port 3000 was confirmed closed. README explicitly documents that both formatting commands traverse the repository root; source files are formatted wherever the respective formatters apply, with documented generated/media/secret exclusions.
 
-## Current repository and database checks
+## Repository and database checks at the historical checkpoint
 
 | Check                         | Result                                                                                                                                                                                      |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
