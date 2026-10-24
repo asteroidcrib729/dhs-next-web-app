@@ -42,23 +42,9 @@ jobs:
     name: PostgreSQL migration and CRUD
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    services:
-      postgres:
-        image: postgres:18-alpine
-        env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: tvs_ci
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd "pg_isready -U postgres -d tvs_ci"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
     env:
-      DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:5432/tvs_ci
       DATABASE_TEST_ALLOW_WRITE: "true"
+      BETTER_AUTH_URL: http://localhost:3000
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -67,10 +53,39 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
+      - name: Start isolated PostgreSQL with ephemeral credentials
+        shell: bash
+        run: |
+          database_password="$(node -p "require('node:crypto').randomBytes(32).toString('hex')")"
+          auth_secret="$(node -p "require('node:crypto').randomBytes(32).toString('hex')")"
+          echo "::add-mask::$database_password"
+          echo "::add-mask::$auth_secret"
+          {
+            printf 'DATABASE_URL=postgresql://postgres:%s@127.0.0.1:5432/dhs_ci\n' "$database_password"
+            printf 'BETTER_AUTH_SECRET=%s\n' "$auth_secret"
+          } >> "$GITHUB_ENV"
+          POSTGRES_PASSWORD="$database_password" docker run --detach --name dhs-ci-postgres \
+            --env POSTGRES_USER=postgres --env POSTGRES_PASSWORD --env POSTGRES_DB=dhs_ci \
+            --publish 127.0.0.1:5432:5432 \
+            --health-cmd 'pg_isready -U postgres -d dhs_ci' \
+            --health-interval 2s --health-timeout 5s --health-retries 20 \
+            postgres:18-alpine
+          for attempt in $(seq 1 40); do
+            status="$(docker inspect --format '{{.State.Health.Status}}' dhs-ci-postgres)"
+            if [ "$status" = healthy ]; then exit 0; fi
+            if [ "$status" = unhealthy ]; then break; fi
+            sleep 2
+          done
+          docker logs dhs-ci-postgres
+          exit 1
       - run: npm ci --no-audit --no-fund
       - run: npm run db:deploy
       - run: npm run db:drift
       - run: npm run db:check
+      - run: npm run studio:check
+      - name: Remove disposable database
+        if: always()
+        run: docker rm --force --volumes dhs-ci-postgres
 
   workflows:
     name: Workflow validation

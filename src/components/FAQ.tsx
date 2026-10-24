@@ -18,17 +18,18 @@ function FaqRow({ item }: { item: FaqItem }) {
   return (
     <div>
       <button
+        id={qid}
         type="button"
         aria-controls={pid}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="group grid w-full grid-cols-[1fr_auto] items-start gap-3 text-left focus:outline-none"
+        className="group grid w-full grid-cols-[1fr_auto] items-start gap-3 text-left"
       >
         <div>
-          <h3 className="text-base sm:text-lg font-semibold text-gray-400">{item.question}</h3>
+          <h3 className="text-base sm:text-lg font-semibold text-foreground">{item.question}</h3>
           {/* The first item in your screenshot is open and shows a light paragraph under it */}
           {open && (
-            <p className="mt-2 max-w-6xl text-sm sm:text-[0.95rem] leading-relaxed text-white">
+            <p className="mt-2 max-w-6xl text-sm sm:text-[0.95rem] leading-relaxed text-foreground">
               {item.answer}
             </p>
           )}
@@ -36,8 +37,8 @@ function FaqRow({ item }: { item: FaqItem }) {
 
         {/* Plus/Minus Icon */}
         <span
-          className="relative mt-1 h-5 w-5 shrink-0 rounded-md text-slate-300 transition-colors
-                     group-hover:text-slate-100"
+          className="relative mt-1 h-5 w-5 shrink-0 rounded-md text-primary transition-colors
+                     group-hover:text-foreground"
           aria-hidden="true"
         >
           {/* horizontal bar */}
@@ -59,94 +60,49 @@ function FaqRow({ item }: { item: FaqItem }) {
 
 const DEFAULT_FAQS: FaqItem[] = [
   {
-    question: "What are the main services you offer?",
+    question: "What does Digital Horizon Systems do?",
     answer:
-      "We provide a complete range of business solutions, focusing on three core areas: Digital Marketing, Web Development, and IT Infrastructure.",
+      "We build websites and customized desktop applications, supported by technical SEO, permission-based email workflows and dependable IT infrastructure. Work can include cloud planning, network design and cybersecurity improvements.",
   },
   {
-    question: "What makes your company a reliable partner?",
+    question: "How do I get started?",
     answer:
-      "We pride ourselves on our deep Market Knowledge, ensuring all our campaigns are Compliance Ready with international regulations, and providing dedicated 24/7 Support aligned with your business hours.",
+      "Use the Contact page to describe your goals, services of interest and project requirements. We will review the inquiry and discuss the next steps with you. The consultation link in the header always opens that page.",
   },
   {
-    question: "Are you certified or partnered with any major tech companies?",
+    question: "How is a project scoped and priced?",
     answer:
-      "Yes, we are official partners with leading platforms, including Meta (Business Partner), Google (Premier Partner), Google Cloud, TikTok (Marketing Partner), Shopify, HubSpot, and AWS (Select Tier). We are also a Top Rated company on Clutch.",
+      "Scope, deliverables, fees and timelines are agreed in a written proposal. Website examples and package information are starting points for discussion. The agreed proposal defines the work we deliver.",
   },
   {
-    question: "What specific digital marketing services do you provide?",
+    question: "Can you improve an existing website?",
     answer:
-      "We offer a comprehensive suite of digital marketing services, including Search Engine Optimization (SEO), Pay-Per-Click (PPC) Management, Social Media Marketing, and Email Marketing.",
+      "Yes. We can review its design, content, accessibility, performance and technical foundations, then agree on a focused set of improvements.",
   },
   {
-    question: "What is included in your SEO service?",
+    question: "Which software and infrastructure platforms can you work with?",
     answer:
-      "Our SEO service includes technical SEO audits, keyword research, on-page optimization, link building campaigns, local SEO, and detailed analytics and reporting.",
+      "We work with established web, cloud and infrastructure technologies. The logos on this site identify platforms relevant to our work. Platform compatibility, licensing and support responsibilities are confirmed for each engagement.",
   },
   {
-    question: "Do you manage advertising on platforms like Google and social media?",
+    question: "Are business results guaranteed?",
     answer:
-      "Absolutely. Our PPC Management service includes Google Ads Management, Bing Ads Optimization, and Social Media Advertising to maximize your return on investment.",
+      "No. Rankings, traffic, conversions and revenue depend on many factors. We agree on useful measures, report progress and refine the work using the available evidence.",
   },
   {
-    question: "Can you build a custom website for my business?",
+    question: "How will I hear about progress?",
     answer:
-      "Yes, we specialize in Custom Web Development. Our service includes everything from CMS integration and database design to performance optimization and security implementation. The starting price is $5,000.",
+      "We agree on milestones, review points and communication channels during project planning. Clear feedback and timely approvals help the work move forward.",
   },
   {
-    question: "Do you create online stores?",
+    question: "What support is available after launch?",
     answer:
-      "Yes, we offer complete E-commerce Solutions, which include platform setup, payment gateway integration, inventory management, and mobile optimization. Our e-commerce packages start at $8,000.",
+      "Maintenance, monitoring and support can be included in the proposal. Coverage hours, response targets and ongoing costs depend on the agreed support arrangement.",
   },
   {
-    question: "Do you develop mobile applications?",
+    question: "What happens to information I send through the contact form?",
     answer:
-      "Yes, we develop native and cross-platform mobile apps for both iOS and Android. Our service covers UI/UX design, development, app store optimization, and ongoing maintenance. Mobile app projects start at $15,000.",
-  },
-  {
-    question: "What platforms are included in your mobile app development service?",
-    answer:
-      "We cover the entire mobile ecosystem, offering iOS App Development, Android App Development, and Cross-Platform Solutions to ensure your app reaches the widest possible audience.",
-  },
-  {
-    question: "What kind of IT infrastructure solutions do you offer?",
-    answer:
-      "We offer a range of enterprise-grade IT solutions, including Cloud Solutions, Cybersecurity Solutions, Network Infrastructure, and Server & Hardware Solutions.",
-  },
-  {
-    question: "Can you help my business with cybersecurity?",
-    answer:
-      "Yes, our Cybersecurity Solutions are designed to protect your business with services like network security assessment, firewall configuration, endpoint protection, and incident response. This service starts at $2,000/month.",
-  },
-  {
-    question: "What is included in your Cloud Solutions package?",
-    answer:
-      "Our Cloud Solutions help you migrate and optimize your infrastructure. The service includes cloud migration strategy, VMware virtualization, hybrid cloud setup, cloud security, and 24/7 monitoring and support. Pricing is customized based on your requirements.",
-  },
-  {
-    question: "What hardware brands do you work with?",
-    answer:
-      "We partner with industry-leading brands to provide premium hardware. Our partners include Dell, HP, Lenovo, H3C, and Sangfor for servers, workstations, storage, and networking equipment.",
-  },
-  {
-    question: "Do you offer support for setting up a network?",
-    answer:
-      "Yes, our Network Infrastructure service covers everything from network design and planning to H3C equipment installation, network optimization, and ongoing maintenance and support.",
-  },
-  {
-    question: "How do you tailor a strategy to my business?",
-    answer:
-      "During our Discovery & Analysis phase, we dive deep into your specific business needs, goals, and objectives. This allows us to create a comprehensive, customized strategy that is perfectly aligned with your vision.",
-  },
-  {
-    question: "Will I be kept informed during the project?",
-    answer:
-      "Definitely. During the Implementation phase of our process, we focus on executing the strategy with precision while keeping you informed throughout the entire process.",
-  },
-  {
-    question: "What happens after my project is launched?",
-    answer:
-      "Our work doesn't stop at launch. The final phase of our process is Optimization & Growth, where we continuously monitor, analyze, and optimize to ensure you achieve maximum ROI and sustained growth.",
+      "We use it to review and respond to your inquiry and discuss requested services. Contact submissions do not subscribe you to a newsletter. The Privacy Policy explains the information we collect and your choices.",
   },
 ];
 
@@ -156,13 +112,13 @@ export default function Faq({
 }: FaqProps) {
   return (
     <section id="faq-section" className="py-0">
-      <div className="w-full bg-black text-slate-100">
+      <div className="w-full bg-background text-foreground">
         <div className="p-4 sm:p-8 lg:p-12 xl:p-16">
-          <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-8 sm:mb-10 lg:mb-12">
+          <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground mb-8 sm:mb-10 lg:mb-12">
             {title}
           </h2>
 
-          <ul role="list" className="divide-y divide-white/10">
+          <ul role="list" className="divide-y divide-border">
             {faqs.map((item, i) => (
               <li key={i} className="py-4 sm:py-5 lg:py-6">
                 <FaqRow item={item} />

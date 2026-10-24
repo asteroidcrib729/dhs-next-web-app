@@ -1,54 +1,84 @@
-// import { Button } from "@/components/ui/button";
-// import SpotlightCard from "@/components/SpotlightCard";
-// import Image from "next/image";
-
-"use client";
-
-import LetterGlitch from "@/components/LetterGlitch";
+import HeroBackground from "@/components/HeroBackground";
 import Link from "next/link";
-
+import { Globe2, Code2, Network } from "lucide-react";
 export default function LandingPageTop() {
   return (
-    <>
-      <section className="relative w-full min-h-[86vh] bg-gradient-to-r from-blue-50 to-blue-100 px-6 text-center overflow-hidden flex items-center justify-center">
-        {/* Glitch Background */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-30">
-          <LetterGlitch
-            glitchSpeed={50}
-            glitchColors={["#2b4539", "#61dca3", "#61b3dc"]}
-            centerVignette={true}
-            outerVignette={true}
-            smooth={true}
-            characters="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-          />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6">
-            Drive Business Growth with{" "}
-            <span className="text-blue-600">Smart Digital Solutions</span>
+    <section className="horizon-hero relative overflow-hidden border-b border-border px-5 py-20 sm:px-8 sm:py-24">
+      <HeroBackground />
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.25fr_1fr]">
+        <div className="hero-entry">
+          <div className="inline-flex items-center gap-3 rounded-full border border-primary/20 bg-white/60 px-4 py-2 text-[10px] font-semibold uppercase tracking-[.17em] text-primary">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary" />A new horizon for your business
+          </div>
+          <h1 className="mt-7 max-w-3xl text-4xl font-semibold leading-[1.06] tracking-tight sm:text-6xl lg:text-7xl">
+            Turn your next idea into <span className="text-primary">lasting digital growth.</span>
           </h1>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
-            From strategy to execution, we help businesses unlock growth through modern marketing
-            and IT infrastructure.
+          <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground">
+            Digital Horizon Systems connects thoughtful strategy, purposeful design and dependable
+            technology. We help your business move forward with confidence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
-              className="px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
-            >
-              Get Started
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Link href="/services" className="action-link">
+              Explore Our Services
             </Link>
-            <Link
-              href="/case-studies"
-              className="px-6 py-3 rounded-lg bg-black hover:bg-gray-600 transition"
-            >
-              View Case Studies
+            <Link href="/contact" className="action-link action-link-secondary">
+              Start a Conversation
             </Link>
           </div>
+          <div className="mt-10 flex flex-wrap gap-x-5 gap-y-2 border-t border-primary/15 pt-5 text-xs font-medium text-muted-foreground">
+            <span>Strategy with direction</span>
+            <span>Design with purpose</span>
+            <span>Technology that lasts</span>
+          </div>
         </div>
-      </section>
-    </>
+        <div className="horizon-panel relative overflow-hidden rounded-3xl p-7 text-white sm:p-9">
+          <div className="relative">
+            <p className="text-[10px] font-medium uppercase tracking-[.22em] text-[#8bddc4]">
+              Your next chapter starts here
+            </p>
+            <h2 className="mt-4 max-w-xs text-3xl font-medium leading-tight">
+              One vision.
+              <br />
+              Connected possibilities.
+            </h2>
+            <div className="my-7 h-px bg-white/15" />
+            <div className="space-y-6">
+              {[
+                {
+                  Icon: Globe2,
+                  title: "Web Development & SEO",
+                  text: "Build a useful website and help people find it.",
+                },
+                {
+                  Icon: Code2,
+                  title: "Custom Desktop Applications",
+                  text: "Simplify daily work with tools built for your team.",
+                },
+                {
+                  Icon: Network,
+                  title: "IT Infrastructure",
+                  text: "Keep your business connected and ready to grow.",
+                },
+              ].map(({ Icon, title, text }) => (
+                <div key={title} className="flex items-start gap-4">
+                  <span className="rounded-xl border border-white/10 bg-white/5 p-3 text-[#8bddc4]">
+                    <Icon size={21} />
+                  </span>
+                  <div>
+                    <h3 className="text-sm font-semibold text-white">{title}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-white/60">{text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="horizon-lines mt-9" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

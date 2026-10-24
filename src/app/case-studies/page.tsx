@@ -1,11 +1,14 @@
 import Header from "@/components/Header";
 import CaseStudiesPageTop from "@/app/case-studies/components/CaseStudiesPageTop";
 import CaseStudiesPageResults from "@/app/case-studies/components/CaseStudiesPageResults";
-import CaseStudiesPageGrid from "@/app/case-studies/components/CaseStudiesPageGrid";
+import Catalogue from "@/components/editorial/Catalogue";
+import { listPublished } from "@/lib/editorial/store";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
-export default function CaseStudies() {
+export const dynamic = "force-dynamic";
+export default async function CaseStudies() {
+  const entries = await listPublished("CASE_STUDY");
   return (
     <>
       <Header />
@@ -14,7 +17,20 @@ export default function CaseStudies() {
 
       <CaseStudiesPageResults />
 
-      <CaseStudiesPageGrid />
+      <Catalogue
+        entries={entries.map(({ id, kind, content: c }) => ({
+          id,
+          kind,
+          content: {
+            title: c.title,
+            slug: c.slug,
+            excerpt: c.excerpt,
+            category: c.category,
+            coverImage: c.coverImage,
+            featured: c.featured,
+          },
+        }))}
+      />
 
       <CTA />
 

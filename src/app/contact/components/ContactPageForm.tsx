@@ -1,6 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { contactServiceOptions } from "@/lib/services";
+import { isGeneralPhoneNumber } from "@/lib/contact-phone";
+import {
+  formatBudgetInput,
+  normalizeProjectBudget,
+  type BudgetCurrency,
+} from "@/lib/project-budget";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -20,14 +27,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Phone, Mail, MapPin, Clock, MessageSquare, Calendar } from "lucide-react";
-import Link from "next/link";
 
 export default function ContactPage() {
   const [industry, setIndustry] = useState<string>("");
   const [service, setService] = useState<string>("");
   const [budget, setBudget] = useState<string>("");
-  const [newsletter, setNewsletter] = useState<boolean>(false);
+  const [budgetCurrency, setBudgetCurrency] = useState<BudgetCurrency>("PKR");
   const [terms, setTerms] = useState<boolean>(false);
 
   const [loading, setLoading] = useState(false);
@@ -35,16 +40,29 @@ export default function ContactPage() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const parsedBudget = normalizeProjectBudget(budget, budgetCurrency);
+    if (!parsedBudget.success) {
+      setNotice(parsedBudget.error);
+      return;
+    }
+    setNotice("");
     setLoading(true);
 
     const form = e.currentTarget;
     const fd = new FormData(form);
 
+    const phone = String(fd.get("phone") ?? "");
+    if (!isGeneralPhoneNumber(phone)) {
+      setNotice("Enter a valid local or international phone number, with an optional extension.");
+      setLoading(false);
+      return;
+    }
+
     // ensure non-native values are present
     fd.set("industry", industry || "");
     fd.set("service", service || "");
-    fd.set("budget", budget || "");
-    fd.set("newsletter", String(newsletter));
+    fd.set("budgetAmount", budget);
+    fd.set("budgetCurrency", budgetCurrency);
     fd.set("terms", String(terms));
 
     const data = Object.fromEntries(fd.entries());
@@ -62,7 +80,7 @@ export default function ContactPage() {
       setIndustry("");
       setService("");
       setBudget("");
-      setNewsletter(false);
+      setBudgetCurrency("PKR");
       setTerms(false);
     } catch (err) {
       setNotice("Could not send your message. Please try again.");
@@ -73,38 +91,46 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 via-white to-gray-100">
       <section className="py-6">
-        <div className="container mx-auto px-4 space-y-12">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 space-y-12">
           {/* Contact Form (Full Width at Top) */}
-          <Card id="contact-form-card-top" className="mb-6 shadow-lg border border-gray-100">
+          <Card id="contact-form-card-top" className="mb-6 shadow-lg border border-border">
             <CardHeader>
-              <CardTitle className="text-3xl text-center font-bold text-blue-900">
+              <CardTitle className="text-3xl text-center font-bold text-foreground">
                 Send Us a Message
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="contact-form space-y-6">
                 {/* Name */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="contact-firstName"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       First Name *
                     </label>
                     <Input
+                      id="contact-firstName"
                       name="firstName"
-                      placeholder="John"
-                      className="rounded-lg placeholder:text-gray-500 text-gray-500 focus:ring-2 focus:ring-blue-500"
+                      placeholder="Your first name"
+                      className="rounded-lg placeholder:text-gray-500 text-gray-500 focus:ring-2 focus:ring-primary"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="contact-lastName"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Last Name *
                     </label>
                     <Input
+                      id="contact-lastName"
                       name="lastName"
-                      placeholder="Doe"
-                      className="rounded-lg placeholder:text-gray-500 text-gray-500 focus:ring-2 focus:ring-blue-500"
+                      placeholder="Your last name"
+                      className="rounded-lg placeholder:text-gray-500 text-gray-500 focus:ring-2 focus:ring-primary"
                     />
                   </div>
                 </div>
@@ -112,67 +138,94 @@ export default function ContactPage() {
                 {/* Email & Phone */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="contact-email"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Email Address *
                     </label>
                     <Input
+                      id="contact-email"
                       name="email"
                       type="email"
-                      placeholder="john@company.com"
-                      className="rounded-lg placeholder:text-gray-500 text-gray-500 focus:ring-2 focus:ring-blue-500"
+                      placeholder="you@company.com"
+                      className="rounded-lg placeholder:text-gray-500 text-gray-500 focus:ring-2 focus:ring-primary"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="contact-phone"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Phone Number
                     </label>
                     <Input
+                      id="contact-phone"
                       name="phone"
-                      placeholder="(555) 123-4567"
-                      className="rounded-lg placeholder:text-gray-500 text-gray-500 focus:ring-2 focus:ring-blue-500"
+                      type="tel"
+                      autoComplete="tel"
+                      inputMode="tel"
+                      placeholder="Country code and phone number"
+                      aria-describedby="contact-phone-help"
+                      className="rounded-lg placeholder:text-gray-500 text-gray-500 focus:ring-2 focus:ring-primary"
                     />
+                    <p id="contact-phone-help" className="mt-2 text-xs text-muted-foreground">
+                      Local and international numbers accepted, including extensions.
+                    </p>
                   </div>
                 </div>
 
                 {/* Company & Industry */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="contact-company"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Company Name
                     </label>
                     <Input
+                      id="contact-company"
                       name="company"
                       placeholder="Your Company"
-                      className="rounded-lg placeholder:text-gray-500 text-gray-500 focus:ring-2 focus:ring-blue-500"
+                      className="rounded-lg placeholder:text-gray-500 text-gray-500 focus:ring-2 focus:ring-primary"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Industry</label>
+                    <label
+                      htmlFor="contact-industry"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
+                      Industry
+                    </label>
                     <Select value={industry} onValueChange={setIndustry}>
-                      <SelectTrigger className="w-full rounded-lg text-gray-500">
+                      <SelectTrigger
+                        id="contact-industry"
+                        className="w-full rounded-lg text-gray-500"
+                      >
                         <SelectValue placeholder="Select your industry" />
                       </SelectTrigger>
                       <SelectContent className="text-gray-500 bg-white placeholder:text-gray-500">
-                        <SelectItem value="technology" className="hover:bg-blue-300">
+                        <SelectItem value="technology" className="hover:bg-secondary">
                           Technology
                         </SelectItem>
-                        <SelectItem value="healthcare" className="hover:bg-blue-300">
+                        <SelectItem value="healthcare" className="hover:bg-secondary">
                           Healthcare
                         </SelectItem>
-                        <SelectItem value="finance" className="hover:bg-blue-300">
+                        <SelectItem value="finance" className="hover:bg-secondary">
                           Finance
                         </SelectItem>
-                        <SelectItem value="retail" className="hover:bg-blue-300">
+                        <SelectItem value="retail" className="hover:bg-secondary">
                           Retail
                         </SelectItem>
-                        <SelectItem value="manufacturing" className="hover:bg-blue-300">
+                        <SelectItem value="manufacturing" className="hover:bg-secondary">
                           Manufacturing
                         </SelectItem>
-                        <SelectItem value="education" className="hover:bg-blue-300">
+                        <SelectItem value="education" className="hover:bg-secondary">
                           Education
                         </SelectItem>
-                        <SelectItem value="other" className="hover:bg-blue-300">
+                        <SelectItem value="other" className="hover:bg-secondary">
                           Other
                         </SelectItem>
                       </SelectContent>
@@ -183,105 +236,131 @@ export default function ContactPage() {
                 {/* Services + Budget */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="contact-service"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Services Interested In *
                     </label>
                     <Select value={service} onValueChange={setService}>
-                      <SelectTrigger className="w-full rounded-lg text-gray-500">
+                      <SelectTrigger
+                        id="contact-service"
+                        className="w-full rounded-lg text-gray-500"
+                      >
                         <SelectValue placeholder="Select services" />
                       </SelectTrigger>
-                      <SelectContent className="text-gray-500 bg-white placeholder:text-gray-500">
-                        <SelectItem value="digital-marketing" className="hover:bg-blue-300">
-                          Digital Marketing
-                        </SelectItem>
-                        <SelectItem value="seo" className="hover:bg-blue-300">
-                          SEO Services
-                        </SelectItem>
-                        <SelectItem value="ppc" className="hover:bg-blue-300">
-                          PPC Management
-                        </SelectItem>
-                        <SelectItem value="web-development" className="hover:bg-blue-300">
-                          Web Development
-                        </SelectItem>
-                        <SelectItem value="it-solutions" className="hover:bg-blue-300">
-                          IT Solutions
-                        </SelectItem>
-                        <SelectItem value="cloud-services" className="hover:bg-blue-300">
-                          Cloud Services
-                        </SelectItem>
-                        <SelectItem value="cybersecurity" className="hover:bg-blue-300">
-                          Cybersecurity
-                        </SelectItem>
-                        <SelectItem value="hardware" className="hover:bg-blue-300">
-                          Hardware Solutions
-                        </SelectItem>
-                        <SelectItem value="consultation" className="hover:bg-blue-300">
-                          Free Consultation
-                        </SelectItem>
+                      <SelectContent className="text-foreground bg-white">
+                        {contactServiceOptions.map((option) => (
+                          <SelectItem
+                            key={option.value}
+                            value={option.value}
+                            className="hover:bg-secondary"
+                          >
+                            {option.label}
+                          </SelectItem>
+                        ))}
                       </SelectContent>
                     </Select>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="project-budget"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Project Budget
                     </label>
-                    <Select value={budget} onValueChange={setBudget}>
-                      <SelectTrigger className="w-full rounded-lg text-gray-500">
-                        <SelectValue placeholder="Select budget range" />
-                      </SelectTrigger>
-                      <SelectContent className="text-gray-500 bg-white placeholder:text-gray-500">
-                        <SelectItem value="under-5k" className="hover:bg-blue-300">
-                          Under $5,000
-                        </SelectItem>
-                        <SelectItem value="5k-15k" className="hover:bg-blue-300">
-                          $5,000 - $15,000
-                        </SelectItem>
-                        <SelectItem value="15k-50k" className="hover:bg-blue-300">
-                          $15,000 - $50,000
-                        </SelectItem>
-                        <SelectItem value="50k-100k" className="hover:bg-blue-300">
-                          $50,000 - $100,000
-                        </SelectItem>
-                        <SelectItem value="over-100k" className="hover:bg-blue-300">
-                          Over $100,000
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
+                    <div className="flex items-center gap-2">
+                      <label htmlFor="budget-currency" className="sr-only">
+                        Budget currency
+                      </label>
+                      <Select
+                        name="budgetCurrency"
+                        value={budgetCurrency}
+                        onValueChange={(value) => setBudgetCurrency(value as BudgetCurrency)}
+                      >
+                        <SelectTrigger
+                          id="budget-currency"
+                          aria-label="Budget currency"
+                          className="w-24 shrink-0 rounded-lg text-foreground"
+                        >
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent className="min-w-0 rounded-lg bg-white text-foreground">
+                          <SelectItem value="PKR">PKR</SelectItem>
+                          <SelectItem value="USD">USD</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <Input
+                        id="project-budget"
+                        name="budgetAmount"
+                        type="text"
+                        inputMode="decimal"
+                        autoComplete="off"
+                        placeholder="e.g. 10,000"
+                        value={budget}
+                        maxLength={22}
+                        aria-describedby="project-budget-help"
+                        className="min-w-0 flex-1 rounded-lg tabular-nums placeholder:text-gray-500 text-foreground focus:ring-2 focus:ring-primary"
+                        onChange={(event) => {
+                          const input = event.currentTarget;
+                          const next = formatBudgetInput(input.value);
+                          if (next === null) return;
+                          const beforeCaret = input.value
+                            .slice(0, input.selectionStart ?? input.value.length)
+                            .replaceAll(",", "");
+                          const position =
+                            beforeCaret.length + (beforeCaret.startsWith(".") ? 1 : 0);
+                          setBudget(next);
+                          requestAnimationFrame(() => {
+                            if (document.activeElement !== input) return;
+                            let caret = 0;
+                            let characters = 0;
+                            while (caret < next.length && characters < position) {
+                              if (next[caret] !== ",") characters++;
+                              caret++;
+                            }
+                            input.setSelectionRange(caret, caret);
+                          });
+                        }}
+                        onBlur={() =>
+                          setBudget((current) => formatBudgetInput(current, true) ?? current)
+                        }
+                      />
+                    </div>
+                    <p id="project-budget-help" className="mt-2 text-xs text-muted-foreground">
+                      Optional. Choose PKR or USD and enter an amount; commas are added
+                      automatically.
+                    </p>
                   </div>
                 </div>
 
                 {/* Message */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                  <label
+                    htmlFor="contact-message"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
+                    Message *
+                  </label>
                   <Textarea
+                    id="contact-message"
                     name="message"
                     placeholder="Tell us about your project..."
-                    rows={5}
-                    className="rounded-lg placeholder:text-gray-500 text-gray-500 focus:ring-2 focus:ring-blue-500"
+                    rows={6}
+                    className="h-40 min-h-40 max-h-40 resize-none overflow-y-auto rounded-lg placeholder:text-gray-500 text-gray-500 focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 {/* Checkboxes */}
                 <div className="flex items-center space-x-2">
                   <Checkbox
-                    checked={newsletter}
-                    onCheckedChange={(v) => setNewsletter(Boolean(v))}
-                    id="newsletter"
-                    className="data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600 data-[state=unchecked]:text-gray-500"
-                  />
-                  <label htmlFor="newsletter" className="text-sm text-gray-600">
-                    Subscribe to our newsletter
-                  </label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Checkbox
                     checked={terms}
                     onCheckedChange={(v) => setTerms(Boolean(v))}
                     id="terms"
-                    className="data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600 data-[state=unchecked]:text-gray-500"
+                    className="data-[state=checked]:bg-primary data-[state=checked]:border-primary data-[state=unchecked]:text-gray-500"
                   />
-                  <label htmlFor="terms" className="text-sm text-gray-600">
+                  <label htmlFor="terms" className="text-sm text-muted-foreground">
                     I agree to the Terms of Service *
                   </label>
                 </div>
@@ -289,102 +368,24 @@ export default function ContactPage() {
                 <Button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3 rounded-lg shadow-md cursor-pointer"
+                  className="w-full bg-primary hover:bg-primary text-lg py-3 rounded-lg shadow-md cursor-pointer"
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </Button>
 
-                {notice && <p className="text-center text-sm text-gray-600">{notice}</p>}
+                {notice && (
+                  <p role="status" className="text-center text-sm text-muted-foreground">
+                    {notice}
+                  </p>
+                )}
               </form>
             </CardContent>
             <CardFooter className="flex justify-center">
-              <CardDescription className="text-center text-gray-600">
-                Fill out the form below and we&#39;ll get back to you within 24 hours.
+              <CardDescription className="text-center text-muted-foreground">
+                Fill out the form above and we&#39;ll get back to you within 24 hours.
               </CardDescription>
             </CardFooter>
           </Card>
-
-          {/* Info Cards (Row on Desktop, Column on Mobile) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Contact Information */}
-            <Card className="shadow-md border border-gray-100">
-              <CardHeader>
-                <CardTitle className="text-xl text-center font-semibold text-blue-900">
-                  Contact Information
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-5 text-gray-700">
-                <div className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-blue-600 mt-1" />
-                  <div>
-                    <div className="font-medium">+92-304-2204258</div>
-                    <div className="text-sm text-gray-500">Main Office</div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Mail className="h-5 w-5 text-blue-600 mt-1" />
-                  <div>
-                    <div className="font-medium">info@techventuresolution.com</div>
-                    <div className="text-sm text-gray-500">General Inquiries</div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-blue-600 mt-1" />
-                  <div>
-                    <div className="font-medium">Karachi, Pakistan</div>
-                    <div className="text-sm text-gray-500">Main Office</div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Clock className="h-5 w-5 text-blue-600 mt-1" />
-                  <div>
-                    <div className="font-medium">Mon - Fri: 9:00 AM - 6:00 PM</div>
-                    <div className="text-sm text-gray-500">Saturday: 10:00 AM - 4:00 PM</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Quick Actions */}
-            <Card className="shadow-md border border-gray-100">
-              <CardHeader>
-                <CardTitle className="text-xl text-center font-semibold text-blue-900">
-                  Quick Actions & Emergency IT Support
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <Button asChild className="w-full justify-start rounded-lg" variant="outline">
-                  <Link href="#contact-form-card-top">
-                    <Calendar className="mr-2 h-4 w-4" />
-                    Schedule a Call
-                  </Link>
-                </Button>
-                <Button asChild className="w-full justify-start rounded-lg" variant="outline">
-                  <Link href="#">
-                    <MessageSquare className="mr-2 h-4 w-4" />
-                    Live Chat Support
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  className="w-full justify-start bg-blue-600 hover:bg-blue-700 text-white rounded-lg"
-                >
-                  <Link href="tel:+92-304-2204258">
-                    <Phone className="mr-2 h-4 w-4" />
-                    Call Now
-                  </Link>
-                </Button>
-              </CardContent>
-              <CardContent>
-                <p className="text-sm text-center text-gray-600 mb-4">
-                  Need immediate IT assistance? Our emergency support team is available 24/7.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
     </div>

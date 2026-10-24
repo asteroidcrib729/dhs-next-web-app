@@ -6,14 +6,14 @@ export default function ServicePageTop() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0ea5e9] via-[#2563eb] to-[#1e293b] py-20">
+      <section className="page-hero">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
               Complete Digital Solutions for Your Business
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
-              From digital marketing that drives growth to IT infrastructure that powers your
+            <p className="text-xl text-muted-foreground mb-8">
+              From websites and customized desktop tools to IT infrastructure that supports your
               operations, we provide comprehensive solutions that help businesses thrive in the
               digital age.
             </p>
@@ -21,7 +21,7 @@ export default function ServicePageTop() {
               <Button
                 asChild
                 size="lg"
-                className="bg-green-500 hover:bg-green-600 text-white px-8 cursor-pointer"
+                className="bg-primary hover:bg-primary/90 text-white px-8 cursor-pointer"
               >
                 <Link href="/contact">
                   Get Free Consultation
@@ -32,7 +32,7 @@ export default function ServicePageTop() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-black hover:border-white bg-black hover:bg-white text-white hover:text-blue-900 cursor-pointer"
+                className="border-border bg-white text-foreground hover:bg-secondary cursor-pointer"
               >
                 <Link href="/portfolio">View Our Portfolio</Link>
               </Button>

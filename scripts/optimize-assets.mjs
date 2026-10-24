@@ -32,6 +32,12 @@ async function walk(dir) {
 const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
 
 for (const asset of manifest.assets) {
+  if (asset.generator) {
+    console.log(
+      `Preserved generated brand asset: ${asset.output}. Regenerate with npm run assets:brand.`,
+    );
+    continue;
+  }
   const input = path.join(originals, asset.source);
   const output = path.join(publicDir, asset.output);
   let bytes;
@@ -94,12 +100,17 @@ for (const asset of manifest.assets) {
     await sharp(bytes)
       .rotate()
       .resize({
-        width: logo ? 1200 : 1600,
-        height: logo ? 1200 : 1600,
-        fit: "inside",
+        width: asset.encoding?.width ?? (logo ? 1200 : 1600),
+        height: asset.encoding?.height ?? (logo ? 1200 : 1600),
+        fit: asset.encoding?.fit ?? "inside",
+        position: asset.encoding?.position ?? "centre",
         withoutEnlargement: true,
       })
-      .webp(logo ? { lossless: true, effort: 6 } : { quality: 82, effort: 6 })
+      .webp(
+        logo
+          ? { lossless: true, effort: 6 }
+          : { quality: asset.encoding?.quality ?? 82, effort: 6 },
+      )
       .toFile(output);
   } else {
     await copyFile(input, output);

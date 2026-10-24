@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "title": "E-commerce Giant Achieves 400% ROI with Comprehensive Digital Strategy",
+    "client": "MegaStore Online",
+    "industry": "E-commerce",
+    "challenge": "Declining organic traffic and poor conversion rates",
+    "solution": "Technical SEO improvements, clearer product pages and conversion-focused website development",
+    "results": {
+      "roi": "400%",
+      "traffic": "250%",
+      "conversions": "180%",
+      "timeline": "6 months"
+    },
+    "image": "/images/case-studies/ecommerce.webp",
+    "services": ["SEO", "Website Development", "CRO", "Analytics"],
+    "description": "MegaStore Online was struggling with declining organic visibility and poor conversion rates. The project focused on technical SEO, product information and the purchase journey."
+  },
+  {
+    "id": 2,
+    "title": "Manufacturing Company Reduces IT Costs by 45% with Cloud Migration",
+    "client": "Industrial Solutions Inc.",
+    "industry": "Manufacturing",
+    "challenge": "High IT infrastructure costs and system downtime",
+    "solution": "Cloud migration with VMware virtualization, access controls and a documented recovery plan",
+    "results": {
+      "roi": "300%",
+      "costSaving": "45%",
+      "uptime": "99.9%",
+      "timeline": "4 months"
+    },
+    "image": "/images/case-studies/manufacturing.webp",
+    "services": ["Cloud Migration", "VMware Virtualization", "Cloud Security", "Recovery Planning"],
+    "description": "Industrial Solutions Inc. needed to modernize their IT infrastructure while reducing costs. We implemented a hybrid cloud solution that improved performance and reliability."
+  },
+  {
+    "id": 3,
+    "title": "Healthcare Startup Generates 500+ Qualified Leads Monthly",
+    "client": "HealthTech Innovations",
+    "industry": "Healthcare Technology",
+    "challenge": "Low brand awareness and difficulty reaching target audience",
+    "solution": "An accessible service website, search optimization and permission-based email follow-up",
+    "results": {
+      "roi": "350%",
+      "leads": "500+/month",
+      "brandAwareness": "300%",
+      "timeline": "8 months"
+    },
+    "image": "/images/case-studies/healthcare.webp",
+    "services": ["Website Development", "SEO", "Email Marketing"],
+    "description": "HealthTech Innovations needed clearer service information and a useful inquiry journey. The approach connected search-friendly pages, accessible forms and permission-based follow-up."
+  },
+  {
+    "id": 4,
+    "title": "Financial Services Firm Enhances Security with Sangfor Solutions",
+    "client": "SecureFinance Corp",
+    "industry": "Financial Services",
+    "challenge": "Cybersecurity threats and compliance requirements",
+    "solution": "Implementation of Sangfor security solutions and network infrastructure",
+    "results": {
+      "roi": "250%",
+      "securityIncidents": "95% reduction",
+      "compliance": "100%",
+      "timeline": "3 months"
+    },
+    "image": "/images/case-studies/cybersecurity.webp",
+    "services": ["Sangfor Security", "Network Infrastructure", "Compliance", "Monitoring"],
+    "description": "SecureFinance Corp required enterprise-grade security solutions to protect sensitive financial data and meet regulatory compliance standards."
+  },
+  {
+    "id": 5,
+    "title": "A Customized Desktop Workflow for an Operations Team",
+    "client": "Illustrative operations team",
+    "industry": "Desktop Solutions",
+    "challenge": "An illustrative team needs to track requests, validate records and produce reports without copying information between separate spreadsheets.",
+    "solution": "Plan a focused desktop application with role-based access, validated imports, searchable records and predictable report exports. Agree supported devices and backup responsibilities before implementation.",
+    "results": {
+      "scope": "Illustrative scenario, not a verified client result",
+      "acceptance": "Import, review and export a sample record without duplicate entry",
+      "recovery": "Demonstrate backup restoration and interrupted-work recovery",
+      "handover": "Provide installation, update and operating instructions"
+    },
+    "image": "/images/editorial/desktop-workstation.webp",
+    "coverAlt": "Developer working with code across desktop displays",
+    "services": ["Custom Desktop Applications", "Database Integration", "Workflow Design"],
+    "description": "Illustrative delivery scenario: replacing disconnected spreadsheets with a focused desktop workflow, clear validation and a documented handover.",
+    "body": "## Illustrative project brief\nThis example explains how a desktop engagement could be scoped. It does not describe a completed client project or claim measured business results.\n\n## From scattered records to one workflow\nDiscovery maps how a request enters the team, who reviews it and which report leaves the process. The first release covers that complete path using sample data. Other requests remain outside scope until the core workflow is accepted.\n\n## Reliable data and a usable interface\nThe proposed tool validates imported rows, identifies duplicate records and provides searchable status views. Permissions follow agreed responsibilities. Exports identify their units and purpose, while a documented backup process protects the working database.\n\n## Acceptance before rollout\nReviewers would demonstrate the import, edit, approval and export path on the supported environment. Interrupted work, invalid data and restore behavior are checked alongside normal operation. Release approval depends on those checks, with no assumed productivity percentage or financial return."
+  },
+  {
+    "id": 6,
+    "title": "A Connected Business Website with SEO and Email Workflows",
+    "client": "Illustrative professional services business",
+    "industry": "Web Development",
+    "challenge": "An illustrative business needs consistent service information, useful search landing pages and a reliable path from inquiry to follow-up.",
+    "solution": "Plan an accessible website, a structured editorial workflow, technical SEO checks and validated inquiry storage. Keep replies to inquiries separate from optional permission-based promotional email.",
+    "results": {
+      "scope": "Illustrative scenario, not a verified client result",
+      "acceptance": "Publish a reviewed service page with accurate metadata and a working inquiry path",
+      "privacy": "Keep form details outside analytics and separate marketing permission",
+      "handover": "Document content review, website updates and notification failures"
+    },
+    "image": "/images/editorial/interface-design.webp",
+    "coverAlt": "Application source code open on a computer display",
+    "services": ["Website Development", "SEO", "Email Marketing", "Editorial Workflows"],
+    "description": "Illustrative delivery scenario: joining a maintainable website, search-friendly content and permission-based email workflows without unsupported growth claims.",
+    "body": "## Illustrative project brief\nThis example shows a possible delivery plan for a professional services website. It is not a verified client outcome, and it makes no claim about rankings, revenue or inquiry volume.\n\n## A coherent content structure\nDiscovery identifies visitor questions and maps them to service pages and useful supporting articles. Shared navigation and reusable templates keep the site consistent. An editorial draft is reviewed before a separate public snapshot is published.\n\n## Connecting the inquiry journey\nThe proposed form validates service choices and international phone information before storing an inquiry. Optional notifications follow successful storage. A reply concerns the inquiry itself; promotional email requires its own appropriate permission and withdrawal process.\n\n## Review and handover\nAcceptance checks cover keyboard access, narrow screens, page titles, canonical addresses and a valid submission. Error messages must describe storage or notification failures accurately. The handover records content ownership, environment settings and maintenance responsibilities. Any later performance assessment needs an agreed baseline and actual evidence."
+  }
+]

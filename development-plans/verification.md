@@ -63,3 +63,19 @@ Linux and Windows quality/build jobs, PostgreSQL integration, Security, and both
 Persistent PostgreSQL hosting, real local credentials and Vercel deployment remain future tasks. Set a real `DATABASE_URL` and deliberately apply the baseline only to an appropriate fresh PostgreSQL database. Existing MySQL data requires its own transfer plan if relevant.
 
 `RESEND_API_KEY` remains empty. Provider acceptance and email delivery were not tested. Configure a verified sender and intended recipient before enabling notifications. Nunito is downloaded through `next/font/google`, so the first development/build font download needs network access.
+
+## Requested visual refresh (October 22, 2026)
+
+See [visual refresh and source credits](visual-refresh.md) for the current presentation and public-configuration changes. `npm run check` (including five public-configuration tests), the production build and Git whitespace checks passed. Chrome verified ten desktop routes and seven mobile routes, the slider controls/background pausing/reduced-motion grid, loaded fonts/photos, footer layout, hidden sections and newsletter-free form payload. Six development routes emitted no image/hydration warnings or page errors.
+
+Isolated PostgreSQL 18.4 verified both a fresh installation and an upgrade preserving an existing inquiry while dropping newsletter preferences. Both paths had zero schema drift; CRUD and contact API persistence passed with email disabled. Temporary databases/tools were removed. All project dev/test ports (3000, 3100, 3101, 55432) were closed at handoff. Local evidence is under ignored `.local/design-*`.
+
+Existing unfinished blog-detail links still return 404 on prefetch and were kept outside this requested scope. Current contact phone/WhatsApp/email values remain blank until the owner can supply them; consultation defaults to `/contact`. Existing social and other destinations are editable environment values awaiting owner review. Current work has not been committed/pushed or deployed.
+
+## Digital Horizon Systems rebrand (October 23, 2026)
+
+The [rebrand record](digital-horizon-rebrand.md) supersedes earlier branding, footer, byline, policy-date and video-preview details. Final formatting/quality checks, eight tests, production build, npm dependency consistency and Git whitespace checks passed. All 112 public assets (14.87 MiB) match manifest hashes. Alpha/outline checks passed for the new logo variants; all 57 editorial/poster assets are landscape.
+
+Chrome verified all ten routes, nine blog category filters and fifteen responsive route checks at 320/390/768 px in development and production. No visible legacy branding, personal names, diagonal pointer icons or em/double-dash punctuation remained in page copy. The native previews have no media border, crop the edge seam and all six play at 1280 × 720; pause and reduced motion passed. Service tabs stay inside their bar, footer spacing meets the requested arrangement, and favicon/policy dates resolve correctly. Production emitted no warnings, page errors or failed media responses.
+
+Evidence: ignored `.local/rebrand-development-report.json`, `.local/rebrand-browser-report.json`, `.local/rebrand-asset-report.json`, screenshots and downloadable brand-kit ZIP. The local dev server, workers and temporary production server are stopped; ports 3000 and 3100 are closed. New social destinations remain unset pending real handles. No commit/push/deployment occurred for this task.

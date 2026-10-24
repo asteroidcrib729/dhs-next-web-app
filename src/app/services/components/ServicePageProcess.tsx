@@ -2,14 +2,14 @@ export default function ServicePageProcess() {
   return (
     <>
       {/* Process Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-20 bg-linear-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="text-blue-600">Proven</span> Process
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Our <span className="text-primary">Proven</span> Process
             </h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto mb-6 rounded"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <div className="w-20 h-1 bg-primary mx-auto mb-6 rounded"></div>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We follow a systematic approach to ensure every project delivers exceptional results
               and exceeds your expectations.
             </p>
@@ -48,14 +48,14 @@ export default function ServicePageProcess() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="relative text-center p-6 bg-white rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                  className="relative text-center p-6 bg-white rounded-xl shadow-md hover:-translate-y-1 hover:border-primary/40 transition-[transform,border-color] duration-200"
                 >
                   {/* Step Circle */}
-                  <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-400 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
+                  <div className="relative z-10 w-16 h-16 bg-linear-to-br from-emerald-600 to-emerald-400 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
                     {item.step}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.description}</p>
                 </div>
               ))}
             </div>

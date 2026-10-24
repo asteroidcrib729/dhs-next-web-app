@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { ConfiguredLink as Link, useSiteConfig } from "@/components/SiteConfigProvider";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 
 export default function TrustedMarketingPartner() {
+  const config = useSiteConfig();
   type Partner = {
     name: string;
     href: string;
@@ -15,50 +16,50 @@ export default function TrustedMarketingPartner() {
   const PARTNERS: Partner[] = [
     {
       name: "Meta Business Partner",
-      href: "https://www.facebook.com/business/partner-directory",
-      src: "https://cdn.simpleicons.org/meta/0866FF",
+      href: config.links.SITE_PARTNER_META,
+      src: "/images/logos/meta-latest-logo.svg",
       tag: "Business Partner",
     },
     {
       name: "Google Partner",
-      href: "https://www.google.com/partners/",
-      src: "https://cdn.simpleicons.org/google/4285F4",
+      href: config.links.SITE_PARTNER_GOOGLE,
+      src: "/images/logos/google-latest-logo.svg",
       tag: "Premier Partner",
     },
     {
       name: "Google Cloud",
-      href: "https://cloud.google.com/partners",
-      src: "https://cdn.simpleicons.org/googlecloud/4285F4",
+      href: config.links.SITE_PARTNER_GOOGLE_CLOUD,
+      src: "/images/logos/google-cloud-latest-logo.svg",
       tag: "Cloud Partner",
     },
     {
       name: "TikTok",
-      href: "https://ads.tiktok.com/marketing-partners/",
-      src: "https://cdn.simpleicons.org/tiktok/000000",
+      href: config.links.SITE_PARTNER_TIKTOK,
+      src: "/images/logos/tiktok-latest-logo.svg",
       tag: "Marketing Partner",
     },
     {
       name: "Clutch",
-      href: "https://clutch.co/",
+      href: config.links.SITE_PARTNER_CLUTCH,
       src: "/images/logos/clutch-logo.webp",
       tag: "Top Rated",
     },
     {
       name: "Shopify Partners",
-      href: "https://www.shopify.com/partners",
-      src: "https://cdn.simpleicons.org/shopify/7AB55C",
+      href: config.links.SITE_PARTNER_SHOPIFY,
+      src: "/images/logos/shopify.svg",
       tag: "Partner",
     },
     {
       name: "HubSpot",
-      href: "https://ecosystem.hubspot.com/marketplace/solutions",
-      src: "https://cdn.simpleicons.org/hubspot/FF7A59",
+      href: config.links.SITE_PARTNER_HUBSPOT,
+      src: "/images/logos/hubspot.svg",
       tag: "Solutions Partner",
     },
     {
       name: "AWS",
-      href: "https://partners.amazonaws.com/",
-      src: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/amazonaws.svg",
+      href: config.links.SITE_PARTNER_AWS,
+      src: "/images/logos/aws.svg",
       tag: "Select Tier",
     },
   ];

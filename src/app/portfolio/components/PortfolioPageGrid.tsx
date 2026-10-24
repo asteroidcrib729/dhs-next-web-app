@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
-import ReactPlayer from "react-player";
+import { useReducedMotion } from "motion/react";
+import React from "react";
+
 import {
   Card,
   CardHeader,
@@ -11,16 +12,17 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-// import Image from "next/image";
+import { ConfiguredLink as Link, useSiteConfig } from "@/components/SiteConfigProvider";
 
 export default function PortfolioPageGrid() {
+  const config = useSiteConfig();
+  const reduceMotion = useReducedMotion();
   const projects = [
     {
       id: 1,
       title: "ENG Properties",
       desc: "End-to-end ecommerce revamp with speed, UX, and CRO improvements for a nationwide F&B brand.",
-      href: "https://eng-properties.com/",
+      href: config.links.SITE_PROJECT_ENG,
       logo: "/images/logos/eng-properties-latest-logo.webp",
       video: "/videos/portfolio/ENG-Properties.mp4",
       thumbnail: "/images/portfolio/ENG-Properties.webp",
@@ -31,7 +33,7 @@ export default function PortfolioPageGrid() {
       id: 2,
       title: "JSN Medical",
       desc: "HIPAA-aware site with gated content hub, marketing automation, and analytics.",
-      href: "https://jsnmedical.com.au/",
+      href: config.links.SITE_PROJECT_JSN,
       logo: "/images/logos/jsn-medical-latest-logo.webp",
       video: "/videos/portfolio/JSN-Medical.mp4",
       thumbnail: "/images/portfolio/JSN-Medical.webp",
@@ -42,7 +44,7 @@ export default function PortfolioPageGrid() {
       id: 3,
       title: "Mission Health Care",
       desc: "Corporate site + resources library integrated with Sangfor stack and compliance notices.",
-      href: "https://missionhealthcare.com.au/",
+      href: config.links.SITE_PROJECT_MISSION,
       logo: "/images/logos/mission-healthcare-latest-logo.svg",
       video: "/videos/portfolio/Mission-Health-Care.mp4",
       thumbnail: "/images/portfolio/Mission-Health-Care.webp",
@@ -52,8 +54,8 @@ export default function PortfolioPageGrid() {
     {
       id: 4,
       title: "Nectronix",
-      desc: "VMware/Dell infrastructure storytelling with calculators and case studies.",
-      href: "https://nectronix.com/",
+      desc: "A technology services website with clear service pages, project information and inquiry paths.",
+      href: config.links.SITE_PROJECT_NECTRONIX,
       logo: "/images/logos/nectronix-digital-latest-logo.webp",
       video: "/videos/portfolio/Nectronix.mp4",
       thumbnail: "/images/portfolio/Nectronix.webp",
@@ -64,7 +66,7 @@ export default function PortfolioPageGrid() {
       id: 5,
       title: "711 Max Bachat",
       desc: "High-converting PDP/PLP templates, SEO-ready architecture, and lightning search.",
-      href: "https://711maxbachat.com/",
+      href: config.links.SITE_PROJECT_711,
       logo: "/images/logos/711-max-bachat-latest-logo.webp",
       video: "/videos/portfolio/711-Max-Bachat.mp4",
       thumbnail: "/images/portfolio/711-Max-Bachat.webp",
@@ -75,7 +77,7 @@ export default function PortfolioPageGrid() {
       id: 6,
       title: "Sharz Properties",
       desc: "Feature-rich microsite with interactive diagrams and spec downloads.",
-      href: "https://sharzproperties.com/",
+      href: config.links.SITE_PROJECT_SHARZ,
       logo: "/images/logos/sharz-properties-latest-logo.svg",
       video: "/videos/portfolio/Sharz-Properties.mp4",
       thumbnail: "/images/portfolio/Sharz-Properties.webp",
@@ -84,112 +86,70 @@ export default function PortfolioPageGrid() {
     },
   ];
 
-  const [hoveredId, setHoveredId] = useState<number | null>(null);
-
   return (
-    <>
-      {/* Projects Grid */}
-      <section className="bg-gradient-to-b from-slate-50 to-white py-16">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-8 flex items-end justify-center gap-4">
-            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Featured Portfolio</h2>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.map((p) => {
-              const isHovered = hoveredId === p.id;
-              return (
-                <Card
-                  key={p.id}
-                  className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-0 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
-                >
-                  {/* subtle gradient border glow on hover */}
-                  <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition duration-300 group-hover:opacity-100">
-                    <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-br from-blue-500/30 via-indigo-500/30 to-cyan-500/30 blur-[2px]" />
-                  </div>
-
-                  {/* shine sweep */}
-                  <div className="pointer-events-none absolute -inset-1 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 transition duration-700 group-hover:translate-x-0 group-hover:opacity-100" />
-
-                  <CardHeader className="px-5 pt-5 pb-0">
-                    <div className="flex flex-col justify-center items-center gap-3">
-                      <div
-                        className="grid h-48 w-full place-items-center rounded-xl border border-slate-200 bg-slate-400 relative z-50 overflow-hidden"
-                        onMouseEnter={() => setHoveredId(p.id)}
-                        onMouseLeave={() => setHoveredId(null)}
-                        onTouchStart={() => setHoveredId(p.id)}
-                        onTouchEnd={() => setHoveredId(null)}
-                      >
-                        {/*
-                                            <Image
-                                                src={p.logo}
-                                                alt={`${p.title} logo`}
-                                                className={`${p.width_class} ${p.height_class} opacity-70`}
-                                                width={200}
-                                                height={200}
-                                            />
-                                            */}
-                        <ReactPlayer
-                          src={p.video}
-                          playing={isHovered}
-                          controls={false}
-                          loop={false}
-                          muted={true}
-                          pip={false}
-                          light={isHovered ? false : p.thumbnail}
-                          playIcon={false}
-                          width="100%"
-                          height="100%"
-                          className="w-full h-full"
-                        />
-                      </div>
-                      <CardTitle className="text-lg text-slate-900">{p.title}</CardTitle>
-                    </div>
-                    {/* floating pill on hover
-                                    <div className="pointer-events-none absolute right-4 top-4 translate-y-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-xs text-slate-700 opacity-0 backdrop-blur transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                                        Case Study
-                                    </div>
-                                    */}
-                  </CardHeader>
-
-                  <CardContent className="px-5">
-                    <CardDescription className="flex justify-center items-center leading-6 text-sm text-slate-600">
-                      {p.desc}
-                    </CardDescription>
-                  </CardContent>
-
-                  <CardFooter className="px-5 pb-5">
-                    <div className="flex flex-col items-center justify-center w-full">
-                      {/*<div className="text-xs text-slate-500">#{String(i + 1).padStart(2, "0")}</div>*/}
-
-                      {/* Button with link as child (shadcn) */}
-                      <Button asChild className="w-full rounded-full bg-blue-600 relative z-50">
-                        <Link
-                          href={p.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2"
-                        >
-                          Visit Website
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            className="h-4 w-4 transition group-hover:translate-x-0.5"
-                          >
-                            <path d="M13.5 4.5a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.5a1 1 0 1 1-2 0V7.414l-8.293 8.293a1 1 0 0 1-1.414-1.414L17.586 6H14.5a1 1 0 0 1-1-1z" />
-                            <path d="M5 6a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 1 0 0-2H6V7a1 1 0 0 0-1-1z" />
-                          </svg>
-                        </Link>
-                      </Button>
-                    </div>
-                  </CardFooter>
-                </Card>
-              );
-            })}
-          </div>
+    <section className="bg-linear-to-b from-slate-50 to-white py-16">
+      <div className="mx-auto max-w-7xl px-6">
+        <h2 className="mb-10 text-center text-3xl font-semibold">Featured Portfolio</h2>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <Card
+              key={project.id}
+              className="group overflow-hidden bg-white p-0 hover:border-primary/40"
+            >
+              <CardHeader className="px-5 pt-5 pb-0">
+                <div className="portfolio-media relative aspect-video w-full overflow-hidden rounded-xl bg-background">
+                  <video
+                    src={project.video}
+                    poster={project.thumbnail}
+                    muted
+                    playsInline
+                    preload="none"
+                    aria-label={
+                      project.title +
+                      " website preview. Focus to preview; press space to pause or play."
+                    }
+                    className="absolute inset-0 block h-full w-full border-0 object-cover"
+                    tabIndex={0}
+                    onPointerEnter={(event) => {
+                      if (!reduceMotion && event.pointerType === "mouse")
+                        void event.currentTarget.play().catch(() => {});
+                    }}
+                    onPointerLeave={(event) => event.currentTarget.pause()}
+                    onFocus={(event) => {
+                      if (!reduceMotion) void event.currentTarget.play().catch(() => {});
+                    }}
+                    onBlur={(event) => event.currentTarget.pause()}
+                    onKeyDown={(event) => {
+                      if (event.key === " " || event.key === "Enter") {
+                        event.preventDefault();
+                        const video = event.currentTarget;
+                        if (video.paused) void video.play().catch(() => {});
+                        else video.pause();
+                      }
+                    }}
+                    onClick={(event) => {
+                      const video = event.currentTarget;
+                      if (video.paused) void video.play().catch(() => {});
+                      else video.pause();
+                    }}
+                  />
+                </div>
+                <CardTitle className="mt-5 text-lg">{project.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="px-5">
+                <CardDescription>{project.desc}</CardDescription>
+              </CardContent>
+              <CardFooter className="mt-auto px-5 pb-5">
+                <Button asChild className="w-full">
+                  <Link href={project.href} target="_blank" rel="noopener noreferrer">
+                    Visit Website
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

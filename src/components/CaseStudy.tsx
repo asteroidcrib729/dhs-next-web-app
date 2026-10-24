@@ -1,90 +1,47 @@
-"use client";
-
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
+import { listPublished } from "@/lib/editorial/store";
+import { contentPath } from "@/lib/editorial/schema";
+import { selectHomepageArticles } from "@/lib/editorial/homepage";
 
-export default function CaseCtudy() {
-  const Blogs = [
-    {
-      name: "How We Increased Conversions by 300%",
-      description:
-        "Discover our proven approach to scaling e-commerce with performance-driven campaigns.",
-      link: (
-        <Link href="/case-studies/conversions" className="text-blue-600 hover:underline">
-          Read More →
-        </Link>
-      ),
-    },
-    {
-      name: "AI in Marketing: The Future is Now",
-      description:
-        "Learn how businesses can leverage AI to optimize customer acquisition and retention.",
-      link: (
-        <Link href="/blog/ai-marketing" className="text-blue-600 hover:underline">
-          Read More →
-        </Link>
-      ),
-    },
-    {
-      name: "AI in Marketing: The Future is Now",
-      description:
-        "Learn how businesses can leverage AI to optimize customer acquisition and retention.",
-      link: (
-        <Link href="/blog/ai-marketing" className="text-blue-600 hover:underline">
-          Read More →
-        </Link>
-      ),
-    },
-    {
-      name: "AI in Marketing: The Future is Now",
-      description:
-        "Learn how businesses can leverage AI to optimize customer acquisition and retention.",
-      link: (
-        <Link href="/blog/ai-marketing" className="text-blue-600 hover:underline">
-          Read More →
-        </Link>
-      ),
-    },
-    {
-      name: "AI in Marketing: The Future is Now",
-      description:
-        "Learn how businesses can leverage AI to optimize customer acquisition and retention.",
-      link: (
-        <Link href="/blog/ai-marketing" className="text-blue-600 hover:underline">
-          Read More →
-        </Link>
-      ),
-    },
-    {
-      name: "AI in Marketing: The Future is Now",
-      description:
-        "Learn how businesses can leverage AI to optimize customer acquisition and retention.",
-      link: (
-        <Link href="/blog/ai-marketing" className="text-blue-600 hover:underline">
-          Read More →
-        </Link>
-      ),
-    },
-  ];
-
+export default async function CaseStudy() {
+  const entries = selectHomepageArticles(await listPublished("BLOG"));
+  if (!entries.length) return null;
   return (
-    <section className="bg-black w-full py-20 px-6">
-      <h2 className="text-white text-3xl font-bold text-center mb-12">
-        Insights & Success Stories
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {Blogs.map((Blog, index) => (
-          <Card
-            key={index}
-            className="bg-gray-800 border-blue-600 border-2 hover:scale-[103%] transition-transform duration-300"
-          >
-            <CardContent className="p-6">
-              <h3 className="text-gray-400 text-xl font-semibold mb-2">{Blog.name}</h3>
-              <p className="text-white mb-4">{Blog.description}</p>
-              {Blog.link}
-            </CardContent>
-          </Card>
-        ))}
+    <section className="bg-background px-5 py-20 sm:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="eyebrow">Ideas for your next project</p>
+            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Practical Insights</h2>
+          </div>
+          <Link href="/blog" className="text-sm font-semibold text-primary hover:underline">
+            Browse all articles
+          </Link>
+        </div>
+        <div className="grid gap-6 md:grid-cols-3">
+          {entries.map((e) => (
+            <article
+              key={e.id}
+              className="flex flex-col rounded-2xl border border-border bg-white p-7"
+            >
+              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
+                {e.content.category}
+              </p>
+              <h3 className="text-xl font-semibold">
+                <Link href={contentPath(e.kind, e.content.slug)}>{e.content.title}</Link>
+              </h3>
+              <p className="my-5 text-sm leading-relaxed text-muted-foreground">
+                {e.content.excerpt}
+              </p>
+              <Link
+                href={contentPath(e.kind, e.content.slug)}
+                className="mt-auto text-sm font-semibold text-primary hover:underline"
+              >
+                Read article
+              </Link>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

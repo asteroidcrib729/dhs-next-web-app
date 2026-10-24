@@ -7,18 +7,144 @@ datasource db {
   provider = "postgresql"
 }
 
-model contact {
-  id         Int      @id @default(autoincrement())
-  firstName  String
-  lastName   String
-  email      String
-  phone      String?
-  company    String?
-  industry   String?
-  service    String
-  budget     String?
-  message    String
-  newsletter Boolean  @default(false)
-  terms      Boolean
+model User {
+  id            String    @id
+  name          String
+  email         String    @unique
+  emailVerified Boolean   @default(false)
+  image         String?
+  editor        Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  sessions      Session[]
+  accounts      Account[]
+
+  @@map("user")
+}
+
+model Session {
+  id        String   @id
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  ipAddress String?
+  userAgent String?
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("session")
+}
+
+model Account {
+  id                    String    @id
+  accountId             String
+  providerId            String
+  userId                String
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  password              String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  @@index([userId])
+  @@map("account")
+}
+
+model Verification {
+  id         String   @id
+  identifier String
+  value      String
+  expiresAt  DateTime
   createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([identifier])
+  @@map("verification")
+}
+
+model RateLimit {
+  id          String @id
+  key         String @unique
+  count       Int
+  lastRequest BigInt
+
+  @@map("rateLimit")
+}
+
+enum EditorialKind {
+  BLOG
+  CASE_STUDY
+}
+
+model EditorialEntry {
+  id                 String              @id @default(cuid())
+  kind               EditorialKind
+  draft              Json
+  published          Json?
+  publishedSlug      String?
+  publishedAt        DateTime?
+  publishedUpdatedAt DateTime?
+  version            Int                 @default(1)
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  revisions          EditorialRevision[]
+  redirects          EditorialRedirect[]
+
+  @@unique([kind, publishedSlug])
+  @@index([kind, publishedAt])
+}
+
+model EditorialRedirect {
+  id      String         @id @default(cuid())
+  kind    EditorialKind
+  slug    String
+  entryId String
+  entry   EditorialEntry @relation(fields: [entryId], references: [id], onDelete: Cascade)
+
+  @@unique([kind, slug])
+}
+
+model EditorialRevision {
+  id        String         @id @default(cuid())
+  entryId   String
+  entry     EditorialEntry @relation(fields: [entryId], references: [id], onDelete: Cascade)
+  version   Int
+  snapshot  Json
+  action    String
+  createdAt DateTime       @default(now())
+
+  @@unique([entryId, version])
+}
+
+model EditorialMedia {
+  id        String   @id @default(cuid())
+  filename  String
+  alt       String
+  width     Int
+  height    Int
+  data      Bytes
+  sha256    String   @unique
+  createdAt DateTime @default(now())
+}
+
+model contact {
+  id        Int      @id @default(autoincrement())
+  firstName String
+  lastName  String
+  email     String
+  phone     String?
+  company   String?
+  industry  String?
+  service   String
+  budget    String?
+  message   String
+  terms     Boolean
+  createdAt DateTime @default(now())
 }

@@ -1,45 +1,84 @@
-/* ==== Partner slider animation (CSS Modules) ==== */
-
-/* Mask container (keeps overflow hidden) */
 .mask {
-  position: relative;
   overflow: hidden;
+  contain: paint;
+  margin-top: 1.5rem;
 }
-
-/* Moving track */
 .track {
   display: flex;
   width: max-content;
-  /* grows to fit content */
-  gap: 1rem;
-  /* equals Tailwind gap-4 */
-  padding-right: 1rem;
-  /* match Tailwind pr-4 visually */
-  will-change: transform;
-  animation: partner-scroll-x var(--slider-speed, 35s) linear infinite;
-  animation-play-state: running;
-}
-
-/* Pause the animation on hover */
-.mask:hover .track {
+  animation: travel 100s linear infinite;
   animation-play-state: paused;
 }
-
-/* Duplicate-two-rows loop: shift by -50% */
-@keyframes partner-scroll-x {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
+.mask[data-active="true"] .track {
+  animation-play-state: running;
+  will-change: transform;
+}
+.mask:hover .track,
+.mask:focus-within .track {
+  animation-play-state: paused;
+}
+.row {
+  display: flex;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+.card {
+  width: 208px;
+  min-height: 192px;
+  flex: 0 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: white;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+@keyframes travel {
+  to {
+    transform: translate3d(-50%, 0, 0);
   }
 }
-
-/* Respect user’s reduced-motion preference */
+.mask[data-all="true"] .track {
+  width: 100%;
+  animation: none;
+  transform: none;
+  will-change: auto;
+}
+.mask[data-all="true"] .row:first-child {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  padding-right: 0;
+}
+.mask[data-all="true"] .row[aria-hidden] {
+  display: none;
+}
+.mask[data-all="true"] .card {
+  width: auto;
+}
 @media (prefers-reduced-motion: reduce) {
-  .track {
-    animation: none !important;
-    transform: translateX(0) !important;
+  .controls {
+    display: none;
+  }
+  .mask[data-active] .track {
+    width: 100%;
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+  .mask .row:first-child {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    padding-right: 0;
+  }
+  .mask .row[aria-hidden] {
+    display: none;
+  }
+  .mask .card {
+    width: auto;
   }
 }

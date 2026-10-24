@@ -18,366 +18,6 @@
       "outputSha256": "04481f86f274b043029ec9493d43bc83883567b8e5fb6cfbfcccdc1eff020b10"
     },
     {
-      "source": "blog-images/blog-image-01.png",
-      "output": "images/blog/blog-image-01.webp",
-      "sourceBytes": 58740,
-      "sourceSha256": "033e6aa2cbbea71fa37a2404a0b4915e1754f823d97bab89532afa4500291a68",
-      "outputBytes": 20450,
-      "outputSha256": "5f1936a20726ebf751bb70b53998b808df3a83d15b4238c5ca170d3a0a72691e"
-    },
-    {
-      "source": "blog-images/blog-image-02.jpg",
-      "output": "images/blog/blog-image-02.webp",
-      "sourceBytes": 80984,
-      "sourceSha256": "7b5380b2bc09d1aec00b48165aa581efee7928fe5b1f1dba72b8eb3d98fbebf3",
-      "outputBytes": 32656,
-      "outputSha256": "69a40bc0a92192fda2e0b61b7d47f03ec38fc57bf7c0a6a60ef8b111fbd0dcac"
-    },
-    {
-      "source": "blog-images/blog-image-03.png",
-      "output": "images/blog/blog-image-03.webp",
-      "sourceBytes": 886803,
-      "sourceSha256": "1db2a18201794ed438739eafa1f4597dff1ef8bc86ebda0a66459bb17446e3eb",
-      "outputBytes": 37122,
-      "outputSha256": "54b2e38b611b37998d5fde8658f35960f9cae81cd812052b3c9f9efbc1282c0a"
-    },
-    {
-      "source": "blog-images/blog-image-04.svg",
-      "output": "images/blog/blog-image-04.svg",
-      "sourceBytes": 6487,
-      "sourceSha256": "4e5ac3a0e1bc48880f18c3d81abf37683967865a316eb88623a58b1d60c7d576",
-      "outputBytes": 6487,
-      "outputSha256": "4e5ac3a0e1bc48880f18c3d81abf37683967865a316eb88623a58b1d60c7d576"
-    },
-    {
-      "source": "blog-images/blog-image-05.png",
-      "output": "images/blog/blog-image-05.webp",
-      "sourceBytes": 5134134,
-      "sourceSha256": "85d5825aaecb4b61d29e6530f2e9eba4fc3c166f42f7fcbf917c9065737c003c",
-      "outputBytes": 47266,
-      "outputSha256": "db47a184d01056a5afdc7d749e93490344dce38cb2550bbece29ca545890558d"
-    },
-    {
-      "source": "blog-images/blog-image-06.webp",
-      "output": "images/blog/blog-image-06.webp",
-      "sourceBytes": 63462,
-      "sourceSha256": "f5d86d71a24e8c84dbbe15b19a114527b5d19ef05a46e4ff0afc1d28dae82106",
-      "outputBytes": 55526,
-      "outputSha256": "c5f34502a6c6c0b277a27583be5e1a0997040847eecfe39500c71adc75905f33"
-    },
-    {
-      "source": "blog-images/blog-image-07.jpg",
-      "output": "images/blog/blog-image-07.webp",
-      "sourceBytes": 620732,
-      "sourceSha256": "494f26aa2786028521032084e595952f0c05966c953ff4228ec755e2183800ef",
-      "outputBytes": 62244,
-      "outputSha256": "473e8eda20fcad793f91667f682578b3aaa989024a347763066b2234577bbdae"
-    },
-    {
-      "source": "blog-images/blog-image-08.jpg",
-      "output": "images/blog/blog-image-08.webp",
-      "sourceBytes": 8112129,
-      "sourceSha256": "bcf568fbd832b89f319ddf16a339d19bc4b9864e8daf9481ca249498dcf35b68",
-      "outputBytes": 120016,
-      "outputSha256": "c371babddc0b5fa3f75bd0dcea648d28b389c2764a82e9f1adb6ec8ff090742e"
-    },
-    {
-      "source": "blog-images/blog-image-09.avif",
-      "output": "images/blog/blog-image-09.webp",
-      "sourceBytes": 105677,
-      "sourceSha256": "6b7b426065384e78f255a79bf7d396f7546f714bb65c9af643525b6402353f99",
-      "outputBytes": 40398,
-      "outputSha256": "6a15eb14387e016840ae79c3889f9186c92713168b7a06d5840a3fe9da3fe1b8"
-    },
-    {
-      "source": "blog-images/blog-image-10.jpg",
-      "output": "images/blog/blog-image-10.webp",
-      "sourceBytes": 182056,
-      "sourceSha256": "558fbc575296052924cb8befdf18f0492cfcd595c22047c11eca7ce2f69e728c",
-      "outputBytes": 90004,
-      "outputSha256": "4c0bcde228d2ae806614658a42e8075da9fb1d82977828437d0488464f15847d"
-    },
-    {
-      "source": "blog-images/blog-image-11.jpg",
-      "output": "images/blog/blog-image-11.webp",
-      "sourceBytes": 179648,
-      "sourceSha256": "26b93a86e8fb36f43198770a9c17f10515833ba1084b31d9524c673d45894e69",
-      "outputBytes": 55372,
-      "outputSha256": "fd3270ed9da65f97967934aed324c4f6dd4c52d9804113ce9b305e4d6d60b8c1"
-    },
-    {
-      "source": "blog-images/blog-image-12.png",
-      "output": "images/blog/blog-image-12.webp",
-      "sourceBytes": 38803,
-      "sourceSha256": "b40518158a0b97435239639ebaca415c7bc6ab9cccd39ab1b2175077b9de9069",
-      "outputBytes": 13450,
-      "outputSha256": "ad50e0b8370a5ccbdd5339029fc876a16bf14d230fbc85313964aaa22edb5d16"
-    },
-    {
-      "source": "blog-images/blog-image-13.webp",
-      "output": "images/blog/blog-image-13.webp",
-      "sourceBytes": 21554,
-      "sourceSha256": "a6c71c80860a80c9dd5c064ba61b221972b837cb6c35ee6aecfd5b2618d07568",
-      "outputBytes": 23340,
-      "outputSha256": "311f5c3121a6ae983ed3acaa4c6b032e64688ab4adf1af3f3eba04c613038e8f"
-    },
-    {
-      "source": "blog-images/blog-image-14.webp",
-      "output": "images/blog/blog-image-14.webp",
-      "sourceBytes": 60008,
-      "sourceSha256": "796e14b6755d55982d6c66576efc485e6979e6751d1b8b5174d9bcbfa14072ee",
-      "outputBytes": 63674,
-      "outputSha256": "4044d8e7b58f057a85f73fa3e9dbfda3c02fab6e6f61665d77a1f2d6bd2303dc"
-    },
-    {
-      "source": "blog-images/blog-image-15.jpg",
-      "output": "images/blog/blog-image-15.webp",
-      "sourceBytes": 203130,
-      "sourceSha256": "794d4dede16089afcf31f9bac1513e907b9510a8e0c1a5298cdba78b5e0b898d",
-      "outputBytes": 35194,
-      "outputSha256": "1d0929c2c3f06d932d3d9f5651341a0dca38cf4b6a996a6b2f5a6c040c20c808"
-    },
-    {
-      "source": "blog-images/blog-image-16.png",
-      "output": "images/blog/blog-image-16.webp",
-      "sourceBytes": 962245,
-      "sourceSha256": "a621ab645e4d964e5dc3e1fa1a0b9baedfdb2c0a8a736d12d8a6677c4f23af5c",
-      "outputBytes": 86540,
-      "outputSha256": "dafcb4205004292a41b784dcd8900db2b522c8b01cf777a3119f33705333fd11"
-    },
-    {
-      "source": "blog-images/blog-image-17.png",
-      "output": "images/blog/blog-image-17.webp",
-      "sourceBytes": 116118,
-      "sourceSha256": "1666e05a9e3fbebc7753bc75eff988a4190bd9481c42d197d2ca11fd115461e5",
-      "outputBytes": 44848,
-      "outputSha256": "171d71135f445b9c2ef63fe73b851292d411dd2daa3313cfb38087e45c0e0f09"
-    },
-    {
-      "source": "blog-images/blog-image-18.webp",
-      "output": "images/blog/blog-image-18.webp",
-      "sourceBytes": 19046,
-      "sourceSha256": "fd498689a24ea8d97be9e6d1d9db32c6c1940c466f4396e39bca6e3adea6886f",
-      "outputBytes": 45042,
-      "outputSha256": "bffa4b5a4347fd4992b8f6d5481c50c420277d4a3e953437f32054c53d0bd0e1"
-    },
-    {
-      "source": "blog-images/blog-image-19.jpg",
-      "output": "images/blog/blog-image-19.webp",
-      "sourceBytes": 88022,
-      "sourceSha256": "ea763ba89aeaa4d8fef461ad5a0f3760257760c023ae55c6377110a34cdd64cd",
-      "outputBytes": 31806,
-      "outputSha256": "0ae9614fa578322ed84b1ff6417e5f8b664e6854233d8ad0222a3d85c609a808"
-    },
-    {
-      "source": "blog-images/blog-image-20.png",
-      "output": "images/blog/blog-image-20.webp",
-      "sourceBytes": 1005373,
-      "sourceSha256": "accae5eb3019a3a11a8254e4fabead35460d47d825be7d71593424a7ef86e15b",
-      "outputBytes": 64964,
-      "outputSha256": "d70217ee0edb71c4521f51d44c63a6fb430b37bf982890f782ffaa31c984bc29"
-    },
-    {
-      "source": "blog-images/blog-image-21.jpg",
-      "output": "images/blog/blog-image-21.webp",
-      "sourceBytes": 388207,
-      "sourceSha256": "cd6cacb31fc5ef1421710a5e56bcdc5826c0f89e5db60513b8720114516e5014",
-      "outputBytes": 28192,
-      "outputSha256": "ae9243ca0bd7eba502969555bd8fd2095d318722b01c398adfaa42406630846e"
-    },
-    {
-      "source": "blog-images/blog-image-22.jpg",
-      "output": "images/blog/blog-image-22.webp",
-      "sourceBytes": 47708,
-      "sourceSha256": "07f20f9fadf2d3573d37b672aec56a604bc988a2645c871923664e1dae9ae72c",
-      "outputBytes": 21982,
-      "outputSha256": "fac2936ea178b76aae73b5a742a25123679fc5ad21fdf50d85152a72e36da031"
-    },
-    {
-      "source": "blog-images/blog-image-23.jpg",
-      "output": "images/blog/blog-image-23.webp",
-      "sourceBytes": 230525,
-      "sourceSha256": "90078a263c511a7f41d71139fe4a016027e517ccb6381b0b78bc37b230635218",
-      "outputBytes": 22700,
-      "outputSha256": "604d7f58b804a771ad62bd9469d23842fc3721a382e841e95ce0f498a940b65a"
-    },
-    {
-      "source": "blog-images/blog-image-24.jpg",
-      "output": "images/blog/blog-image-24.webp",
-      "sourceBytes": 939635,
-      "sourceSha256": "0c738d829facfbd28b47bc024d959cce7be5c0fcdc264f85f212d432a043eddf",
-      "outputBytes": 42506,
-      "outputSha256": "bef7de9db95ee095877e6cf2e76f515fc1763ddc4f715b8da3a31fea6e3ced90"
-    },
-    {
-      "source": "blog-images/blog-image-25.jpg",
-      "output": "images/blog/blog-image-25.webp",
-      "sourceBytes": 673243,
-      "sourceSha256": "edc969e196dc471edec23f8894d74d06188553f6f71b273afad48bcf29c280bf",
-      "outputBytes": 53322,
-      "outputSha256": "0db118902fb49303cdc3a11f2886e7ec1aa1f9df06fe4c095c9f1f14c172ca81"
-    },
-    {
-      "source": "blog-images/blog-image-26.webp",
-      "output": "images/blog/blog-image-26.webp",
-      "sourceBytes": 42250,
-      "sourceSha256": "963a7baf8b649ae9252a97332055f6a22290e5081936b97cb77155d34713c6d5",
-      "outputBytes": 29756,
-      "outputSha256": "6ebc64dad4cd5b156f5cf65af6d042a8b057e17a301ba2d0bee0e454d93f900f"
-    },
-    {
-      "source": "blog-images/blog-image-27.png",
-      "output": "images/blog/blog-image-27.webp",
-      "sourceBytes": 903353,
-      "sourceSha256": "fadc124d1b1adb71cd60eb7d888cf4aa1f178f44c5cb5a06e2da24c073bb9826",
-      "outputBytes": 73674,
-      "outputSha256": "6b2bd3067670d7f5808d5f189227e8058d13ce263534641f7e6fffa5aed8f265"
-    },
-    {
-      "source": "blog-images/blog-image-28.jpg",
-      "output": "images/blog/blog-image-28.webp",
-      "sourceBytes": 231652,
-      "sourceSha256": "ce6f627734aa00ba989b70b11a1552c1ca395b26a1ecbc121a497863d81ac1ed",
-      "outputBytes": 83128,
-      "outputSha256": "6f70a7315eb7140d0d065b57ea226f82fec149c1fcbd4894f051f3975224dc7f"
-    },
-    {
-      "source": "blog-images/blog-image-29.png",
-      "output": "images/blog/blog-image-29.webp",
-      "sourceBytes": 605260,
-      "sourceSha256": "09a37de92181d51d243c3fc5a378d132c8cebc5bb859b77be7c3bb7986c977a7",
-      "outputBytes": 36558,
-      "outputSha256": "8cc89cf39d02d75996eb52179a222181a4e0f7ccb56270695ea15310a8f43744"
-    },
-    {
-      "source": "blog-images/blog-image-30.jpg",
-      "output": "images/blog/blog-image-30.webp",
-      "sourceBytes": 73974,
-      "sourceSha256": "0b0f5ed47bc0638abda2c57e4cac5f1a6c6d6f860c01f3e94be8d1331988568e",
-      "outputBytes": 27004,
-      "outputSha256": "d24d1fcb08cb77fae632946ff9758de92f70e0c063c62522d3f819d015e2c127"
-    },
-    {
-      "source": "blog-images/blog-image-31.webp",
-      "output": "images/blog/blog-image-31.webp",
-      "sourceBytes": 45204,
-      "sourceSha256": "0786b7d4db4b4420f2545902c38a0d6c832690cbf3b261fe746d240fda86fd61",
-      "outputBytes": 43720,
-      "outputSha256": "f708be86fc8745d3dff1fede15696bb9c51fb66fbc009aa67a0e9cdc8c64a1db"
-    },
-    {
-      "source": "blog-images/blog-image-32.png",
-      "output": "images/blog/blog-image-32.webp",
-      "sourceBytes": 439128,
-      "sourceSha256": "7c8b12160672bc216420a8b20cb70ab397dab4a26e092db9bba10bb9d9e58a3a",
-      "outputBytes": 77580,
-      "outputSha256": "c6df050f2ca16c4516e58c73143a75b0e125ccbc62c453a72d19d4ba3afd6b18"
-    },
-    {
-      "source": "blog-images/blog-image-33.jpg",
-      "output": "images/blog/blog-image-33.webp",
-      "sourceBytes": 356487,
-      "sourceSha256": "cd0783889ca652335669db523cd2981a250371cb61b9e89eb554ee2c45daaabb",
-      "outputBytes": 272056,
-      "outputSha256": "691d656570f5d31a2e15c5043b525addb6d3efc944694c7d3b191837c67d0410"
-    },
-    {
-      "source": "blog-images/blog-image-34.jpg",
-      "output": "images/blog/blog-image-34.webp",
-      "sourceBytes": 39494,
-      "sourceSha256": "749c6c6b10ef83f4eb075490856f8b81f571298c6f09affb86e28322a7a50c19",
-      "outputBytes": 18406,
-      "outputSha256": "76e4330670f24341fa9f6eb3fd44786797796e3cd591e4688ce1ab49b1598db1"
-    },
-    {
-      "source": "blog-images/blog-image-35.jpg",
-      "output": "images/blog/blog-image-35.webp",
-      "sourceBytes": 299048,
-      "sourceSha256": "6ed901cfbafd640d0e57f0a96c39b85d20e6f87c48b759b86374e274b89222c4",
-      "outputBytes": 51256,
-      "outputSha256": "2583e64ededa366e1d2cf422f0eae8f8b1f334411735666cad18906d59552433"
-    },
-    {
-      "source": "blog-images/blog-image-36.png",
-      "output": "images/blog/blog-image-36.webp",
-      "sourceBytes": 242789,
-      "sourceSha256": "5155558ca31e4e4a6378eedda732034f6357c0a874aeb574ca3326760f6a4d83",
-      "outputBytes": 33608,
-      "outputSha256": "1d2a3f950753111bf58bb4bf5982e7966fefa2b3ba844c3516bede91fc577446"
-    },
-    {
-      "source": "blog-images/blog-image-37.webp",
-      "output": "images/blog/blog-image-37.webp",
-      "sourceBytes": 886366,
-      "sourceSha256": "aad8712c98ab2a7c0579c82ebabbdd60b826c4520d7b81228ce726f7f74ef7d6",
-      "outputBytes": 89890,
-      "outputSha256": "4863ed19c9ed8f1e6830222dfddfa620699b35f38f2abacdb0b6167c768d96e4"
-    },
-    {
-      "source": "blog-images/blog-image-38.png",
-      "output": "images/blog/blog-image-38.webp",
-      "sourceBytes": 137938,
-      "sourceSha256": "294485dd1df56adca08d7f492fb89c5c0b721e6f798aa9307b4d135d9fb54849",
-      "outputBytes": 44892,
-      "outputSha256": "f6aa3518e9cb9c2d480a2b4e12a6d68f1de9725f0eb64a14032bd847442f3126"
-    },
-    {
-      "source": "blog-images/blog-image-39.jpg",
-      "output": "images/blog/blog-image-39.webp",
-      "sourceBytes": 81178,
-      "sourceSha256": "0a8f2e6c8553bef97cbbe7782e1476b6d4461fa3642d5839be5314ab15216418",
-      "outputBytes": 38120,
-      "outputSha256": "fd927f0cd96e36318c643d0f57599dffe7438c51193e841dfc73c594b8c1524c"
-    },
-    {
-      "source": "blog-images/blog-image-40.jpg",
-      "output": "images/blog/blog-image-40.webp",
-      "sourceBytes": 79587,
-      "sourceSha256": "237affe8d9609d83146cccc1cad93e02c030578164cd314dc079be877d447aa5",
-      "outputBytes": 30594,
-      "outputSha256": "f2e70fb216d2fa8f244e16f92a78f20608b811ba381a2a1171b3ab46b7b8b9b8"
-    },
-    {
-      "source": "blog-images/blog-image-41.jpeg",
-      "output": "images/blog/blog-image-41.webp",
-      "sourceBytes": 381165,
-      "sourceSha256": "4fa634396fde4977ab81fd22007a598357d2dc6db9a84ae9ebb2f551b02d0827",
-      "outputBytes": 55264,
-      "outputSha256": "6f72793a3416f87fcebd7e32b6280916b377d056735006a19907ba2bd85ef478"
-    },
-    {
-      "source": "blog-images/blog-image-42.webp",
-      "output": "images/blog/blog-image-42.webp",
-      "sourceBytes": 55314,
-      "sourceSha256": "da56dacb32ad4daa8a371d7b963ab19bf1953bb2a61a5441cd830332b596dc9b",
-      "outputBytes": 50902,
-      "outputSha256": "5a83eea5b77021577cb1da70881c30ddd8f4b18f540b3e3d3ce9029ff8c29bcb"
-    },
-    {
-      "source": "blog-images/blog-image-43.webp",
-      "output": "images/blog/blog-image-43.webp",
-      "sourceBytes": 37270,
-      "sourceSha256": "2cedbf6541cfb0aae110f3547437579c9d4ffdae6b8239bd68da11bbfed9b88d",
-      "outputBytes": 42386,
-      "outputSha256": "0215ef3d4ef0c230c3ba9818ead6dc114d2b80cf539d53c16c8c9fb51b2c1fa0"
-    },
-    {
-      "source": "blog-images/blog-image-44.png",
-      "output": "images/blog/blog-image-44.webp",
-      "sourceBytes": 216434,
-      "sourceSha256": "930c8bd5cab1bf707f06036e474e75f4342acd1f925900db309b33f1d053f98c",
-      "outputBytes": 19376,
-      "outputSha256": "b1f96ce41dafbffc7097d43ec16aae1f2871bd5d5a1c10db6a41f42997f4546a"
-    },
-    {
-      "source": "blog-images/blog-image-45.png",
-      "output": "images/blog/blog-image-45.webp",
-      "sourceBytes": 136518,
-      "sourceSha256": "883c0ab2318ddbdc8e26663491e16d3024bb222376a26b5dc87a65cf855f5f8c",
-      "outputBytes": 32134,
-      "outputSha256": "9616f85a4cf928e4f2c7e84eecb7c3795fc8e9d54a4e66b627349782ed5c6162"
-    },
-    {
       "source": "clutch-logo.png",
       "output": "images/logos/clutch-logo.webp",
       "sourceBytes": 17875,
@@ -392,14 +32,6 @@
       "sourceSha256": "28b063af99256542ba73c2a7ed9e341d516662eb277a9632f0dcc2b33868219a",
       "outputBytes": 4922,
       "outputSha256": "28b063af99256542ba73c2a7ed9e341d516662eb277a9632f0dcc2b33868219a"
-    },
-    {
-      "source": "dell-latest-logo.svg",
-      "output": "images/logos/dell-latest-logo.svg",
-      "sourceBytes": 2044,
-      "sourceSha256": "11046b98770f07b32517ee9c2674943def7f7084e4b9a134b6156cda15765b30",
-      "outputBytes": 2044,
-      "outputSha256": "11046b98770f07b32517ee9c2674943def7f7084e4b9a134b6156cda15765b30"
     },
     {
       "source": "eng-properties-latest-logo.png",
@@ -458,14 +90,6 @@
       "outputSha256": "734497a565a0128807259f4b9ba992d09e558dfc7d435bba946f5cbb988a139a"
     },
     {
-      "source": "hp-latest-logo.svg",
-      "output": "images/logos/hp-latest-logo.svg",
-      "sourceBytes": 1678,
-      "sourceSha256": "44c1f65759c38480332964814872323ff5160cedeb6115ad3d6acdde067acc8b",
-      "outputBytes": 1678,
-      "outputSha256": "44c1f65759c38480332964814872323ff5160cedeb6115ad3d6acdde067acc8b"
-    },
-    {
       "source": "jsn-medical-latest-logo.png",
       "output": "images/logos/jsn-medical-latest-logo.webp",
       "sourceBytes": 65891,
@@ -482,14 +106,6 @@
       "outputSha256": "e488c3da55f4b620c6f45e5e9115e470f118d010d4c0336596dd8a0f9cee4dd1"
     },
     {
-      "source": "lenovo-latest-logo.svg",
-      "output": "images/logos/lenovo-latest-logo.svg",
-      "sourceBytes": 1801,
-      "sourceSha256": "84f347c25abfdac804157095c075a10cf9bca454c395221fe87730abe4938c20",
-      "outputBytes": 1801,
-      "outputSha256": "84f347c25abfdac804157095c075a10cf9bca454c395221fe87730abe4938c20"
-    },
-    {
       "source": "meta-latest-logo.svg",
       "output": "images/logos/meta-latest-logo.svg",
       "sourceBytes": 1984,
@@ -498,12 +114,23 @@
       "outputSha256": "78e77f62b148c7e51c24d978f7f450deaa2adb84b7b716d113c0f2777b97e7e0"
     },
     {
-      "source": "methodology.jpg",
-      "output": "images/about/methodology.webp",
-      "sourceBytes": 982426,
-      "sourceSha256": "18aed5827ce277a1811ead5da303dd8ba93f602d9a5606cd8aa0ea3fcb1bbcb2",
-      "outputBytes": 62584,
-      "outputSha256": "71811272c1235007869a5221aad9d5f26363f2595c83d19e79ff29c9c65e73d2"
+      "source": "external/pexels/7651636.jpeg",
+      "output": "images/about/strategy-and-measurement.webp",
+      "sourceBytes": 160612,
+      "sourceSha256": "8e517cd8e81183cabfc77f337f0a4053e7e06762881bab3c0d65d48d2cfc76df",
+      "outputBytes": 48324,
+      "outputSha256": "479eb8f055b38f5057dafb467839574d221a3b5fa67236d59cad4f7af21f7d46",
+      "sourceUrl": "https://www.pexels.com/photo/two-people-holding-document-papers-7651636/",
+      "downloadUrl": "https://images.pexels.com/photos/7651636/pexels-photo-7651636.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "photographer": "Kindel Media",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "encoding": {
+        "width": 1200,
+        "height": 800,
+        "fit": "cover",
+        "position": "centre",
+        "quality": 78
+      }
     },
     {
       "source": "microsoft-certified-latest-logo.png",
@@ -554,12 +181,23 @@
       "outputSha256": "ca77574264b0e1367eba0b57624ef0e1de8dfbb9f9cc407cd17e5d89b748a5ee"
     },
     {
-      "source": "our-story.jpg",
-      "output": "images/about/our-story.webp",
-      "sourceBytes": 1010389,
-      "sourceSha256": "b9686a2ee8fcafe35e5b22cc86a1771c0a472fa84af9fa4fdddd741c07adfd65",
-      "outputBytes": 261842,
-      "outputSha256": "42907d8fdf1bc0ee5bd6a5766e7dca7b9d49febe81527676f876f135646e846c"
+      "source": "external/pexels/3862370.jpeg",
+      "output": "images/about/collaborative-engineering.webp",
+      "sourceBytes": 105640,
+      "sourceSha256": "f71fd4853a7128e020e2206318412542847e20919e7e27e44671b0e9e7a3c83b",
+      "outputBytes": 32164,
+      "outputSha256": "3e73668b936383c3b88314f20a0f9658aea1c4cfb46f934bcbbee8f10de9d882",
+      "sourceUrl": "https://www.pexels.com/photo/engineers-planning-structure-3862370/",
+      "downloadUrl": "https://images.pexels.com/photos/3862370/pexels-photo-3862370.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "photographer": "ThisIsEngineering",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "encoding": {
+        "width": 1200,
+        "height": 800,
+        "fit": "cover",
+        "position": "attention",
+        "quality": 78
+      }
     },
     {
       "source": "profile-placeholder.jpg",
@@ -600,22 +238,6 @@
       "sourceSha256": "afc19baed635ab99c481573a071115d5ee92c4a1104d13125be2f7b332d08efc",
       "outputBytes": 1606,
       "outputSha256": "afc19baed635ab99c481573a071115d5ee92c4a1104d13125be2f7b332d08efc"
-    },
-    {
-      "source": "tvs-logo.png",
-      "output": "images/logos/tvs-logo.webp",
-      "sourceBytes": 172795,
-      "sourceSha256": "7a7daf3831ced87e3aa9b4a014517c94cc4b29475d7923a67a389b2d848d9254",
-      "outputBytes": 89608,
-      "outputSha256": "4b6d84734656dac79db00346f5dfa2f8d1bfe649ad1af5756488f1e186c5c0b6"
-    },
-    {
-      "source": "tvs-new-logo.png",
-      "output": "images/logos/tvs-new-logo.webp",
-      "sourceBytes": 187363,
-      "sourceSha256": "4dccc96b24e57b7cded989b737484c724ae2410d396e5f7ed48fc94fcd3b88dc",
-      "outputBytes": 110640,
-      "outputSha256": "e6e32ba7d3a14f903abd12cb6e9142882f3027275648a0b9a6c160496804bf4b"
     },
     {
       "source": "twitter-latest-logo.svg",
@@ -746,20 +368,22 @@
       "outputSha256": "2a2de8c85e64ca6ac27c4da3c6cc523b2dd7f77ede6635f1f439b61b39c690d9"
     },
     {
-      "source": "web-app-manifest-192x192.png",
+      "source": "icons/web-app-manifest-192x192.png",
       "output": "icons/web-app-manifest-192x192.png",
-      "sourceBytes": 14526,
-      "sourceSha256": "d71c24df29e1948f076666bf31dd78eb1ad4e6b82d5c9d3088ce348317eecf59",
-      "outputBytes": 14526,
-      "outputSha256": "d71c24df29e1948f076666bf31dd78eb1ad4e6b82d5c9d3088ce348317eecf59"
+      "sourceBytes": 3192,
+      "sourceSha256": "31082bfaf77bcecc2aaceb832aeaf40c6cb5b52a80f92f84521d75df4c2370b7",
+      "outputBytes": 3192,
+      "outputSha256": "31082bfaf77bcecc2aaceb832aeaf40c6cb5b52a80f92f84521d75df4c2370b7",
+      "generator": "scripts/generate-brand-assets.mjs"
     },
     {
-      "source": "web-app-manifest-512x512.png",
+      "source": "icons/web-app-manifest-512x512.png",
       "output": "icons/web-app-manifest-512x512.png",
-      "sourceBytes": 57750,
-      "sourceSha256": "6290b7962acb936b8ba5b94483e6ae11d71ddfa55756ed285103b64b73286716",
-      "outputBytes": 57750,
-      "outputSha256": "6290b7962acb936b8ba5b94483e6ae11d71ddfa55756ed285103b64b73286716"
+      "sourceBytes": 10576,
+      "sourceSha256": "96822ff7c89de68e2a3540d1bedf1a1a9c5119bf744df6455e6bdf9c41b7994c",
+      "outputBytes": 10576,
+      "outputSha256": "96822ff7c89de68e2a3540d1bedf1a1a9c5119bf744df6455e6bdf9c41b7994c",
+      "generator": "scripts/generate-brand-assets.mjs"
     },
     {
       "source": "window.svg",
@@ -776,8 +400,413 @@
       "sourceSha256": "7120f9c45dfe6680539cbed7b93475cd2ebf753adcaf4ca88aed19a1ee77457d",
       "outputBytes": 85718,
       "outputSha256": "cd595b890d81a8828d4bb18446b3b3eec054de45f7c0cb18ee7c314952bc0c61"
+    },
+    {
+      "source": "case-studies/pexels-5585793.jpeg",
+      "output": "images/case-studies/ecommerce.webp",
+      "sourceBytes": 179387,
+      "sourceSha256": "6135d0e6fce99a6aa7c6338b0e020f4ff0f9d9eb20710f2b2ff51e6b30c35dbe",
+      "outputBytes": 61124,
+      "outputSha256": "263cd1a6f9ee1e45c5f1345f26229770fb1fcfc450cdfd87ef6d32f445ff5516",
+      "sourceUrl": "https://www.pexels.com/photo/a-person-shopping-online-using-a-laptop-5585793/",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "photographer": "Polina Tankilevitch",
+      "downloadUrl": "https://images.pexels.com/photos/5585793/pexels-photo-5585793.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "encoding": {
+        "width": 1200,
+        "height": 800,
+        "fit": "cover",
+        "position": "centre",
+        "quality": 78
+      }
+    },
+    {
+      "source": "case-studies/pexels-32407077.jpeg",
+      "output": "images/case-studies/manufacturing.webp",
+      "sourceBytes": 356672,
+      "sourceSha256": "cbeeb9ca69a3fab6aa470f310c794d6bbb5620e3e7a84e13e720ff111cc267c5",
+      "outputBytes": 156318,
+      "outputSha256": "916d7f96892c01ad042f7ff4ca40f4f0be32878bdb58d2e922f0f21c55d1218e",
+      "sourceUrl": "https://www.pexels.com/photo/worker-operating-machinery-in-industrial-factory-32407077/",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "photographer": "Deniz SENGUL",
+      "downloadUrl": "https://images.pexels.com/photos/32407077/pexels-photo-32407077.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "encoding": {
+        "width": 1200,
+        "height": 800,
+        "fit": "cover",
+        "position": "centre",
+        "quality": 78
+      }
+    },
+    {
+      "source": "case-studies/pexels-6129502.jpeg",
+      "output": "images/case-studies/healthcare.webp",
+      "sourceBytes": 163436,
+      "sourceSha256": "4f98f64646849f88c34689d8e48b54d62491e2e2f8310ad2a0a0f91f008ad4e2",
+      "outputBytes": 53028,
+      "outputSha256": "667c52ac6ca4fabd1a7211c8f96e2d00ca0ccc22e3edaf3785905dc85165ccea",
+      "sourceUrl": "https://www.pexels.com/photo/doctors-and-nurses-in-a-hospital-6129502/",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "photographer": "RDNE Stock project",
+      "downloadUrl": "https://images.pexels.com/photos/6129502/pexels-photo-6129502.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "encoding": {
+        "width": 1200,
+        "height": 800,
+        "fit": "cover",
+        "position": "centre",
+        "quality": 78
+      }
+    },
+    {
+      "source": "case-studies/pexels-5483240.jpeg",
+      "output": "images/case-studies/cybersecurity.webp",
+      "sourceBytes": 120484,
+      "sourceSha256": "e5ab3ff0f6d2987351859a33325f20589ebfdc245d4156b7d410d014d4644d7f",
+      "outputBytes": 10392,
+      "outputSha256": "e5f399a36acf908acf000bcf02fcc247e02682a9f4df6d5c159b2ff376d5a3c9",
+      "sourceUrl": "https://www.pexels.com/photo/laptop-with-cyber-security-text-on-the-screen-5483240/",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "photographer": "cottonbro studio",
+      "downloadUrl": "https://images.pexels.com/photos/5483240/pexels-photo-5483240.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "encoding": {
+        "width": 1200,
+        "height": 800,
+        "fit": "cover",
+        "position": "bottom",
+        "quality": 78
+      }
+    },
+    {
+      "source": "case-studies/pexels-5480781.jpeg",
+      "output": "images/case-studies/infrastructure.webp",
+      "sourceBytes": 416705,
+      "sourceSha256": "2ec81d66caa21e759d9b28c7b915c90ec83dba24ddcefc4a0be4917feb3668fd",
+      "outputBytes": 197648,
+      "outputSha256": "fa431100298b2e1b94f5cc42702693041506c49340d56e184be8ee15f3555d02",
+      "sourceUrl": "https://www.pexels.com/photo/server-racks-on-data-center-5480781/",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "photographer": "Brett Sayles",
+      "downloadUrl": "https://images.pexels.com/photos/5480781/pexels-photo-5480781.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "encoding": {
+        "width": 1200,
+        "height": 800,
+        "fit": "cover",
+        "position": "centre",
+        "quality": 78
+      }
+    },
+    {
+      "source": "remote-logos/shopify.svg",
+      "output": "images/logos/shopify.svg",
+      "sourceBytes": 1249,
+      "sourceSha256": "73b7faee1aa8969eba999c3d6622ece507a6415039592185e85ce7bb6244ddc2",
+      "outputBytes": 1249,
+      "outputSha256": "73b7faee1aa8969eba999c3d6622ece507a6415039592185e85ce7bb6244ddc2",
+      "sourceUrl": "https://cdn.simpleicons.org/shopify/7AB55C",
+      "downloadUrl": "https://cdn.simpleicons.org/shopify/7AB55C"
+    },
+    {
+      "source": "remote-logos/hubspot.svg",
+      "output": "images/logos/hubspot.svg",
+      "sourceBytes": 678,
+      "sourceSha256": "5e3d32c06f065e541829e34c2d2429b1fee686a49020b1974b3fec228916f55e",
+      "outputBytes": 678,
+      "outputSha256": "5e3d32c06f065e541829e34c2d2429b1fee686a49020b1974b3fec228916f55e",
+      "sourceUrl": "https://cdn.simpleicons.org/hubspot/FF7A59",
+      "downloadUrl": "https://cdn.simpleicons.org/hubspot/FF7A59"
+    },
+    {
+      "source": "remote-logos/aws.svg",
+      "output": "images/logos/aws.svg",
+      "sourceBytes": 3474,
+      "sourceSha256": "1f52a1d5f3c11d1452aac763e53ca9e74d6635298feb077059903595ca408206",
+      "outputBytes": 3474,
+      "outputSha256": "1f52a1d5f3c11d1452aac763e53ca9e74d6635298feb077059903595ca408206",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+    },
+    {
+      "source": "branding/digital-horizon-systems-logo.svg",
+      "output": "branding/digital-horizon-systems-logo.svg",
+      "sourceBytes": 10605,
+      "sourceSha256": "a8efab6530d39d505eb113efcddc529fa5501dd0dadaae29ecabdc1591787d01",
+      "outputBytes": 10605,
+      "outputSha256": "a8efab6530d39d505eb113efcddc529fa5501dd0dadaae29ecabdc1591787d01",
+      "generator": "scripts/generate-brand-assets.mjs"
+    },
+    {
+      "source": "branding/digital-horizon-systems-logo.png",
+      "output": "branding/digital-horizon-systems-logo.png",
+      "sourceBytes": 17872,
+      "sourceSha256": "218ff3a1ae37acb00fac178691f7fe56aecd6e7f9b4643f2dee1ad7dfec5058b",
+      "outputBytes": 17872,
+      "outputSha256": "218ff3a1ae37acb00fac178691f7fe56aecd6e7f9b4643f2dee1ad7dfec5058b",
+      "generator": "scripts/generate-brand-assets.mjs"
+    },
+    {
+      "source": "branding/digital-horizon-systems-logo.jpg",
+      "output": "branding/digital-horizon-systems-logo.jpg",
+      "sourceBytes": 24174,
+      "sourceSha256": "8c22723af0f61dbd26419e10142a6ba8a34100ceb8e2d5398f19aa635e5ed9bd",
+      "outputBytes": 24174,
+      "outputSha256": "8c22723af0f61dbd26419e10142a6ba8a34100ceb8e2d5398f19aa635e5ed9bd",
+      "generator": "scripts/generate-brand-assets.mjs"
+    },
+    {
+      "source": "branding/digital-horizon-systems-logo-light.svg",
+      "output": "branding/digital-horizon-systems-logo-light.svg",
+      "sourceBytes": 10605,
+      "sourceSha256": "e18a81dc9b7bd1ff1ed13be1230f6c3502e53cc6691f53e9cd435695dd60a7f4",
+      "outputBytes": 10605,
+      "outputSha256": "e18a81dc9b7bd1ff1ed13be1230f6c3502e53cc6691f53e9cd435695dd60a7f4",
+      "generator": "scripts/generate-brand-assets.mjs"
+    },
+    {
+      "source": "branding/digital-horizon-systems-logo-light.png",
+      "output": "branding/digital-horizon-systems-logo-light.png",
+      "sourceBytes": 17859,
+      "sourceSha256": "1b8aa8e3c75cfe7a1fe4cb4771db0ef05c91b5ab3ddee85deef5ea61c58fce49",
+      "outputBytes": 17859,
+      "outputSha256": "1b8aa8e3c75cfe7a1fe4cb4771db0ef05c91b5ab3ddee85deef5ea61c58fce49",
+      "generator": "scripts/generate-brand-assets.mjs"
+    },
+    {
+      "source": "branding/digital-horizon-systems-logo-light.jpg",
+      "output": "branding/digital-horizon-systems-logo-light.jpg",
+      "sourceBytes": 22906,
+      "sourceSha256": "c7705f928646036d6d6716b61b3c29307e2743995164d5284848f6a8af747d0d",
+      "outputBytes": 22906,
+      "outputSha256": "c7705f928646036d6d6716b61b3c29307e2743995164d5284848f6a8af747d0d",
+      "generator": "scripts/generate-brand-assets.mjs"
+    },
+    {
+      "source": "branding/digital-horizon-systems-mark.svg",
+      "output": "branding/digital-horizon-systems-mark.svg",
+      "sourceBytes": 478,
+      "sourceSha256": "643367bb762539a20e3c9286c149735f225cb1fe4c4f41351495bea8e0bab135",
+      "outputBytes": 478,
+      "outputSha256": "643367bb762539a20e3c9286c149735f225cb1fe4c4f41351495bea8e0bab135",
+      "generator": "scripts/generate-brand-assets.mjs"
+    },
+    {
+      "source": "branding/digital-horizon-systems-mark.png",
+      "output": "branding/digital-horizon-systems-mark.png",
+      "sourceBytes": 9417,
+      "sourceSha256": "e9bde3b27d1a2de17779babc0ecf836243ad4452c3ac04dd70ae188149e9a0fb",
+      "outputBytes": 9417,
+      "outputSha256": "e9bde3b27d1a2de17779babc0ecf836243ad4452c3ac04dd70ae188149e9a0fb",
+      "generator": "scripts/generate-brand-assets.mjs"
+    },
+    {
+      "source": "branding/digital-horizon-systems-mark.jpg",
+      "output": "branding/digital-horizon-systems-mark.jpg",
+      "sourceBytes": 11854,
+      "sourceSha256": "457edfc3d4610dd3a7973ec64bfa0465350f2fe78b70e6c4a6ad7b9ee8b7a7af",
+      "outputBytes": 11854,
+      "outputSha256": "457edfc3d4610dd3a7973ec64bfa0465350f2fe78b70e6c4a6ad7b9ee8b7a7af",
+      "generator": "scripts/generate-brand-assets.mjs"
+    },
+    {
+      "source": "icons/apple-touch-icon.png",
+      "output": "icons/apple-touch-icon.png",
+      "sourceBytes": 3166,
+      "sourceSha256": "bd572fa5ec4b9b251ea9ab08526e254fded9309ebcc21511e810ea492cd8b5e8",
+      "outputBytes": 3166,
+      "outputSha256": "bd572fa5ec4b9b251ea9ab08526e254fded9309ebcc21511e810ea492cd8b5e8",
+      "generator": "scripts/generate-brand-assets.mjs"
+    },
+    {
+      "source": "external/pexels/34804016.jpeg",
+      "output": "images/editorial/development-code.webp",
+      "sourceBytes": 289180,
+      "sourceSha256": "d5450f93c773d6d3cbcc4b277680e08a6b1eeff798258a0f35f4d35952d99091",
+      "outputBytes": 85092,
+      "outputSha256": "ee9f4c5ae3623c1f146bb0eb82c41e2d1a7ddffe3dbcdaceb08b95b80fd5b8a8",
+      "sourceUrl": "https://www.pexels.com/photo/modern-workspace-with-laptop-and-code-display-34804016/",
+      "downloadUrl": "https://images.pexels.com/photos/34804016/pexels-photo-34804016.jpeg?auto=compress&cs=tinysrgb&w=2400",
+      "photographer": "Daniil Komov",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "encoding": {
+        "width": 1600,
+        "height": 1067,
+        "fit": "cover",
+        "position": "attention",
+        "quality": 84
+      }
+    },
+    {
+      "source": "external/pexels/1181676.jpeg",
+      "output": "images/editorial/desktop-workstation.webp",
+      "sourceBytes": 341177,
+      "sourceSha256": "69f9d1af060b91c693f71ac32a4f1b1b40617ac36fcadd405bb7bd12f73a3b7f",
+      "outputBytes": 103042,
+      "outputSha256": "27b27611afa4d53522a8dfd643f191a5aa4d3a3f28ff1053db1083cad18769d4",
+      "sourceUrl": "https://www.pexels.com/photo/woman-sitting-while-operating-macbook-pro-1181676/",
+      "downloadUrl": "https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=2400",
+      "photographer": "Christina Morillo",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "encoding": {
+        "width": 1600,
+        "height": 1067,
+        "fit": "cover",
+        "position": "attention",
+        "quality": 84
+      }
+    },
+    {
+      "source": "external/pexels/3888149.jpeg",
+      "output": "images/editorial/interface-design.webp",
+      "sourceBytes": 640004,
+      "sourceSha256": "629fb5ea9cc20be7a73f51fd0c4bfcff384c81e6bfce8654a39be83fd0fa2b11",
+      "outputBytes": 223124,
+      "outputSha256": "b6072dd67ef6f21a033effde9e200907767eda9c5205507ccaa4305273bf93ec",
+      "sourceUrl": "https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/",
+      "downloadUrl": "https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=2400",
+      "photographer": "Rodrigo Santos",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "encoding": {
+        "width": 1600,
+        "height": 1067,
+        "fit": "cover",
+        "position": "attention",
+        "quality": 84
+      }
+    },
+    {
+      "source": "external/pexels/2881232.jpeg",
+      "output": "images/editorial/data-center.webp",
+      "sourceBytes": 299672,
+      "sourceSha256": "b0db6641e7f06c40fc2f9a044e35f83a1ad0271fec2fe23745760911d0a0c010",
+      "outputBytes": 84446,
+      "outputSha256": "f6750b4a24f1526c581ae20306735f177ab2388110d5ae28a744ce8bbda24802",
+      "sourceUrl": "https://www.pexels.com/photo/2881232/",
+      "downloadUrl": "https://images.pexels.com/photos/2881232/pexels-photo-2881232.jpeg?auto=compress&cs=tinysrgb&w=2400",
+      "photographer": "Brett Sayles",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "encoding": {
+        "width": 1600,
+        "height": 1067,
+        "fit": "cover",
+        "position": "attention",
+        "quality": 84
+      }
+    },
+    {
+      "source": "external/pexels/2881229.jpeg",
+      "output": "images/editorial/network-cabling.webp",
+      "sourceBytes": 271698,
+      "sourceSha256": "e7da7b78aeb8c6ddece8f88958c53aca5cda7095c5ffe77ce67fd6f22707ee88",
+      "outputBytes": 91582,
+      "outputSha256": "cb1fff25a97e28933ec7b5a721f6474885bc5b307d2100b137856bc6fc71ee0e",
+      "sourceUrl": "https://www.pexels.com/photo/cables-connected-on-server-2881229/",
+      "downloadUrl": "https://images.pexels.com/photos/2881229/pexels-photo-2881229.jpeg?auto=compress&cs=tinysrgb&w=2400",
+      "photographer": "Brett Sayles",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "encoding": {
+        "width": 1600,
+        "height": 1067,
+        "fit": "cover",
+        "position": "attention",
+        "quality": 84
+      }
+    },
+    {
+      "source": "external/pexels/5380642.jpeg",
+      "output": "images/editorial/security-review.webp",
+      "sourceBytes": 378460,
+      "sourceSha256": "eaaf478dd7ea124c27f045c2aa4e023e49e5ee595417f9f16d6419bf2cce2153",
+      "outputBytes": 114836,
+      "outputSha256": "503832d519b1b92aa895a41d17776a2cbb1a739028dd3f5de9cccbf42e0af0ba",
+      "sourceUrl": "https://www.pexels.com/photo/close-up-view-of-system-hacking-5380642/",
+      "downloadUrl": "https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=2400",
+      "photographer": "Tima Miroshnichenko",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "encoding": {
+        "width": 1600,
+        "height": 1067,
+        "fit": "cover",
+        "position": "attention",
+        "quality": 84
+      }
+    },
+    {
+      "source": "external/pexels/29502376.jpeg",
+      "output": "images/editorial/online-commerce.webp",
+      "sourceBytes": 277895,
+      "sourceSha256": "bdfa0f9a154c7c022dff6cefea328091768498465b639f6023d9b37248163aab",
+      "outputBytes": 94632,
+      "outputSha256": "8c609d3c9bb74d7011de0c66955ec5132145095c6336d460f6bbb394315e135e",
+      "sourceUrl": "https://www.pexels.com/photo/modern-online-shopping-with-mobile-payment-29502376/",
+      "downloadUrl": "https://images.pexels.com/photos/29502376/pexels-photo-29502376.jpeg?auto=compress&cs=tinysrgb&w=2400",
+      "photographer": "Julio Lopez",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "encoding": {
+        "width": 1600,
+        "height": 1067,
+        "fit": "cover",
+        "position": "attention",
+        "quality": 84
+      }
+    },
+    {
+      "source": "external/pexels/590016.jpeg",
+      "output": "images/editorial/business-analysis.webp",
+      "sourceBytes": 625896,
+      "sourceSha256": "46e96374de9bd8ea1c8517087d41583c82287c1080ed4794420e02d8f0df1aab",
+      "outputBytes": 252294,
+      "outputSha256": "dcca72790cb4f6c8b0df68b2925766de79b2d3841409b94c7f87abe2415bdf83",
+      "sourceUrl": "https://www.pexels.com/photo/590016/",
+      "downloadUrl": "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=2400",
+      "photographer": "Lukas",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "encoding": {
+        "width": 1600,
+        "height": 1067,
+        "fit": "cover",
+        "position": "attention",
+        "quality": 84
+      }
+    },
+    {
+      "source": "external/pexels/3183150.jpeg",
+      "output": "images/editorial/project-collaboration.webp",
+      "sourceBytes": 500165,
+      "sourceSha256": "1dbf84e838c6c739fa24dc222b65c4ec0b34e9097ea1d1d5be1c7efe63748e1d",
+      "outputBytes": 186112,
+      "outputSha256": "91676c79a2b88147ccd919ec4fa105886f484c8c78ceb21545125a17986b8308",
+      "sourceUrl": "https://www.pexels.com/photo/top-view-photo-of-people-near-wooden-table-3183150/",
+      "downloadUrl": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=2400",
+      "photographer": "fauxels",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "encoding": {
+        "width": 1600,
+        "height": 1067,
+        "fit": "cover",
+        "position": "attention",
+        "quality": 84
+      }
+    },
+    {
+      "source": "external/pexels/4483610.jpeg",
+      "output": "images/editorial/order-logistics.webp",
+      "sourceBytes": 662630,
+      "sourceSha256": "4b91505cad6ea447fe86c9d00edc357de37fe7048cdd64acc3155c594fb752e8",
+      "outputBytes": 274124,
+      "outputSha256": "b7114cf36625d86f0e7d26a11388549e4523eb128e611bcc44456f40b6fa6993",
+      "sourceUrl": "https://www.pexels.com/photo/4483610/",
+      "downloadUrl": "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=2400",
+      "photographer": "Tiger Lily",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "encoding": {
+        "width": 1600,
+        "height": 1067,
+        "fit": "cover",
+        "position": "attention",
+        "quality": 84
+      }
     }
   ],
-  "beforeBytes": 143200132,
-  "afterBytes": 15327230
+  "beforeBytes": 142440651,
+  "afterBytes": 15596149
 }

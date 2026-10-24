@@ -5,6 +5,9 @@ import { NextResponse } from "next/server";
 import { getPrisma } from "@/lib/prisma";
 import type { Prisma } from "@/generated/prisma/client";
 import { Resend } from "resend";
+import { isSupportedContactService } from "@/lib/services";
+import { isGeneralPhoneNumber } from "@/lib/contact-phone";
+import { normalizeProjectBudget } from "@/lib/project-budget";
 
 // ---------- helpers ----------
 const toBool = (v: unknown) => {
@@ -43,6 +46,9 @@ function isPrismaKnownRequestError(e: unknown): e is Prisma.PrismaClientKnownReq
 export async function POST(req: Request) {
   try {
     const raw = await req.json();
+    const budget = normalizeProjectBudget(raw?.budgetAmount, raw?.budgetCurrency);
+    if (!budget.success)
+      return NextResponse.json({ success: false, error: budget.error }, { status: 400 });
 
     // Build data EXACTLY as your schema expects:
     // service: required string
@@ -60,9 +66,8 @@ export async function POST(req: Request) {
       company: strOrUndefined(raw.company), // String?
       industry: strOrUndefined(raw.industry), // String?
       service, // REQUIRED String
-      budget: strOrUndefined(raw.budget), // String?
+      budget: budget.value, // Existing optional text column stores currency and formatted amount.
       message,
-      newsletter: toBool(raw.newsletter), // Boolean (default false in DB)
       terms: toBool(raw.terms), // Boolean (required)
     } satisfies Prisma.contactCreateInput;
 
@@ -74,6 +79,17 @@ export async function POST(req: Request) {
       );
     }
 
+    if (!isSupportedContactService(data.service))
+      return NextResponse.json(
+        { success: false, error: "Choose a currently available service." },
+        { status: 400 },
+      );
+    if (!isGeneralPhoneNumber(data.phone ?? ""))
+      return NextResponse.json(
+        { success: false, error: "Enter a valid local or international phone number." },
+        { status: 400 },
+      );
+
     if (!process.env.DATABASE_URL) {
       return NextResponse.json(
         { success: false, error: "Contact storage is not configured." },
@@ -84,10 +100,14 @@ export async function POST(req: Request) {
 
     // Send email (don’t fail the request if email fails)
     try {
-      if (process.env.RESEND_API_KEY)
+      if (
+        process.env.RESEND_API_KEY &&
+        process.env.CONTACT_EMAIL_FROM &&
+        process.env.CONTACT_EMAIL_TO
+      )
         await new Resend(process.env.RESEND_API_KEY).emails.send({
-          from: process.env.CONTACT_EMAIL_FROM || "Tech Venture Solutions <onboarding@resend.dev>",
-          to: process.env.CONTACT_EMAIL_TO || "info@techventuresolution.com",
+          from: process.env.CONTACT_EMAIL_FROM,
+          to: process.env.CONTACT_EMAIL_TO,
           subject: "New Contact Form Submission",
           html: `
           <h2>New Inquiry Received</h2>

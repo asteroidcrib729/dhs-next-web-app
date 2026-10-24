@@ -21,7 +21,7 @@ export default function Form({ className, ...props }: React.ComponentProps<"div"
               </div>
               <div className="grid gap-3">
                 <Label htmlFor="name">Name</Label>
-                <Input id="name" type="name" placeholder="John Doe" required />
+                <Input id="name" type="name" placeholder="Your name" required />
               </div>
               <div className="grid gap-3">
                 <Label htmlFor="email">Email</Label>
@@ -43,7 +43,7 @@ export default function Form({ className, ...props }: React.ComponentProps<"div"
           </form>
           <div className="bg-muted relative hidden md:block">
             <Image
-              src="/images/about/our-story.webp"
+              src="/images/about/collaborative-engineering.webp"
               alt="Image"
               className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.4]"
               width={5464}

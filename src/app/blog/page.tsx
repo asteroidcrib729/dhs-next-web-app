@@ -1,17 +1,33 @@
 import Header from "@/components/Header";
 import BlogPageTop from "@/app/blog/components/BlogPageTop";
-import BlogPagePosts from "@/app/blog/components/BlogPagePosts";
+import Catalogue from "@/components/editorial/Catalogue";
+import { listPublished } from "@/lib/editorial/store";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
-export default function Blog() {
+export const dynamic = "force-dynamic";
+export default async function Blog() {
+  const entries = await listPublished("BLOG");
   return (
     <>
       <Header />
 
       <BlogPageTop />
 
-      <BlogPagePosts />
+      <Catalogue
+        entries={entries.map(({ id, kind, content: c }) => ({
+          id,
+          kind,
+          content: {
+            title: c.title,
+            slug: c.slug,
+            excerpt: c.excerpt,
+            category: c.category,
+            coverImage: c.coverImage,
+            featured: c.featured,
+          },
+        }))}
+      />
 
       <CTA />
 

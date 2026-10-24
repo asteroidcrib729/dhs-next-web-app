@@ -1,40 +1,27 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
+import AboutSection from "./AboutSection";
 export default function AboutPageMissionVision() {
   return (
-    <>
-      {/* Mission & Vision */}
-      <section className="py-8 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="border-l-12 border-l-[#0ea5e9] hover:scale-[103%] hover:shadow-lg transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-2xl text-blue-900">Our Mission</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  To empower businesses with comprehensive digital marketing and IT solutions that
-                  drive sustainable growth, improve operational efficiency, and create lasting
-                  competitive advantages in an increasingly digital world.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-l-12 border-l-[#64748b] hover:scale-[103%] hover:shadow-lg transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-2xl text-blue-900">Our Vision</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  To be the leading provider of integrated digital marketing and IT solutions,
-                  recognized for our innovation, expertise, and unwavering commitment to client
-                  success across all industries and business sizes.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-    </>
+    <AboutSection id="our-direction" eyebrow="What guides the work" title="Our Direction" tinted>
+      <div className="grid gap-6 md:grid-cols-2">
+        {[
+          {
+            title: "Our Mission",
+            text: "Build useful digital experiences and business tools that fit real workflows, with clear communication and a responsible approach to information.",
+          },
+          {
+            title: "Our Vision",
+            text: "Help businesses develop a connected foundation where their website, internal software and infrastructure can evolve together.",
+          },
+        ].map((item) => (
+          <article
+            key={item.title}
+            className="rounded-2xl border border-border bg-white p-7 sm:p-8"
+          >
+            <h3 className="text-xl font-semibold">{item.title}</h3>
+            <p className="mt-4 leading-relaxed text-muted-foreground">{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </AboutSection>
   );
 }

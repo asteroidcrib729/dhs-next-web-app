@@ -1,29 +1,27 @@
 export default function CaseStudiesPageResults() {
   return (
-    <>
-      {/* Results Overview */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-[#4A90A4] mb-2">$2.5B+</div>
-              <div className="text-gray-600">Revenue Generated</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-[#64748b] mb-2">350%</div>
-              <div className="text-gray-600">Average ROI</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-purple-600 mb-2">500+</div>
-              <div className="text-gray-600">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-orange-500 mb-2">98%</div>
-              <div className="text-gray-600">Client Satisfaction</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    <section className="border-y border-border bg-secondary px-5 py-12 sm:px-8">
+      <div className="mx-auto max-w-7xl">
+        <h2 className="text-2xl font-semibold">From the brief to the handover</h2>
+        <p className="mt-3 max-w-3xl text-muted-foreground">
+          Explore the problem, proposed approach and acceptance criteria. Illustrative scenarios are
+          labelled; historical figures remain subject to editorial verification.
+        </p>
+        <ol className="mt-7 grid gap-5 sm:grid-cols-3">
+          {[
+            "Understand the workflow",
+            "Build and verify the solution",
+            "Document the handover",
+          ].map((text, i) => (
+            <li key={text} className="flex items-center gap-3 text-sm font-medium">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/20 bg-white text-primary">
+                {i + 1}
+              </span>
+              {text}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
   );
 }

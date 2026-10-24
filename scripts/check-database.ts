@@ -22,7 +22,6 @@ try {
       },
     });
     assert.ok(created.id > 0);
-    assert.equal(created.newsletter, false);
     assert.ok(created.createdAt instanceof Date);
     assert.equal(created.phone, null);
     const stored = await transaction.contact.findUniqueOrThrow({ where: { id: created.id } });
@@ -30,9 +29,9 @@ try {
     assert.ok(stored.message.length > 191);
     const updated = await transaction.contact.update({
       where: { id: created.id },
-      data: { newsletter: true },
+      data: { company: "Updated company" },
     });
-    assert.equal(updated.newsletter, true);
+    assert.equal(updated.company, "Updated company");
     await transaction.contact.delete({ where: { id: created.id } });
     assert.equal(await transaction.contact.count({ where: { email } }), 0);
   });

@@ -8,7 +8,7 @@ try {
     constants.COPYFILE_EXCL,
   );
   console.log(
-    "Created .env. Add DATABASE_URL to enable contact storage; add RESEND_API_KEY to enable email.",
+    "Created .env. Configure DATABASE_URL for storage and the documented authentication settings for /studio. Email requires all three notification settings.",
   );
 } catch (error) {
   if (error.code !== "EEXIST") throw error;
