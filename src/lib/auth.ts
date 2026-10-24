@@ -1,11 +1,12 @@
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import { getPrisma } from "./prisma";
+import { studioOrigin } from "./studio-origin";
 
 export function studioConfigured() {
   return Boolean(
     process.env.DATABASE_URL &&
-    process.env.BETTER_AUTH_URL &&
+    studioOrigin() &&
     (process.env.BETTER_AUTH_SECRET?.length ?? 0) >= 32,
   );
 }
@@ -14,7 +15,7 @@ export function createStudioAuth(bootstrap = false) {
     throw new Error(
       "Configure DATABASE_URL, BETTER_AUTH_URL and a random BETTER_AUTH_SECRET of at least 32 characters.",
     );
-  const origin = new URL(process.env.BETTER_AUTH_URL!).origin;
+  const origin = studioOrigin()!;
   if (
     process.env.NODE_ENV === "production" &&
     !origin.startsWith("https://") &&

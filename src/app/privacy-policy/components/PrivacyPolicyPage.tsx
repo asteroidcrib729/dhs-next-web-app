@@ -86,8 +86,9 @@ export default function PrivacyPolicyPage() {
       <p>
         Social, vendor and portfolio links take you to other services with their own privacy
         practices. Those services may process information when you choose to visit them. Hosting,
-        database and email processing locations depend on the providers selected for the website.
-        The <Link href="/cookie-policy">Cookie Policy</Link> explains the current use of browser
+        security, analytics and optional email services may process information in other locations
+        according to the providers? infrastructure and policies. The{" "}
+        <Link href="/cookie-policy">Cookie Policy</Link> explains the current use of browser
         storage. We will review this notice when our services or processing arrangements change.
       </p>
     </LegalShell>

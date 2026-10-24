@@ -1,4 +1,5 @@
 import { getStudioAuth, studioConfigured } from "@/lib/auth";
+import { studioOrigin } from "@/lib/studio-origin";
 
 export class StudioError extends Error {
   constructor(
@@ -17,7 +18,7 @@ export async function requireEditor(headers: Headers) {
 }
 export function requireSameOrigin(request: Request) {
   const origin = request.headers.get("origin");
-  if (!origin || origin !== new URL(process.env.BETTER_AUTH_URL!).origin)
+  if (!origin || origin !== studioOrigin())
     throw new StudioError("Request origin is not allowed.", 403);
 }
 export async function boundedJson(request: Request, max = 120000) {

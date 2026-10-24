@@ -1,0 +1,31 @@
+# Vercel and Prisma deployment
+
+The owner authorized deployment on October 24, 2026. Target public origin: https://digitalhorizonsystems.vercel.app.
+
+## Resources and isolation
+
+- Vercel team: farazhussain-5000s-projects (team_grJesWXYv44pv3DuOPkWPa9z).
+- Vercel project: digitalhorizonsystems (prj_q8SilSUQloxBnDheQyBOQwV837hm), linked to asteroidcrib729/dhs-next-web-app. Node 24; functions in Singapore (sin1).
+- Existing Prisma workspace: Personal workspace (wksp_d92jyphfrn32hycz9voueezd).
+- One Prisma project: Digital Horizon Systems (proj_p0nq6s36wcod40owpw3xaso1), default region ap-southeast-1.
+- Production database: dhs-production (db_aic0uqga8auwqpri609xtlgc), on the Prisma main production environment.
+- Preview database: dhs-preview (db_iqm0hazncpndvk9ridbpw3xm), on the Prisma master preview environment. These Prisma environment names are separate from Vercel/Git deployment selection: the repository master branch deploys production on Vercel. Vercel environment variables explicitly select the correct database.
+- Local .env points only to preview. Existing non-database settings and its auth secret were preserved. Production and preview auth secrets are independent. Secrets, .vercel linkage, local credentials and verification reports are ignored by Git.
+
+The Prisma plugin created/verified the workspace project and issued the approved Vercel credentials. Its database creation tool lacks a project selector and would create extra projects, so the official Prisma 8.0.0-rc.15 CLI was used only to create databases within the selected project. The application's Prisma ORM, generated client, adapter and migrations remain version 7.10.1.
+
+## Deployment behavior
+
+Vercel applies db:deploy before build using the direct database URL. Application traffic uses the PostgreSQL pooler with explicit certificate/hostname verification and a maximum of two connections per process. Preview authorization uses the server-provided VERCEL_URL hostname, never a request Host header; production and local use their exact configured auth origins. Use the generated preview URL when testing Studio authentication.
+
+Both databases receive the existing three forward migrations. Preview permits explicit disposable integration checks; production must never run db:check or studio:check. Test records are owned by those checks and removed afterwards. No real email is sent during verification; optional Resend notifications remain unconfigured.
+
+The explicit studio:import -- --publish-current operation preserves the already visible bundled public catalogue, original creation/publication/update dates and noindex flags. Existing database entries are skipped. Ordinary imports remain private drafts. Legacy summaries and illustrative/unverified case studies keep their existing noindex decisions; deployment does not certify their results.
+
+## Editorial accounts
+
+The owner selected the configured public contact email for private editor accounts. Separate random temporary passwords for production and preview are stored only in the ignored .local/deployment/studio-credentials.json file. Public signup is disabled. Sign in at /studio on the production origin or localhost for preview/local. Rotate credentials privately with studio:admin -- --reset-password when needed; that revokes existing sessions. Never put passwords, cookies or database URLs in documentation, issue comments or chat.
+
+## Verification and handoff
+
+Preview migrations, zero drift, inquiry CRUD, editorial lifecycle checks and repeated catalogue import passed before production setup. Final hosted build, public route, editor auth, environment isolation, analytics and Git/CI verification are recorded in the final handoff after deployment. A green CodeQL job alone does not mean no alerts; check the actual alert state as well.
